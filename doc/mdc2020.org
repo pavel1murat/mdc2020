@@ -1,0 +1,14 @@
+# 
+
+* MDC2020 datasets 
+
+* cele01: family of CE + ...
+
+  cele01s41b0
+  cele01s41b1
+  cele01s41b2  - "triggered"
+
+  cele02s41bx  - "untriggered" "perfect" 
+  cele12s41bx  - "untriggered" "best" 
+  cele22s41bx  - "untriggered" "startup" 
+* ------------------------------------------------------------------------------
