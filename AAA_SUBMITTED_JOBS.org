@@ -1,0 +1,43 @@
+#
+
+
+#+startup:fold
+* grid output directory: file:/pnfs/mu2e/scratch/users/murat/workflow
+* ----------------------------------------------------------------------------------------------------
+* <2022-11-28 Mon> *41213122 SUBMITTED* : cosme01.s1_stn                  /   9  2000MB:12h:xrootd 
+murat@mu2ebuild01:/mu2e/app/users/murat/muse>grim/scripts/submit_job.py --project=mdc2020 --dsid=cosme01 --stage=s1 --job=stn --doit=.
+2022/11/28 22:11:29 [ GridTool::ParseParameters ] Project      = mdc2020
+2022/11/28 22:11:29 [ GridTool::ParseParameters ] Verbose      = 1
+2022/11/28 22:11:29 [ GridTool::ParseParameters ] Doit         = .
+2022/11/28 22:11:29 [ GridTool::ParseParameters ] FamilyID     = cosme01
+2022/11/28 22:11:29 [ GridTool::ParseParameters ] InputDsid    = xxx_xxxx
+2022/11/28 22:11:29 [ GridTool::ParseParameters ] ProjectDir   = mdc2020/datasets/cosme01
+2022/11/28 22:11:29 [ GridTool::ParseParameters ] Recover      = None
+2022/11/28 22:11:29 [ GridTool::ParseParameters ] Fileset      = None
+2022/11/28 22:11:29 [ GridTool::ParseParameters ] ------------------------------------- Done
+2022/11/28 22:11:29 [ GridTool::submit_grid_job ] executing :tar -tjf /pnfs/mu2e/resilient/users/murat/mdc2020/cnf.murat.cosme01.s1_stn.mdc2020.fcl.tbz | wc -l
+2022/11/28 22:11:29 [ GridTool::submit_grid_job ] nsegments: 9
+submit_grid_job: parms: ['grim/scripts/submit_grid_job', 'mdc2020', 'cosme01', 's1:stn', '2000MB:12h:xrootd', '.']
+['Mon Nov 28 22:11:29 CST 2022', 'mkdir /pnfs/mu2e/scratch/users/murat/workflow/cosme01.s1_stn', 'mkdir /pnfs/mu2e/scratch/users/murat/workflow/cosme01.s1_stn/outstage', 'Will use the outstage directory = /pnfs/mu2e/scratch/users/murat/workflow/cosme01.s1_stn/outstage', 'Will use ifdh version v2_6_10', 'Will use mu2efilename version v3_8', 'Will use mu2etools version v4_04_00', 'Command:  jobsub_submit --disk 30GB --resource-provides usage_model=OPPORTUNISTIC,DEDICATED --expected-lifetime 12h --group mu2e --memory 2000MB --jobsub-server https://fifebatch.fnal.gov:8443 -l priority=0 --append_condor_requirements=\'(TARGET.HAS_SINGULARITY=?=true)\' -l \'+SingularityImage="/cvmfs/singularity.opensciencegrid.org/fermilab/fnal-wn-sl7:latest"\' -e XRD_STREAMTIMEOUT=300 -e EXPERIMENT=mu2e -e MU2EGRID_MU2ESETUP=/cvmfs/mu2e.opensciencegrid.org/setupmu2e-art.sh -e MU2EGRID_CODE=/pnfs/mu2e/resilient/users/murat/mdc2020/mdc2020.code.murat.3f9e32e5.tbz -e IFDH_VERSION=v2_6_10 -e MU2EGRID_WFOUTSTAGE=/pnfs/mu2e/scratch/users/murat/workflow/cosme01.s1_stn/outstage -e MU2EGRID_FCLTAR=/pnfs/mu2e/resilient/users/murat/mdc2020/cnf.murat.cosme01.s1_stn.mdc2020.fcl.tbz -e MU2EGRID_ERRORDELAY=10 -e MU2EGRID_INPUTLIST=QCk7i92nff -e MU2EGRID_DSCONF=mdc2020 -e MU2EGRID_XROOTD=1 -e MU2EGRID_USERSETUP=Code/setup.sh -e MU2EGRID_DSOWNER=murat -e MU2EGRID_TRANSFER_ALL=1 -e MU2EGRID_MU2ETOOLS_VERSION=v4_04_00 -e MU2EGRID_MU2EFILENAME_VERSION=v3_8 -N 9 -f dropbox:///tmp/QCk7i92nff --use-cvmfs-dropbox --tar_file_name dropbox:///pnfs/mu2e/resilient/users/murat/mdc2020/mdc2020.code.murat.3f9e32e5.tbz file:///cvmfs/mu2e.opensciencegrid.org/artexternals/mu2egrid/v7_01_00/bin/impl/mu2eprodsys.sh', 'Submitting....', '/fife/local/scratch/uploads/mu2e/murat/2022-11-28_221204.377759_461', '', '/fife/local/scratch/uploads/mu2e/murat/2022-11-28_221204.377759_461/mu2eprodsys.sh_20221128_221205_3010541_0_1_.cmd', '', 'submitting....', '', 'Submitting job(s).........', '', '9 job(s) submitted to cluster 41213122.', '', 'JobsubJobId of first job: 41213122.0@jobsub03.fnal.gov', '', 'Use job id 41213122.0@jobsub03.fnal.gov to retrieve output', '', '']
+Mon Nov 28 22:11:29 CST 2022
+mkdir /pnfs/mu2e/scratch/users/murat/workflow/cosme01.s1_stn
+mkdir /pnfs/mu2e/scratch/users/murat/workflow/cosme01.s1_stn/outstage
+Will use the outstage directory = /pnfs/mu2e/scratch/users/murat/workflow/cosme01.s1_stn/outstage
+Will use ifdh version v2_6_10
+Will use mu2efilename version v3_8
+Will use mu2etools version v4_04_00
+Command:  jobsub_submit --disk 30GB --resource-provides usage_model=OPPORTUNISTIC,DEDICATED --expected-lifetime 12h --group mu2e --memory 2000MB --jobsub-server https://fifebatch.fnal.gov:8443 -l priority=0 --append_condor_requirements='(TARGET.HAS_SINGULARITY=?=true)' -l '+SingularityImage="/cvmfs/singularity.opensciencegrid.org/fermilab/fnal-wn-sl7:latest"' -e XRD_STREAMTIMEOUT=300 -e EXPERIMENT=mu2e -e MU2EGRID_MU2ESETUP=/cvmfs/mu2e.opensciencegrid.org/setupmu2e-art.sh -e MU2EGRID_CODE=/pnfs/mu2e/resilient/users/murat/mdc2020/mdc2020.code.murat.3f9e32e5.tbz -e IFDH_VERSION=v2_6_10 -e MU2EGRID_WFOUTSTAGE=/pnfs/mu2e/scratch/users/murat/workflow/cosme01.s1_stn/outstage -e MU2EGRID_FCLTAR=/pnfs/mu2e/resilient/users/murat/mdc2020/cnf.murat.cosme01.s1_stn.mdc2020.fcl.tbz -e MU2EGRID_ERRORDELAY=10 -e MU2EGRID_INPUTLIST=QCk7i92nff -e MU2EGRID_DSCONF=mdc2020 -e MU2EGRID_XROOTD=1 -e MU2EGRID_USERSETUP=Code/setup.sh -e MU2EGRID_DSOWNER=murat -e MU2EGRID_TRANSFER_ALL=1 -e MU2EGRID_MU2ETOOLS_VERSION=v4_04_00 -e MU2EGRID_MU2EFILENAME_VERSION=v3_8 -N 9 -f dropbox:///tmp/QCk7i92nff --use-cvmfs-dropbox --tar_file_name dropbox:///pnfs/mu2e/resilient/users/murat/mdc2020/mdc2020.code.murat.3f9e32e5.tbz file:///cvmfs/mu2e.opensciencegrid.org/artexternals/mu2egrid/v7_01_00/bin/impl/mu2eprodsys.sh
+Submitting....
+/fife/local/scratch/uploads/mu2e/murat/2022-11-28_221204.377759_461
+
+/fife/local/scratch/uploads/mu2e/murat/2022-11-28_221204.377759_461/mu2eprodsys.sh_20221128_221205_3010541_0_1_.cmd
+
+submitting....
+
+Submitting job(s).........
+
+9 job(s) submitted to cluster 41213122.
+
+JobsubJobId of first job: 41213122.0@jobsub03.fnal.gov
+2022/11/28 22:12:05 [ GridTool::submit_grid_job ] jobid: 41213122 , writing to json nsegments = 9
+* ----------------------------------------------------------------------------------------------------

@@ -1,0 +1,94 @@
+# -*- mode:org -*-
+#+startup:fold
+  *tvst003* : vertical plane orientation
+# ----------------------------------------------------------------------------------------------------
+ - directory       : file:./
+ - configuration   : [[file:./init_project.py][init_project.py]]
+ - submitted jobs  : file:../../AAA_SUBMITTED_JOBS
+ - grid input      : file:/pnfs/mu2e/resilient/users/murat/
+ - grid output     : file:/pnfs/mu2e/scratch/users/murat/workflow
+ - output_location : file:/mu2e/data/projects/tracker/vst/stntuple
+ - log files       : file:/mu2e/data/projects/tracker/vst/log
+ - catalogs        : file:./catalog
+ - fcl             : file:../../../tmp/trkvst/fcl
+# ----------------------------------------------------------------------------------------------------
+
+
+|--------------------------------+--------+---------+--------+-------------+-----------------------------------------+---------------------------|
+| STNTUPLE dsid                  |    run | Nevents | Nfiles | job         | input dsid                              | comments                  |
+|--------------------------------+--------+---------+--------+-------------+-----------------------------------------+---------------------------|
+| nts.mu2e.tvst003r02.trkvst.stn | 100033 | 7435261 |     17 | [[file:s1_vst_stn_tvst003.fcl][s1_vst_stn]]  | rec.mu2e.TRK_VST-cosmics.vst003-r02.art | stntupled                 |
+|--------------------------------+--------+---------+--------+-------------+-----------------------------------------+---------------------------|
+| nts.mu2e.tvst803r02.trkvst.stn | 100033 |  136413 |      1 | vst_strip_v | nts.mu2e.tvst003r02.trkvst.stn          | 8+ good hits in one panel |
+|--------------------------------+--------+---------+--------+-------------+-----------------------------------------+---------------------------|
+
+* ---------------------------------------------------------------------------------------------------------------
+* dataset format   
+* ---------------------------------------------------------------------------------------------------------------
+* dig.mu2e.CosmicCORSIKAExtractedNoFieldTrk.MDC2020r_perfect_v1_0.art :                                                                   
+murat@mu2ebuild01:/mu2e/app/users/murat/muse>mu2e -c Offline/Print/fcl/dumpDataProducts.fcl -s /pnfs/mu2e/persistent/datasets/phy-sim/dig/mu2e/CosmicCORSIKAExtractedNoFieldTrk/MDC2020r_perfect_v1_0/art/bd/f6/dig.mu2e.CosmicCORSIKAExtractedNoFieldTrk.MDC2020r_perfect_v1_0.2.art
+   ************************** Mu2e Offline **************************
+     art v3_12_00    root v6_26_06    KinKal v02_02_01
+     build  /mu2e/app/users/murat/muse
+     build  sl7-debug-e20-p034    11/28/22 17:15:30
+   ******************************************************************
+28-Nov-2022 19:52:03 CST  Initiating request to open input file "/pnfs/mu2e/persistent/datasets/phy-sim/dig/mu2e/CosmicCORSIKAExtractedNoFieldTrk/MDC2020r_perfect_v1_0/art/bd/f6/dig.mu2e.CosmicCORSIKAExtractedNoFieldTrk.MDC2020r_perfect_v1_0.2.art"
+28-Nov-2022 19:52:06 CST  Opened input file "/pnfs/mu2e/persistent/datasets/phy-sim/dig/mu2e/CosmicCORSIKAExtractedNoFieldTrk/MDC2020r_perfect_v1_0/art/bd/f6/dig.mu2e.CosmicCORSIKAExtractedNoFieldTrk.MDC2020r_perfect_v1_0.2.art"
+Begin processing the 1st record. run: 1205 subRun: 2 event: 341 at 28-Nov-2022 19:52:11 CST
+Found 30 data products in this Event
+Data products: 
+                                Friendly Class Name            Module Label    Instance Name  Process Name     Product ID
+                                mu2e::StrawGasSteps         compressDigiMCs                       Digitize    72058159
+                                 mu2e::StepPointMCs         compressDigiMCs  virtualdetector      Digitize    74878460
+                                art::TriggerResults          TriggerResults                       Digitize   155684381
+                                 mu2e::StepPointMCs         compressDigiMCs   protonabsorber      Digitize   158150203
+                                art::TriggerResults          TriggerResults                        Primary   295524022
+                            mu2e::EventWindowMarker             EWMProducer                       Digitize   642151885
+                                   mu2e::StrawDigis                  makeSD                       Digitize   997532670
+                              mu2e::ProtonBunchTime             EWMProducer                       Digitize  1009213382
+                        mu2e::StrawDigiADCWaveforms                  makeSD                       Digitize  1022520476
+                         mu2e::ProtonBunchIntensity                  PBISim                       Digitize  1259754398
+mu2e::SimParticleart::Ptrmu2e::MCTrajectorystd::map         compressDigiMCs                       Digitize  1274809250
+                                  mu2e::TriggerInfo  cstTimeClusterTCFilter                       Digitize  1395249774
+                              mu2e::CaloShowerSteps         compressDigiMCs                       Digitize  1396696979
+                                     mu2e::CrvDigis                 CrvDigi                       Digitize  1459952629
+                              mu2e::PrimaryParticle         compressDigiMCs                       Digitize  1650507766
+                                     mu2e::StatusG4                   g4run                        Primary  1820700010
+                                mu2e::CaloShowerROs         compressDigiMCs                       Digitize  1965965890
+                                 mu2e::GenParticles         compressDigiMCs                       Digitize  2150092380
+                                   mu2e::CrvDigiMCs         compressDigiMCs                       Digitize  2299371380
+                                 mu2e::StepPointMCs         compressDigiMCs   stoppingtarget      Digitize  2682679337
+                                 mu2e::CaloClusters         CaloClusterFast                       Digitize  2889669272
+                                    mu2e::CaloDigis           CaloDigiMaker                       Digitize  3184178227
+                                  mu2e::TriggerInfo    caloFastCosmicFilter                       Digitize  3257738601
+                                  mu2e::TriggerInfo             cstTSFilter                       Digitize  3519385687
+                            mu2e::ProtonBunchTimeMC             EWMProducer                       Digitize  3695387500
+                                mu2e::SimParticlemv         compressDigiMCs                       Digitize  3792529598
+                                 mu2e::StrawDigiMCs         compressDigiMCs                       Digitize  3817592014
+                               mu2e::CaloShowerSims         compressDigiMCs                       Digitize  3907563765
+                                     mu2e::CrvSteps         compressDigiMCs                       Digitize  3931763695
+                                  mu2e::TriggerInfo             cstTCFilter                       Digitize  4284927055
+
+Found 2 data products in this SubRun
+Data products: 
+       Friendly Class Name  Module Label  Instance Name  Process Name     Product ID
+mu2e::ProtonBunchIntensity        PBISim  MeanIntensity      Digitize  2226649673
+       mu2e::GenEventCount    genCounter                      Primary  2659886210
+
+Found 0 data products in this Run
+28-Nov-2022 19:52:11 CST  Closed input file "/pnfs/mu2e/persistent/datasets/phy-sim/dig/mu2e/CosmicCORSIKAExtractedNoFieldTrk/MDC2020r_perfect_v1_0/art/bd/f6/dig.mu2e.CosmicCORSIKAExtractedNoFieldTrk.MDC2020r_perfect_v1_0.2.art"
+Art has completed and will exit with status 0.
+* ---------------------------------------------------------------------------------------------------------------
+* performance testing                                                                                         
+
+  bmum0:  stage 1 test       : (230 sec ~ 4min) / 5000 events on mu2ebuild01: 75,000 events/hour
+	  250,000 events     : < 4 hours
+          100,000,000 events : 400 segments with the time request of, say, 10 hours
+
+	  MemReport          : VmPeak = 2254.73 VmHWM = 1659.85 < 2 GBytes
+
+	  output             : 154 events out of 5000
+
+* ---------------------------------------------------------------------------------------------------------------
+* back to summary: [[file:../../doc/dataset_summary.org][trkvst/doc/dataset_summary.org]]
+* ---------------------------------------------------------------------------------------------------------------
