@@ -1,0 +1,99 @@
+# -*- mode:tcl -*-
+#------------------------------------------------------------------------------
+# - use FlagBkgHits to flag compton electron hits
+# - use TZClusterFinder for time clustering
+# - use PhiClusterFinder to provide input to the patttern recognition
+#------------------------------------------------------------------------------
+BEGIN_PROLOG
+  INPUT_MODULE  @protect_ignore: RootInput        # choices: EmptyEvent / RootInput
+  TRIGGER_PATHS @protect_ignore: [ p1       ]     # defined below
+END_PROLOG
+
+#include "Stntuple/fcl/stntuple.fcl"
+
+process_name : S5Reco
+
+physics : {
+
+    producers : { @table::Reconstruction.producers 
+        
+        # FlagBkgHits        : { @table::CalPatRec.producers.DeltaFinder }
+
+        TZClusterFinder    : { @table::TZClusterFinder  } 
+
+	PhiClusterFinder   : { @table::PhiClusterFinder }
+
+	MHFinderDe   : { @table::TrkReco.producers.MergeHelices  
+	    HelixFinders: [ "MHDeM", "MHDeP" ]
+	}
+	
+	KSFDe : { @table::KSFDeM
+	    SeedCollection : "MHFinderDe"
+	    CheckHelicity  : false
+	}
+	
+	KFFDe : { @table::KFFDeM
+	    SeedCollection : "KSFDe"
+	}
+    }
+    
+    filters   : { @table::Reconstruction.filters   }
+    
+    p1        : [ @sequence::Reconstruction.CaloReco, 
+		  @sequence::TrkHitReco.PrepareHits ,     # PBTFSD, makeSH, makePH, FlagBkgHits
+		                                          # ------------ @sequence::Reconstruction.DmuReco  
+		  # TimeClusterFinderDmu, 
+		  TZClusterFinder, 
+                  PhiClusterFinder, 
+		  HelixFinderDe,
+                         #
+		  CalTimePeakFinder, 
+                  CalHelixFinderDe,                       # CalPatRec
+		  
+		  MHDeM , MHDeP ,                        # 1st step: RobustHelixFinder(M/P)+CalHelixFinder(M/P)
+		  MHFinderDe                             # 2nd step: MHDmuM + MHDmuP
+		  , KSFDe                                # Seed fit (chisquared, no drift)
+		  , KFFDe                                # final Kalman filter fit
+		 ]
+
+    trigger_paths : [ p1            ]
+
+    e1            : [ defaultOutput ]
+    end_paths     : [ e1            ]
+ 
+}
+#------------------------------------------------------------------------------
+# physics.producers.TimeClusterFinderDmu : { @table::physics.producers.TimeClusterFinderDmu
+#     ComboHitCollection     : "makePH"
+#     UseCaloCluster         : false
+#     TestFlag               : false
+#     MinNHits               : 10
+#     MinKeepHitMVA          : -1.0
+#     MinAddHitMVA           : -1.0
+#     MaxdPhi                : 100.0
+#     PeakWidth              : 100
+# }
+
+physics.producers.makePH.StrawHitSelectionBits : ["TimeSelection"]  ## default: ["EnergySelection","TimeSelection"]
+
+# physics.producers.FlagBkgHits.BkgMVACut                   : 10.  ## turn off the ANN
+
+physics.producers.TZClusterFinder.clusterThresh           : 10     # min N straw hits
+physics.producers.TZClusterFinder.runDisplay              : 0
+physics.producers.TZClusterFinder.doComptonClean          : 0
+
+physics.producers.PhiClusterFinder.useTC                  : true
+physics.producers.PhiClusterFinder.TimeClusterCollection  : "TZClusterFinder"
+
+physics.producers.HelixFinderDe.ComboHitCollection       : "makePH"
+physics.producers.HelixFinderDe.TimeClusterCollection    : "PhiClusterFinder"
+#------------------------------------------------------------------------------
+services.GeometryService.inputFile    : "pbar2m/common/geom_baseline.txt"
+services.TFileService.fileName        : "nts.user.cele01s52b0.mdc2020.001210_00000000.root"
+outputs.defaultOutput.fileName        : "mcs.user.cele01s52b0.mdc2020.001210_00000000.art"
+
+# Uncomment the below lines if one wants a truncated report i.e with the "Run,Event,SubRun" numbers not mentioned for every event
+# services.message.destinations.log.categories.ArtReport.reportEvery : 50
+# services.message.destinations.log.categories.ArtReport.limit : 5
+# services.message.destinations.log.categories.ArtReport.timespan : 1000
+
