@@ -4,11 +4,60 @@
 
 * cele01: family of CE + ...
 
-  cele01s41b0
-  cele01s41b1
-  cele01s41b2  - "triggered"
+murat@mu2ebuild01:/mu2e/app/users/murat/muse>samweb list-definitions | grep -i mdc202 | grep -i CEendpointmix2bb
 
-  cele02s41bx  - "untriggered" "perfect" 
-  cele12s41bx  - "untriggered" "best" 
-  cele22s41bx  - "untriggered" "startup" 
+    parent dataset : dts.mu2e.CeEndpoint.MDC2020r.001210_00000000.art
+
+|--------------------------------------------------------------------------------+-----------+----------|
+| file                                                                           | N(events) | comments |
+|--------------------------------------------------------------------------------+-----------+----------|
+| dig.mu2e.CeEndpointMix2BBSignal.MDC2020r_perfect_v1_0.001210_00000000.art      |      1354 |          |
+| dig.mu2e.CeEndpointMix2BBCalo.MDC2020r_perfect_v1_0.001210_00000000.art        |         0 |          |
+| dig.mu2e.CeEndpointMix2BBDiag.MDC2020r_perfect_v1_0.001210_00000000.art        |         0 |          |
+| dig.mu2e.CeEndpointMix2BBTrk.MDC2020r_perfect_v1_0.001210_00000000.art         |        14 |          |
+| dig.mu2e.CeEndpointMix2BBUntriggered.MDC2020r_perfect_v1_0.001210_00000000.art |        12 |          |
+|--------------------------------------------------------------------------------+-----------+----------|
+| total                                                                          |      1380 |          |
+|--------------------------------------------------------------------------------+-----------+----------|
+| dts.mu2e.CeEndpoint.MDC2020r.001210_00000000.art                               |      2184 |          |
+|--------------------------------------------------------------------------------+-----------+----------|
+
+    cele01s41b2  - "signal"                           : first file: 1354 events
+    cele01s41b2  - "untriggered"                      : first file:   12 events
+    cele01s41b2  - "calo"                             : first file:    0 events
+    cele01s41b2  - "trk"                              : first file:   14 events
+    cele01s41b2  - "diag"                             : first file:    0 events
+
+    total simulated : 4000 events
+
+
+  cele01s41  : signal
+
+    cele01s41b0
+    cele01s41b1
+    cele01s41b2  - "signal"                           : first file: 1354 events
+
+  cele01s42  : untriggered
+
+    cele02s41bx  - "untriggered" "perfect"            : first file : 12 events 
+    cele12s41bx  - "untriggered" "best"            
+    cele22s41bx  - "untriggered" "startup"            
+
+  cele01s43  : trk                                    : first file 
+  cele01s44  : calo                                   : first file : 0 events
+  cele01s45  : diag
+  
+
+
+cnf.mu2e.CeEndpointMix2BB.MDC2020r_perfect_v1_0.fcl
+bck.mu2e.CeEndpointMix2BB.MDC2020r_perfect_v1_0.tbz
+dig.mu2e.CeEndpointMix2BBTrk.MDC2020r_perfect_v1_0.art
+dig.mu2e.CeEndpointMix2BBUntriggered.MDC2020r_perfect_v1_0.art
+dig.mu2e.CeEndpointMix2BBCalo.MDC2020r_perfect_v1_0.art
+dig.mu2e.CeEndpointMix2BBSignal.MDC2020r_perfect_v1_0.art
+dig.mu2e.CeEndpointMix2BBDiag.MDC2020r_perfect_v1_0.art
+cnf.mu2e.CeEndpointMix2BBSignal.MDC2020r_perfect_v1_0.fcl
+bck.mu2e.CeEndpointMix2BBSignal.MDC2020r_perfect_v1_0.tbz
+mcs.mu2e.CeEndpointMix2BBSignal.MDC2020r_perfect_v1_0.art
+
 * ------------------------------------------------------------------------------
