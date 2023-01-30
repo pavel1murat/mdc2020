@@ -70,7 +70,7 @@ physics.producers.TZClusterFinder.clusterThresh           : 10     # min N straw
 physics.producers.TZClusterFinder.runDisplay              :  0
 physics.producers.TZClusterFinder.doComptonClean          :  0
 
-physics.producers.PhiClusterFinder.useTC                  : true
+# physics.producers.PhiClusterFinder.useTC                  : true
 physics.producers.PhiClusterFinder.TimeClusterCollection  : "TZClusterFinder"
 
 physics.producers.HelixFinderDe.ComboHitCollection       : "makePH"
