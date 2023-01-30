@@ -1,8 +1,9 @@
 # -*- mode:tcl -*-
 #------------------------------------------------------------------------------
-# - use FlagBkgHits to flag compton electron hits
-# - use TimeClusterFinder for time clustering
-# - no  PhiClusterFinder 
+# - use DeltaFinder to flag compton electron hits
+# - use TZClusterFinder for time clustering
+# - use PhiClusterFinder to provide input to the patttern recognition
+# - combiHit: up to 4 straws
 #------------------------------------------------------------------------------
 BEGIN_PROLOG
   INPUT_MODULE  @protect_ignore: RootInput        # choices: EmptyEvent / RootInput
@@ -17,11 +18,11 @@ physics : {
 
     producers : { @table::Reconstruction.producers 
 
-        # FlagBkgHits        : { @table::CalPatRec.producers.DeltaFinder }
+        FlagBkgHits        : { @table::CalPatRec.producers.DeltaFinder }
 
-        TZClusterFinder    : { @table::TZClusterFinder  } 
+        TZClusterFinder    : { @table::TZClusterFinder  }
 
-	# PhiClusterFinder   : { @table::PhiClusterFinder }
+	PhiClusterFinder   : { @table::PhiClusterFinder }
 
 	MHFinderDe   : { @table::TrkReco.producers.MergeHelices  
 	    HelixFinders: [ "MHDeM", "MHDeP" ]
@@ -42,16 +43,16 @@ physics : {
     p1        : [ @sequence::Reconstruction.CaloReco, 
 		  @sequence::TrkHitReco.PrepareHits ,     # PBTFSD, makeSH, makePH, FlagBkgHits
 		                                          # ------------ @sequence::Reconstruction.DmuReco  
-		  TimeClusterFinderDe, 
-		  # TZClusterFinder, 
-                  # PhiClusterFinder, 
+		  # TimeClusterFinderDe, 
+		  TZClusterFinder, 
+                  PhiClusterFinder, 
 		  HelixFinderDe,
                          #
 		  CalTimePeakFinder, 
                   CalHelixFinderDe,                       # CalPatRec
 		  
 		  MHDeM , MHDeP ,                        # 1st step: RobustHelixFinder(M/P)+CalHelixFinder(M/P)
-		  MHFinderDe                             # 2nd step: MHDmuM + MHDmuP
+		  MHFinderDe                             # 2nd step: MHDeM + MHDeP
 		  , KSFDe                                # Seed fit (chisquared, no drift)
 		  , KFFDe                                # final Kalman filter fit
 		 ]
@@ -62,35 +63,24 @@ physics : {
     end_paths     : [ e1            ]
  
 }
-#------------------------------------------------------------------------------
-# physics.producers.TimeClusterFinderDmu : { @table::physics.producers.TimeClusterFinderDmu
-#     ComboHitCollection     : "makePH"
-#     UseCaloCluster         : false
-#     TestFlag               : false
-#     MinNHits               : 10
-#     MinKeepHitMVA          : -1.0
-#     MinAddHitMVA           : -1.0
-#     MaxdPhi                : 100.0
-#     PeakWidth              : 100
-# }
 
-physics.producers.makePH.StrawHitSelectionBits : ["EnergySelection","TimeSelection"] ## the default
+physics.producers.makePH.StrawHitSelectionBits : ["TimeSelection"]  ## default: ["EnergySelection","TimeSelection"]
+physics.producers.makePH.MaxDS                           : 4
+# physics.producers.makePH.CheckWres                       : true
 
-# physics.producers.FlagBkgHits.BkgMVACut                   : 10.  ## turn off the ANN
+physics.producers.TZClusterFinder.clusterThresh          : 10     # min N straw hits
+physics.producers.TZClusterFinder.runDisplay             :  0
+physics.producers.TZClusterFinder.doComptonClean         :  0
 
-# physics.producers.TZClusterFinder.clusterThresh           : 10     # min N straw hits
-# physics.producers.TZClusterFinder.runDisplay              : 0
-# physics.producers.TZClusterFinder.doComptonClean          : 0
-
-# physics.producers.PhiClusterFinder.useTC                  : true
-# physics.producers.PhiClusterFinder.TimeClusterCollection  : "TZClusterFinder"
+physics.producers.PhiClusterFinder.useTC                 : true
+physics.producers.PhiClusterFinder.TimeClusterCollection : "TZClusterFinder"
 
 physics.producers.HelixFinderDe.ComboHitCollection       : "makePH"
-physics.producers.HelixFinderDe.TimeClusterCollection    : "TimeClusterFinderDe"  ## "PhiClusterFinder"
+physics.producers.HelixFinderDe.TimeClusterCollection    : "PhiClusterFinder"
 #------------------------------------------------------------------------------
 services.GeometryService.inputFile    : "pbar2m/common/geom_baseline.txt"
-services.TFileService.fileName        : "nts.user.cele01s51b0.mdc2020.001210_00000000.root"
-outputs.defaultOutput.fileName        : "mcs.user.cele01s51b0.mdc2020.001210_00000000.art"
+services.TFileService.fileName        : "nts.user.cele01s53b0.mdc2020.001210_00000000.root"
+outputs.defaultOutput.fileName        : "mcs.user.cele01s53b0.mdc2020.001210_00000000.art"
 
 # Uncomment the below lines if one wants a truncated report i.e with the "Run,Event,SubRun" numbers not mentioned for every event
 # services.message.destinations.log.categories.ArtReport.reportEvery : 50

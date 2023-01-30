@@ -62,21 +62,8 @@ physics : {
     end_paths     : [ e1            ]
  
 }
-#------------------------------------------------------------------------------
-# physics.producers.TimeClusterFinderDmu : { @table::physics.producers.TimeClusterFinderDmu
-#     ComboHitCollection     : "makePH"
-#     UseCaloCluster         : false
-#     TestFlag               : false
-#     MinNHits               : 10
-#     MinKeepHitMVA          : -1.0
-#     MinAddHitMVA           : -1.0
-#     MaxdPhi                : 100.0
-#     PeakWidth              : 100
-# }
 
-physics.producers.makePH.StrawHitSelectionBits : ["EnergySelection","TimeSelection"] ## the default
-
-# physics.producers.FlagBkgHits.BkgMVACut                   : 10.  ## turn off the ANN
+physics.producers.makePH.StrawHitSelectionBits : ["TimeSelection"]  ## default: ["EnergySelection","TimeSelection"]
 
 # physics.producers.TZClusterFinder.clusterThresh           : 10     # min N straw hits
 # physics.producers.TZClusterFinder.runDisplay              : 0
@@ -89,8 +76,8 @@ physics.producers.HelixFinderDe.ComboHitCollection       : "makePH"
 physics.producers.HelixFinderDe.TimeClusterCollection    : "TimeClusterFinderDe"  ## "PhiClusterFinder"
 #------------------------------------------------------------------------------
 services.GeometryService.inputFile    : "pbar2m/common/geom_baseline.txt"
-services.TFileService.fileName        : "nts.user.cele01s51b0.mdc2020.001210_00000000.root"
-outputs.defaultOutput.fileName        : "mcs.user.cele01s51b0.mdc2020.001210_00000000.art"
+services.TFileService.fileName        : "nts.user.cele0b2s51r04.mdc2020.001210_00000000.root"
+outputs.defaultOutput.fileName        : "mcs.user.cele0b2s51r04.mdc2020.001210_00000000.art"
 
 # Uncomment the below lines if one wants a truncated report i.e with the "Run,Event,SubRun" numbers not mentioned for every event
 # services.message.destinations.log.categories.ArtReport.reportEvery : 50

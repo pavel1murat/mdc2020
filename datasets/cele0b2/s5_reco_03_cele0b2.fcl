@@ -62,19 +62,7 @@ physics : {
     end_paths     : [ e1            ]
  
 }
-#------------------------------------------------------------------------------
-# physics.producers.TimeClusterFinderDmu : { @table::physics.producers.TimeClusterFinderDmu
-#     ComboHitCollection     : "makePH"
-#     UseCaloCluster         : false
-#     TestFlag               : false
-#     MinNHits               : 10
-#     MinKeepHitMVA          : -1.0
-#     MinAddHitMVA           : -1.0
-#     MaxdPhi                : 100.0
-#     PeakWidth              : 100
-# }
-
-physics.producers.makePH.StrawHitSelectionBits : ["TimeSelection"]  ## default: ["EnergySelection","TimeSelection"]
+physics.producers.makePH.StrawHitSelectionBits : ["EnergySelection","TimeSelection"]  ## the default
 
 # physics.producers.FlagBkgHits.BkgMVACut                   : 10.  ## turn off the ANN
 
