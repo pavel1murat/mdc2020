@@ -21,11 +21,9 @@ physics : {
     producers : { @table::Reconstruction.producers 
 
         FlagBkgHits        : { @table::CalPatRec.producers.DeltaFinder }
-
-        TZClusterFinder    : { @table::TZClusterFinder  }
-
-	PhiClusterFinder   : { @table::PhiClusterFinder }
-
+        TZClusterFinder    : { @table::CalPatRec.producers.TZClusterFinder  }
+	PhiClusterFinder   : { @table::CalPatRec.producers.PhiClusterFinder }
+ 
 	MHFinderDe   : { @table::TrkReco.producers.MergeHelices  
 	    HelixFinders: [ "MHDeM", "MHDeP" ]
 	}

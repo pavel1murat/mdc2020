@@ -43,7 +43,6 @@
 
 - 'Untriggered' stream was prescaled by x10 file:../../../Production/JobConfig/digitize/OnSpill.fcl::physics.filters.UntriggeredPrescale::
     (assume mdc2020 and Production at the same level)
-
 * ------------------------------------------------------------------------------------------------------
 * dataset format                                                                                     
 ** dig.mu2e.CeEndpointMix2BBSignal.MDC2020r_perfect_v1_0.art :                                       
