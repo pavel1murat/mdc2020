@@ -3,6 +3,9 @@
 # - use DeltaFinder to flag compton electron hits
 # - use TZClusterFinder for time clustering
 # - use PhiClusterFinder to provide input to the patttern recognition
+# - combiHit: up to 5 straws
+# - if the assigned resolution along the wire of a combo hit is > x2 times 
+#   larger than the spread of hits, use sigma determined by the spread of hits
 #------------------------------------------------------------------------------
 BEGIN_PROLOG
   INPUT_MODULE  @protect_ignore: RootInput        # choices: EmptyEvent / RootInput
@@ -13,11 +16,19 @@ END_PROLOG
 
 process_name : S5Reco
 
+source : { module_type : RootInput 
+    firstRun    : 1210
+    firstSubRun :    0
+    #source.firstEvent  :    7
+    #source.maxEvents   :    1
+    fileNames   : [ "/mu2e/data2/users/murat/datasets/mdc2020/CeEndpointMix2BBSignal/dig.mu2e.CeEndpointMix2BBSignal.MDC2020r_perfect_v1_0.001210_00000000.art" ]
+}
+
 physics : {
 
     producers : { @table::Reconstruction.producers 
 
-        FlagBkgHits        : { @table::CalPatRec.producers.DeltaFinder }
+        FlagBkgHits        : { @table::CalPatRec.producers.DeltaFinder      }
         TZClusterFinder    : { @table::CalPatRec.producers.TZClusterFinder  }
 	PhiClusterFinder   : { @table::CalPatRec.producers.PhiClusterFinder }
 
@@ -35,14 +46,18 @@ physics : {
 	}
     }
     
+    analyzers : {
+        MuHitDisplay : { @table::Stntuple.analyzers.MuHitDisplay }
+    }
+    
     filters   : { @table::Reconstruction.filters   }
     
     p1        : [ @sequence::Reconstruction.CaloReco, 
 		  @sequence::TrkHitReco.PrepareHits ,     # PBTFSD, makeSH, makePH, FlagBkgHits
 		                                          # ------------ @sequence::Reconstruction.DmuReco  
-		  # TimeClusterFinderDe, 
+		  TimeClusterFinderDe, 
 		  TZClusterFinder, 
-                  PhiClusterFinder, 
+                  # PhiClusterFinder, 
 		  HelixFinderDe,
                          #
 		  CalTimePeakFinder, 
@@ -56,25 +71,32 @@ physics : {
 
     trigger_paths : [ p1            ]
 
-    e1            : [ defaultOutput ]
+    e1            : [ MuHitDisplay  ]
     end_paths     : [ e1            ]
  
 }
 
-physics.producers.makePH.StrawHitSelectionBits : ["TimeSelection"]  ## default: ["EnergySelection","TimeSelection"]
+physics.producers.makePH.StrawHitSelectionBits           : ["TimeSelection"]  ## default: ["EnergySelection","TimeSelection"]
+physics.producers.makePH.MaxDS                           : 5
+physics.producers.makePH.CheckWres                       : true
 
-physics.producers.TZClusterFinder.clusterThresh           : 10     # min N straw hits
-physics.producers.TZClusterFinder.runDisplay              :  0
-physics.producers.TZClusterFinder.doComptonClean          :  0
-
-physics.producers.PhiClusterFinder.TimeClusterCollection  : "TZClusterFinder"
+physics.producers.PhiClusterFinder.TimeClusterCollection : "TZClusterFinder"
 
 physics.producers.HelixFinderDe.ComboHitCollection       : "makePH"
-physics.producers.HelixFinderDe.TimeClusterCollection    : "PhiClusterFinder"
+physics.producers.HelixFinderDe.TimeClusterCollection    : "TZClusterFinder" ## "TimeClusterFinderDe"   ## "PhiClusterFinder"
+
+physics.analyzers.MuHitDisplay.primaryParticleTag : ""
+physics.analyzers.MuHitDisplay.timeClusterCollTag : "TZClusterFinder" ## "TimeClusterFinderDe" ## 
+physics.analyzers.MuHitDisplay.phiClusterCollTag  : ""  ## "PhiClusterFinder" ## 
+physics.analyzers.MuHitDisplay.helixSeedCollTag   : "MHFinderDe"
+physics.analyzers.MuHitDisplay.trackCollTag       : "KSFDe"
+physics.analyzers.MuHitDisplay.ksfCollTag         : "KSFDe"
+physics.analyzers.MuHitDisplay.kffCollTag         : "KFFDe"
+# physics.analyzers.MuHitDisplay.rootMacro          : "pbar2m/scripts/display_phi.C"
 #------------------------------------------------------------------------------
 services.GeometryService.inputFile    : "pbar2m/common/geom_baseline.txt"
-services.TFileService.fileName        : "nts.user.cele01s53b0.mdc2020.001210_00000000.root"
-outputs.defaultOutput.fileName        : "mcs.user.cele01s53b0.mdc2020.001210_00000000.art"
+services.TFileService.fileName        : "nts.user.cele0b2s53r04.mdc2020.001210_00000000.root"
+outputs.defaultOutput.fileName        : "mcs.user.cele0b2s53r04.mdc2020.001210_00000000.art"
 
 # Uncomment the below lines if one wants a truncated report i.e with the "Run,Event,SubRun" numbers not mentioned for every event
 # services.message.destinations.log.categories.ArtReport.reportEvery : 50

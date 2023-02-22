@@ -3,6 +3,9 @@
 # - use DeltaFinder to flag compton electron hits
 # - use TZClusterFinder for time clustering
 # - use PhiClusterFinder to provide input to the patttern recognition
+# - combiHit: up to 4 straws
+# - if the assigned resolution along the wire of a combo hit is > x2 times 
+#   larger than the spread of hits, use sigma determined by the spread of hits
 #------------------------------------------------------------------------------
 BEGIN_PROLOG
   INPUT_MODULE  @protect_ignore: RootInput        # choices: EmptyEvent / RootInput
@@ -12,6 +15,8 @@ END_PROLOG
 #include "Stntuple/fcl/stntuple.fcl"
 
 process_name : S5Reco
+
+source : { module_type : RootInput }
 
 physics : {
 
@@ -40,9 +45,9 @@ physics : {
     p1        : [ @sequence::Reconstruction.CaloReco, 
 		  @sequence::TrkHitReco.PrepareHits ,     # PBTFSD, makeSH, makePH, FlagBkgHits
 		                                          # ------------ @sequence::Reconstruction.DmuReco  
-		  # TimeClusterFinderDe, 
-		  TZClusterFinder, 
-                  PhiClusterFinder, 
+		  TimeClusterFinderDe, 
+		  # TZClusterFinder, 
+                  # PhiClusterFinder, 
 		  HelixFinderDe,
                          #
 		  CalTimePeakFinder, 
@@ -61,20 +66,22 @@ physics : {
  
 }
 
-physics.producers.makePH.StrawHitSelectionBits : ["TimeSelection"]  ## default: ["EnergySelection","TimeSelection"]
+physics.producers.makePH.StrawHitSelectionBits           : ["TimeSelection"]  ## default: ["EnergySelection","TimeSelection"]
+physics.producers.makePH.MaxDS                           : 5
+physics.producers.makePH.CheckWres                       : true
 
-physics.producers.TZClusterFinder.clusterThresh           : 10     # min N straw hits
-physics.producers.TZClusterFinder.runDisplay              :  0
-physics.producers.TZClusterFinder.doComptonClean          :  0
+physics.producers.TZClusterFinder.clusterThresh          : 10     # min N straw hits
+physics.producers.TZClusterFinder.runDisplay             :  0
+physics.producers.TZClusterFinder.doComptonClean         :  0
 
-physics.producers.PhiClusterFinder.TimeClusterCollection  : "TZClusterFinder"
+physics.producers.PhiClusterFinder.TimeClusterCollection : "TZClusterFinder"
 
 physics.producers.HelixFinderDe.ComboHitCollection       : "makePH"
-physics.producers.HelixFinderDe.TimeClusterCollection    : "PhiClusterFinder"
+physics.producers.HelixFinderDe.TimeClusterCollection    : "TimeClusterFinderDe"   ## "PhiClusterFinder"
 #------------------------------------------------------------------------------
 services.GeometryService.inputFile    : "pbar2m/common/geom_baseline.txt"
-services.TFileService.fileName        : "nts.user.cele01s53b0.mdc2020.001210_00000000.root"
-outputs.defaultOutput.fileName        : "mcs.user.cele01s53b0.mdc2020.001210_00000000.art"
+services.TFileService.fileName        : "nts.user.cele0b2s53r04.mdc2020.001210_00000000.root"
+outputs.defaultOutput.fileName        : "mcs.user.cele0b2s53r04.mdc2020.001210_00000000.art"
 
 # Uncomment the below lines if one wants a truncated report i.e with the "Run,Event,SubRun" numbers not mentioned for every event
 # services.message.destinations.log.categories.ArtReport.reportEvery : 50

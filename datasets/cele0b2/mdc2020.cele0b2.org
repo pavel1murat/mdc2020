@@ -1,6 +1,6 @@
 # -*- mode:org -*-
 #+startup:fold
-# *cele01* : CE + 2-batch mode background, perfect calibrations: dig.mu2e.CeEndpointMix2BBSignal.MDC2020r_perfect_v1_0.art
+# *cele0b2* : CE + 2-batch mode background, perfect calibrations: dig.mu2e.CeEndpointMix2BBSignal.MDC2020r_perfect_v1_0.art
 # parent signal dataset : dts.mu2e.CeEndpoint.MDC2020r.art
 #
 # fileset 000: 1 files, 1374 events
@@ -10,39 +10,72 @@
  - submitted jobs  : file:../../AAA_SUBMITTED_JOBS
  - grid input      : file:/pnfs/mu2e/resilient/users/murat/
  - grid output     : file:/pnfs/mu2e/scratch/users/murat/workflow
- - output_location : file:/mu2e/data/projects/tracker/vst/stntuple
- - log files       : file:/mu2e/data/projects/tracker/vst/log
+ - output_location : file:/mu2e/data2/projects/mdc2020/
+ - log files       : file:/mu2e/data2/projects/mdc2020/log
  - catalogs        : file:./catalog
  - fcl             : file:../../../tmp/trkvst/fcl
 # ----------------------------------------------------------------------------------------------------
 
-|---------------+----------------------------------------------------------------|
-| short dsid    | SAM definition name                                            |
-|---------------+----------------------------------------------------------------|
-| cele0b2s41r00 | dig.mu2e.CeEndpointMix2BBSignal.MDC2020r_perfect_v1_0.art      |
-| cele0b2s42r00 | Diag                                                           |
-| cele0b2s43r00 | Trk                                                            |
-| cele0b2s44r00 | Calo                                                           |
-| cele0b2s45r00 | dig.mu2e.CeEndpointMix2BBUntriggered.MDC2020r_perfect_v1_0.art |
-|---------------+----------------------------------------------------------------|
+|---------------+---------+----------------------------------------------------------------|
+| short dsid    | fileset | SAM definition name                                            |
+|---------------+---------+----------------------------------------------------------------|
+| cele0b2s41r00 |         | dig.mu2e.CeEndpointMix2BBSignal.MDC2020r_perfect_v1_0.art      |
+|               |     000 | first file of the above                                        |
+|---------------+---------+----------------------------------------------------------------|
+| cele0b2s42r00 |         | Diag                                                           |
+| cele0b2s43r00 |         | Trk                                                            |
+| cele0b2s44r00 |         | Calo                                                           |
+|---------------+---------+----------------------------------------------------------------|
+| cele0b2s45r00 |         | dig.mu2e.CeEndpointMix2BBUntriggered.MDC2020r_perfect_v1_0.art |
+|               |     100 | first 100 files of the above                                   |
+|---------------+---------+----------------------------------------------------------------|
 
-|----------------+--------+---------+--------+-----+------------+------------------------------------------------------------|
-| dsid           | run    | Nevents | Nfiles | job | input dsid | comments                                                   |
-|----------------+--------+---------+--------+-----+------------+------------------------------------------------------------|
-| cele01s31b0r00 | 1210 ? |         |        |     |            | .dts                                                       |
-| cele01s41b2r00 | 1210   |         |        |     |            | digi format dataset                                        |
-|----------------+--------+---------+--------+-----+------------+------------------------------------------------------------|
-| cele0b2s51r01  |        |         |        |     |            | 'Signal' .mcs default reco                                 |
-| cele0b2s51r02  |        |         |        |     |            | 'Signal' .mcs (TZFinder+PhiClusterFinder)                  |
-| [[file:catalog/mcs.mu2e.cele01s53b2.mdc2020.art.files][cele0b2s51r03]]  |        |         |        |     |            | 'Signal' .mcs (DeltaFinder+TZFinder+PhiClusterFinder)      |
-|----------------+--------+---------+--------+-----+------------+------------------------------------------------------------|
-| cele0b2s55r01  |        |         |        |     |            | 'Untriggered' .mcs default reco                            |
-| cele0b2s55r02  |        |         |        |     |            | 'Untriggered' .mcs (TZFinder+PhiClusterFinder)             |
-| [[file:catalog/mcs.mu2e.cele01s53b2.mdc2020.art.files][cele0b2s55r03]]  |        |         |        |     |            | 'Untriggered' .mcs (DeltaFinder+TZFinder+PhiClusterFinder) |
-|----------------+--------+---------+--------+-----+------------+------------------------------------------------------------|
+|---------------+---------+--------+---------+--------+-----+------------+------------------------------------------------------------+------------------|
+| dsid          | fileset |    run | Nevents | Nfiles | job | input dsid | comments                                                   | date             |
+|---------------+---------+--------+---------+--------+-----+------------+------------------------------------------------------------+------------------|
+| cele0b0s31r00 |         | 1210 ? |         |        |     |            | .dts                                                       |                  |
+| cele0b2s41r00 |         |   1210 |         |        |     |            | digi format dataset                                        |                  |
+|---------------+---------+--------+---------+--------+-----+------------+------------------------------------------------------------+------------------|
+| cele0b2s51r01 |         |        |         |        |     |            | 'Signal' .mcs default reco                                 |                  |
+|               |     004 |   1210 |         |        |     |            | 'r04', reprocessing with f9882aa9                          | <2023-02-14 Tue> |
+|---------------+---------+--------+---------+--------+-----+------------+------------------------------------------------------------+------------------|
+| cele0b2s51r02 |         |        |         |        |     |            | 'Signal' .mcs (TZFinder+PhiClusterFinder)                  |                  |
+| [[file:catalog/mcs.mu2e.cele01s53b2.mdc2020.art.files][cele0b2s51r03]] |         |        |         |        |     |            | 'Signal' .mcs (DeltaFinder+TZFinder+PhiClusterFinder)      |                  |
+|---------------+---------+--------+---------+--------+-----+------------+------------------------------------------------------------+------------------|
+| cele0b2s55r01 |         |        |         |        |     |            | 'Untriggered' .mcs default reco                            |                  |
+|               |     100 |        |         |        |     |            | first 100 files reprocessed the default reco               | <2023-02-14 Tue> |
+|---------------+---------+--------+---------+--------+-----+------------+------------------------------------------------------------+------------------|
+| cele0b2s55r02 |         |        |         |        |     |            | 'Untriggered' .mcs (TZFinder+PhiClusterFinder)             |                  |
+| [[file:catalog/mcs.mu2e.cele01s53b2.mdc2020.art.files][cele0b2s55r03]] |         |        |         |        |     |            | 'Untriggered' .mcs (DeltaFinder+TZFinder+PhiClusterFinder) |                  |
+|---------------+---------+--------+---------+--------+-----+------------+------------------------------------------------------------+------------------|
 
 - 'Untriggered' stream was prescaled by x10 file:../../../Production/JobConfig/digitize/OnSpill.fcl::physics.filters.UntriggeredPrescale::
     (assume mdc2020 and Production at the same level)
+
+* jobs:                            
+
+- reco_01 : default reco: (FlagBkgHits+TimeClusterFinder)
+- reco_02 : reco_01+(TimeClusteFinder --> TZClusterFinder+PhiClusterFinder)
+- reco_03 : reco_01+(FlagBkgHits --> DeltaFinder) + (TimeClusteFinder --> TZClusterFinder+PhiClusterFinder)
+- reco_04 : default reco: (FlagBkgHits+TimeClusterFinder), makePH doesn't require the _energysel_ flag
+- reco_05 : reco_04+(TimeClusteFinder --> TZClusterFinder+PhiClusterFinder)
+- reco_06 : reco_04+(FlagBkgHits --> DeltaFinder) + (TimeClusteFinder --> TZClusterFinder+PhiClusterFinder)
+- reco_07 : default reco + <makePH doesn't require the _energysel_ flag> + <PDG-style along-the-wire resolution scaling> + 4SH/CH
+- reco_08 : reco_07 + {TimeClusteFinder --> TZClusterFinder+PhiClusterFinder} 
+- reco_09 : reco_07+(FlagBkgHits --> DeltaFinder) + (TimeClusteFinder --> TZClusterFinder+PhiClusterFinder)
+- reco_0a : reco_04+(FlagBkgHits --> DeltaFinder) + <5 SH/CH>
+
+- stn     : standard stntupling
+
+* stntuples : file:/mu2e/data2/projects/mdc2020/stntuple
+|-------------------+-----------------------------+------------------|
+| dir               | comment                     | date             |
+|-------------------+-----------------------------+------------------|
+| cele0b2s51r01/001 | initial processing with r03 | <2023-01-21 Sat> |
+| cele0b2s51r01/004 | reprocessing with r04       | <2023-02-14 Tue> |
+| cele0b2s55r01/001 | initial processing with r03 | <2023-01-21 Sat> |
+| cele0b2s55r01/004 | reprocessing with r04       | <2023-02-14 Tue> |
+|-------------------+-----------------------------+------------------|
 * ------------------------------------------------------------------------------------------------------
 * dataset format                                                                                     
 ** dig.mu2e.CeEndpointMix2BBSignal.MDC2020r_perfect_v1_0.art :                                       
