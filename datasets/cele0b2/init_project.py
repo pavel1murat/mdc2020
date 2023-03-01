@@ -31,7 +31,8 @@ class Project:
         self.fDataset['cele0b2s45r0000'] = Dataset('dig.mu2e.CeEndpointMix2BBUntriggered.MDC2020r_perfect_v1_0.art','cele0b2s45r0000','local')    # 
 
         self.fDataset['cele0b2s51r01'] = Dataset('mcs.mu2e.cele0b2s51r01.mdc2020.art'                            ,'cele0b2s51r01','local')    # 
-        self.fDataset['cele0b2s51r0104'] = Dataset('mcs.mu2e.cele0b2s51r0104.mdc2020.art'                            ,'cele0b2s51r0104','local')    # 
+        self.fDataset['cele0b2s51r0104'] = Dataset('mcs.mu2e.cele0b2s51r0104.mdc2020.art'                        ,'cele0b2s51r0104','local')    # 
+        self.fDataset['cele0b2s51r0106'] = Dataset('mcs.mu2e.cele0b2s51r0106.mdc2020.art'                        ,'cele0b2s51r0106','local')    # 
         self.fDataset['cele0b2s51r02'] = Dataset('mcs.mu2e.cele0b2s51r02.mdc2020.art'                            ,'cele0b2s51r02','local')    # 
         self.fDataset['cele0b2s51r03'] = Dataset('mcs.mu2e.cele0b2s51r03.mdc2020.art'                            ,'cele0b2s51r03','local')    # 
         self.fDataset['cele0b2s51r04'] = Dataset('mcs.mu2e.cele0b2s51r04.mdc2020.art'                            ,'cele0b2s51r04','local')    # 
@@ -39,10 +40,13 @@ class Project:
         self.fDataset['cele0b2s51r06'] = Dataset('mcs.mu2e.cele0b2s51r06.mdc2020.art'                            ,'cele0b2s51r06','local')    # 
         self.fDataset['cele0b2s51r07'] = Dataset('mcs.mu2e.cele0b2s51r07.mdc2020.art'                            ,'cele0b2s51r07','local')    # 
         self.fDataset['cele0b2s51r08'] = Dataset('mcs.mu2e.cele0b2s51r08.mdc2020.art'                            ,'cele0b2s51r08','local')    # 
-        self.fDataset['cele0b2s51r0905'] = Dataset('mcs.mu2e.cele0b2s51r0905.mdc2020.art'                            ,'cele0b2s51r0905','local')    # 
-        self.fDataset['cele0b2s51r0a05'] = Dataset('mcs.mu2e.cele0b2s51r0a05.mdc2020.art'                            ,'cele0b2s51r0a05','local')    # 
+        self.fDataset['cele0b2s51r0905'] = Dataset('mcs.mu2e.cele0b2s51r0905.mdc2020.art'                        ,'cele0b2s51r0905','local')    # 
+        self.fDataset['cele0b2s51r0906'] = Dataset('mcs.mu2e.cele0b2s51r0906.mdc2020.art'                        ,'cele0b2s51r0906','local')    # 
+        self.fDataset['cele0b2s51r0a05'] = Dataset('mcs.mu2e.cele0b2s51r0a05.mdc2020.art'                        ,'cele0b2s51r0a05','local')    # 
+        self.fDataset['cele0b2s51r0a06'] = Dataset('mcs.mu2e.cele0b2s51r0a06.mdc2020.art'                        ,'cele0b2s51r0a06','local')    # 
                                                                                                                  
         self.fDataset['cele0b2s55r01'] = Dataset('mcs.mu2e.cele0b2s55r01.mdc2020.art'                            ,'cele0b2s55r01','local')    # 
+        self.fDataset['cele0b2s55r0106'] = Dataset('mcs.mu2e.cele0b2s55r0106.mdc2020.art'                        ,'cele0b2s55r0106','local')    # 
         self.fDataset['cele0b2s55r02'] = Dataset('mcs.mu2e.cele0b2s55r02.mdc2020.art'                            ,'cele0b2s55r02','local')    # 
         self.fDataset['cele0b2s55r03'] = Dataset('mcs.mu2e.cele0b2s55r03.mdc2020.art'                            ,'cele0b2s55r03','local')    # 
         self.fDataset['cele0b2s55r04'] = Dataset('mcs.mu2e.cele0b2s55r04.mdc2020.art'                            ,'cele0b2s55r04','local')    # 
@@ -50,10 +54,12 @@ class Project:
         self.fDataset['cele0b2s55r06'] = Dataset('mcs.mu2e.cele0b2s55r06.mdc2020.art'                            ,'cele0b2s55r06','local')    # 
         self.fDataset['cele0b2s55r07'] = Dataset('mcs.mu2e.cele0b2s55r07.mdc2020.art'                            ,'cele0b2s55r07','local')    # 
         self.fDataset['cele0b2s55r08'] = Dataset('mcs.mu2e.cele0b2s55r08.mdc2020.art'                            ,'cele0b2s55r08','local')    # 
-        self.fDataset['cele0b2s55r0904'] = Dataset('mcs.mu2e.cele0b2s55r0904.mdc2020.art'                            ,'cele0b2s55r0904','local')    # 
-        self.fDataset['cele0b2s55r0905'] = Dataset('mcs.mu2e.cele0b2s55r0905.mdc2020.art'                            ,'cele0b2s55r0905','local')    # 
-        self.fDataset['cele0b2s55r0a04'] = Dataset('mcs.mu2e.cele0b2s55r0a04.mdc2020.art'                            ,'cele0b2s55r0a04','local')    # 
-        self.fDataset['cele0b2s55r0a05'] = Dataset('mcs.mu2e.cele0b2s55r0a05.mdc2020.art'                            ,'cele0b2s55r0a05','local')    # 
+        self.fDataset['cele0b2s55r0904'] = Dataset('mcs.mu2e.cele0b2s55r0904.mdc2020.art'                        ,'cele0b2s55r0904','local')    # 
+        self.fDataset['cele0b2s55r0905'] = Dataset('mcs.mu2e.cele0b2s55r0905.mdc2020.art'                        ,'cele0b2s55r0905','local')    # 
+        self.fDataset['cele0b2s55r0906'] = Dataset('mcs.mu2e.cele0b2s55r0906.mdc2020.art'                        ,'cele0b2s55r0906','local')    # 
+        self.fDataset['cele0b2s55r0a04'] = Dataset('mcs.mu2e.cele0b2s55r0a04.mdc2020.art'                        ,'cele0b2s55r0a04','local')    # 
+        self.fDataset['cele0b2s55r0a05'] = Dataset('mcs.mu2e.cele0b2s55r0a05.mdc2020.art'                        ,'cele0b2s55r0a05','local')    # 
+        self.fDataset['cele0b2s55r0a06'] = Dataset('mcs.mu2e.cele0b2s55r0a06.mdc2020.art'                        ,'cele0b2s55r0a06','local')    # 
 #------------------------------------------------------------------------------
 # init first stage. a Stage can have one or several jobs associated with it
 #------------------------------------------------------------------------------        
@@ -140,7 +146,7 @@ class Project:
         desc                         = project+'.'+job.input_dataset().id()+'.'+s.name()+'_'+job.name()
         job.fDescription             = desc;
 #------------------------------------------------------------------------------
-# s5:reco_s51r04 : default reco, no E<3.5keV cut
+# s5:reco_04 : default reco, no E<3.5keV cut
 # for a job with an input dataset, 'job.fNInputFiles' is defined by the input dataset
 #------------------------------------------------------------------------------        
         job                          = s.new_job('reco_04','cele0b2s41r0000');
@@ -164,7 +170,7 @@ class Project:
         desc                         = project+'.'+job.input_dataset().id()+'.'+s.name()+'_'+job.name()
         job.fDescription             = desc;
 #------------------------------------------------------------------------------
-# s5:reco_s51r05 : reco with FlagBkgHits+TZFinder+PhiClusterFinder, no Ehit<3.5keV cut in makePH
+# s5:reco_05 : reco with FlagBkgHits+TZFinder+PhiClusterFinder, no Ehit<3.5keV cut in makePH
 # for a job with an input dataset, 'job.fNInputFiles' is defined by the input dataset
 #------------------------------------------------------------------------------        
         job                          = s.new_job('reco_s51r05','cele0b2s41r0000');
@@ -338,6 +344,32 @@ class Project:
 
         job.fOutputStream            = [ 'defaultOutput'                 ]
         job.fOutputDsID              = [ idsid                           ]
+        job.fOutputFnPattern         = [ 'nts.mu2e.'+job.fOutputDsID[0]+'.'+project ]
+        job.fOutputFormat            = [ 'stn'                           ]
+
+        desc                         = project+'.'+job.input_dataset().id()+'.'+s.name()+'_'+job.name()
+        job.fDescription             = desc;
+#------------------------------------------------------------------------------
+# s5:cele0b2s51r0106:stn : default reco, reprocessing v6
+# for a job with an input dataset, 'job.fNInputFiles' is defined by the input dataset
+#------------------------------------------------------------------------------        
+        idsid                        = 'cele0b2s51r0106';
+        job                          = s.new_job('stn',idsid);
+
+        job.fRunNumber               = 1210;
+        job.fBaseFcl                 = project+'/datasets/'+familyID+'/'+s.name()+'_stn_'+familyID+'.fcl'
+        job.fRecoVersion             = '09'
+
+        job.fNInputFiles             = -1                                        # placeholder, 
+        job.fMaxInputFilesPerSegment =  1                                        # process each run separately
+        job.fNEventsPerSegment       =  1000000                                  # placeholder
+        job.fResample                = 'no'                                      # yes/no
+        job.fMaxMemory               = '2000MB'
+        job.fRequestedTime           = '12h'
+        job.fIfdh                    = 'xrootd'                                  # ifdh/xrootd
+
+        job.fOutputStream            = [ 'defaultOutput'                 ]
+        job.fOutputDsID              = [ idsid                           ]       # ntupling: odsid=idsid
         job.fOutputFnPattern         = [ 'nts.mu2e.'+job.fOutputDsID[0]+'.'+project ]
         job.fOutputFormat            = [ 'stn'                           ]
 
@@ -547,10 +579,62 @@ class Project:
         desc                         = project+'.'+job.input_dataset().id()+'.'+s.name()+'_'+job.name()
         job.fDescription             = desc;
 #------------------------------------------------------------------------------
+# s5:cele0b2s51r0906:stn : default reco, reprocessing v6
+# for a job with an input dataset, 'job.fNInputFiles' is defined by the input dataset
+#------------------------------------------------------------------------------        
+        idsid                        = 'cele0b2s51r0906';
+        job                          = s.new_job('stn',idsid);
+
+        job.fRunNumber               = 1210;
+        job.fBaseFcl                 = project+'/datasets/'+familyID+'/'+s.name()+'_stn_'+familyID+'.fcl'
+        job.fRecoVersion             = '09'
+
+        job.fNInputFiles             = -1                                        # placeholder, 
+        job.fMaxInputFilesPerSegment =  1                                        # process each run separately
+        job.fNEventsPerSegment       =  1000000                                  # placeholder
+        job.fResample                = 'no'                                      # yes/no
+        job.fMaxMemory               = '2000MB'
+        job.fRequestedTime           = '12h'
+        job.fIfdh                    = 'xrootd'                                  # ifdh/xrootd
+
+        job.fOutputStream            = [ 'defaultOutput'                 ]
+        job.fOutputDsID              = [ idsid                           ]       # ntupling: odsid=idsid
+        job.fOutputFnPattern         = [ 'nts.mu2e.'+job.fOutputDsID[0]+'.'+project ]
+        job.fOutputFormat            = [ 'stn'                           ]
+
+        desc                         = project+'.'+job.input_dataset().id()+'.'+s.name()+'_'+job.name()
+        job.fDescription             = desc;
+#------------------------------------------------------------------------------
 # s5:cele0b2s51r0a05:stn : DeltaFinder+TZFinder+PhiClusterFinder
 # for a job with an input dataset, 'job.fNInputFiles' is defined by the input dataset
 #------------------------------------------------------------------------------        
         idsid                        = 'cele0b2s51r0a05';
+        job                          = s.new_job('stn',idsid);
+
+        job.fRunNumber               = 1210;
+        job.fBaseFcl                 = project+'/datasets/'+familyID+'/'+s.name()+'_stn_'+familyID+'.fcl'
+        job.fRecoVersion             = '0a'
+
+        job.fNInputFiles             = -1                                        # placeholder, 
+        job.fMaxInputFilesPerSegment =  1                                        # process each run separately
+        job.fNEventsPerSegment       =  1000000                                  # placeholder
+        job.fResample                = 'no'                                      # yes/no
+        job.fMaxMemory               = '2000MB'
+        job.fRequestedTime           = '12h'
+        job.fIfdh                    = 'xrootd'                                  # ifdh/xrootd
+
+        job.fOutputStream            = [ 'defaultOutput'                 ]
+        job.fOutputDsID              = [ idsid                           ]       # ntupling: odsid=idsid
+        job.fOutputFnPattern         = [ 'nts.mu2e.'+job.fOutputDsID[0]+'.'+project ]
+        job.fOutputFormat            = [ 'stn'                           ]
+
+        desc                         = project+'.'+job.input_dataset().id()+'.'+s.name()+'_'+job.name()
+        job.fDescription             = desc;
+#------------------------------------------------------------------------------
+# s5:cele0b2s51r0a06:stn : DeltaFinder+TimeClusterFinder
+# for a job with an input dataset, 'job.fNInputFiles' is defined by the input dataset
+#------------------------------------------------------------------------------        
+        idsid                        = 'cele0b2s51r0a06';
         job                          = s.new_job('stn',idsid);
 
         job.fRunNumber               = 1210;
@@ -863,6 +947,31 @@ class Project:
         desc                         = project+'.'+job.input_dataset().id()+'.'+s.name()+'_'+job.name()
         job.fDescription             = desc;
 #------------------------------------------------------------------------------
+# s5:cele0b2s55r0106:stn : default reco
+# for a job with an input dataset, 'job.fNInputFiles' is defined by the input dataset
+#------------------------------------------------------------------------------        
+        idsid                        = 'cele0b2s55r0106'
+        job                          = s.new_job('stn',idsid);
+
+        job.fRunNumber               = 1210;
+        job.fBaseFcl                 = project+'/datasets/'+familyID+'/'+s.name()+'_stn_'+familyID+'.fcl'
+
+        job.fNInputFiles             = -1                                        # placeholder, 
+        job.fMaxInputFilesPerSegment =  100                                      # process each run separately
+        job.fNEventsPerSegment       =  1000000                                  # placeholder
+        job.fResample                = 'no'                                      # yes/no
+        job.fMaxMemory               = '2000MB'
+        job.fRequestedTime           = '12h'
+        job.fIfdh                    = 'xrootd'                                  # ifdh/xrootd
+
+        job.fOutputStream            = [ 'defaultOutput'                 ]
+        job.fOutputDsID              = [ idsid                           ]
+        job.fOutputFnPattern         = [ 'nts.mu2e.'+job.fOutputDsID[0]+'.'+project ]
+        job.fOutputFormat            = [ 'stn'                           ]
+
+        desc                         = project+'.'+job.input_dataset().id()+'.'+s.name()+'_'+job.name()
+        job.fDescription             = desc;
+#------------------------------------------------------------------------------
 # s5:cele0b2s55r02:stn : (TZClusterFinder+PhiClusterFinder)
 # for a job with an input dataset, 'job.fNInputFiles' is defined by the input dataset
 #------------------------------------------------------------------------------        
@@ -1063,6 +1172,31 @@ class Project:
         desc                         = project+'.'+job.input_dataset().id()+'.'+s.name()+'_'+job.name()
         job.fDescription             = desc;
 #------------------------------------------------------------------------------
+# s5:cele0b2s55r0906:stn : default reco
+# for a job with an input dataset, 'job.fNInputFiles' is defined by the input dataset
+#------------------------------------------------------------------------------        
+        idsid                        = 'cele0b2s55r0906'
+        job                          = s.new_job('stn',idsid);
+
+        job.fRunNumber               = 1210;
+        job.fBaseFcl                 = project+'/datasets/'+familyID+'/'+s.name()+'_stn_'+familyID+'.fcl'
+
+        job.fNInputFiles             = -1                                        # placeholder, 
+        job.fMaxInputFilesPerSegment =  100                                      # process each run separately
+        job.fNEventsPerSegment       =  1000000                                  # placeholder
+        job.fResample                = 'no'                                      # yes/no
+        job.fMaxMemory               = '2000MB'
+        job.fRequestedTime           = '12h'
+        job.fIfdh                    = 'xrootd'                                  # ifdh/xrootd
+
+        job.fOutputStream            = [ 'defaultOutput'                 ]
+        job.fOutputDsID              = [ idsid                           ]
+        job.fOutputFnPattern         = [ 'nts.mu2e.'+job.fOutputDsID[0]+'.'+project ]
+        job.fOutputFormat            = [ 'stn'                           ]
+
+        desc                         = project+'.'+job.input_dataset().id()+'.'+s.name()+'_'+job.name()
+        job.fDescription             = desc;
+#------------------------------------------------------------------------------
 # s5:cele0b2s55r0a04:stn : DeltaFinder+TZFinder+PhiClusterFinder
 # for a job with an input dataset, 'job.fNInputFiles' is defined by the input dataset
 #------------------------------------------------------------------------------        
@@ -1107,6 +1241,31 @@ class Project:
 
         job.fOutputStream            = [ 'defaultOutput'                 ]
         job.fOutputDsID              = [ idsid                           ]       # ntupling: odsid=idsid
+        job.fOutputFnPattern         = [ 'nts.mu2e.'+job.fOutputDsID[0]+'.'+project ]
+        job.fOutputFormat            = [ 'stn'                           ]
+
+        desc                         = project+'.'+job.input_dataset().id()+'.'+s.name()+'_'+job.name()
+        job.fDescription             = desc;
+#------------------------------------------------------------------------------
+# s5:cele0b2s55r0a06:stn : default reco
+# for a job with an input dataset, 'job.fNInputFiles' is defined by the input dataset
+#------------------------------------------------------------------------------        
+        idsid                        = 'cele0b2s55r0a06'
+        job                          = s.new_job('stn',idsid);
+
+        job.fRunNumber               = 1210;
+        job.fBaseFcl                 = project+'/datasets/'+familyID+'/'+s.name()+'_stn_'+familyID+'.fcl'
+
+        job.fNInputFiles             = -1                                        # placeholder, 
+        job.fMaxInputFilesPerSegment =  100                                      # process each run separately
+        job.fNEventsPerSegment       =  1000000                                  # placeholder
+        job.fResample                = 'no'                                      # yes/no
+        job.fMaxMemory               = '2000MB'
+        job.fRequestedTime           = '12h'
+        job.fIfdh                    = 'xrootd'                                  # ifdh/xrootd
+
+        job.fOutputStream            = [ 'defaultOutput'                 ]
+        job.fOutputDsID              = [ idsid                           ]
         job.fOutputFnPattern         = [ 'nts.mu2e.'+job.fOutputDsID[0]+'.'+project ]
         job.fOutputFormat            = [ 'stn'                           ]
 

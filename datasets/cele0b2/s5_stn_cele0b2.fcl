@@ -49,6 +49,7 @@ physics : {
             trackCollTag         : [ "KFFDe" ]
             trackSeedCollTag     : [ "KSFDe" ]
             trackTsCollTag       : [ "KSFDe" ]
+            trackTsBlockName     : [ "KSFBlock" ]
 
 	    primaryParticleTag   : ""
 	}

@@ -3,6 +3,7 @@
 # - use FlagBkgHits to flag compton electron hits
 # - use TimeClusterFinder for time clustering
 # - no  PhiClusterFinder 
+# - add trigger
 #------------------------------------------------------------------------------
 BEGIN_PROLOG
   INPUT_MODULE  @protect_ignore: RootInput        # choices: EmptyEvent / RootInput
@@ -11,7 +12,7 @@ END_PROLOG
 
 #include "Stntuple/fcl/stntuple.fcl"
 
-process_name : S5Reco01
+process_name : S5Reco
 
 physics : {
 
@@ -54,7 +55,7 @@ physics : {
 		  , KFFDe                                # final Kalman filter fit
 		 ]
 
-    trigger_paths : [ p1            ]
+#    trigger_paths : [ p1            ]
 
     e1            : [ defaultOutput ]
     end_paths     : [ e1            ]
@@ -62,12 +63,24 @@ physics : {
 }
 physics.producers.makePH.StrawHitSelectionBits : ["EnergySelection","TimeSelection"] ## the default
 
+# physics.producers.FlagBkgHits.BkgMVACut                   : 10.  ## turn off the ANN
+
+# physics.producers.TZClusterFinder.clusterThresh           : 10     # min N straw hits
+# physics.producers.TZClusterFinder.runDisplay              : 0
+# physics.producers.TZClusterFinder.doComptonClean          : 0
+
+# physics.producers.PhiClusterFinder.useTC                  : true
+# physics.producers.PhiClusterFinder.TimeClusterCollection  : "TZClusterFinder"
+
 physics.producers.HelixFinderDe.ComboHitCollection       : "makePH"
 physics.producers.HelixFinderDe.TimeClusterCollection    : "TimeClusterFinderDe"  ## "PhiClusterFinder"
 #------------------------------------------------------------------------------
 services.GeometryService.inputFile    : "pbar2m/common/geom_baseline.txt"
 services.TFileService.fileName        : "nts.user.cele01s51b0.mdc2020.001210_00000000.root"
 outputs.defaultOutput.fileName        : "mcs.user.cele01s51b0.mdc2020.001210_00000000.art"
+
+#include "Offline/gen/fcl/Trigger/OnSpillTrigMenu/OnSpillTrigMenu.fcl"
+physics.trigger_paths[0] : p1
 
 # Uncomment the below lines if one wants a truncated report i.e with the "Run,Event,SubRun" numbers not mentioned for every event
 # services.message.destinations.log.categories.ArtReport.reportEvery : 50

@@ -14,7 +14,7 @@ END_PROLOG
 
 #include "Stntuple/fcl/stntuple.fcl"
 
-process_name : S5Reco
+process_name : S5Reco0ADisplay
 
 source : { module_type : RootInput 
     firstRun    : 1210
@@ -89,13 +89,12 @@ physics.analyzers.MuHitDisplay.primaryParticleTag : ""
 physics.analyzers.MuHitDisplay.timeClusterCollTag : "TimeClusterFinderDe" ## "TZClusterFinder" ## 
 physics.analyzers.MuHitDisplay.phiClusterCollTag  : ""  ## "PhiClusterFinder" ## 
 physics.analyzers.MuHitDisplay.helixSeedCollTag   : "MHFinderDe"
-physics.analyzers.MuHitDisplay.trackCollTag       : "KSFDe"
 physics.analyzers.MuHitDisplay.ksfCollTag         : "KSFDe"
 physics.analyzers.MuHitDisplay.kffCollTag         : "KFFDe"
 # physics.analyzers.MuHitDisplay.rootMacro          : "pbar2m/scripts/display_phi.C"
 #------------------------------------------------------------------------------
 services.GeometryService.inputFile    : "pbar2m/common/geom_baseline.txt"
-services.TFileService.fileName        : "nts.user.cele0b2s53r04.mdc2020.001210_00000000.root"
+# services.TFileService.fileName        : "nts.user.cele0b2s53r04.mdc2020.001210_00000000.root"
 outputs.defaultOutput.fileName        : "mcs.user.cele0b2s53r04.mdc2020.001210_00000000.art"
 
 # Uncomment the below lines if one wants a truncated report i.e with the "Run,Event,SubRun" numbers not mentioned for every event
