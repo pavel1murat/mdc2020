@@ -1,10 +1,836 @@
 #
-
-
 #+startup:fold
 * grid output directory: file:/pnfs/mu2e/scratch/users/murat/workflow
-* ----------------------------------------------------------------------------------------------------
-* <2022-11-28 Mon> *41213122 SUBMITTED* : cosme01.s1_stn                  /   9  2000MB:12h:xrootd 
+* log files            : file:/mu2e/data2/projects/mdc2020/
+* -----------------------------------------------------------------------------------------------------
+* <2023-02-24 Fri> *57386183 SUBMITTED* : mdc2020.cele0b2s45r0000.s5_reco_0a:0100 2000MB:12h:xrootd 
+murat@mu2egpvm05:/mu2e/app/users/murat/muse>grim/scripts/submit_job.py --project=mdc2020 --dsid=cele0b2s45r0000 --stage=s5 --job=reco_0a --fileset=0100 --doit=.
+2023/02/24 09:57:23 [ GridTool::ParseParameters ] Project      = mdc2020
+2023/02/24 09:57:23 [ GridTool::ParseParameters ] Verbose      = 1
+2023/02/24 09:57:23 [ GridTool::ParseParameters ] Doit         = .
+2023/02/24 09:57:23 [ GridTool::ParseParameters ] FamilyID     = cele0b2
+2023/02/24 09:57:23 [ GridTool::ParseParameters ] InputDsid    = xxx_xxxx
+2023/02/24 09:57:23 [ GridTool::ParseParameters ] ProjectDir   = mdc2020/datasets/cele0b2
+2023/02/24 09:57:23 [ GridTool::ParseParameters ] Recover      = None
+2023/02/24 09:57:23 [ GridTool::ParseParameters ] Fileset      = 0100
+2023/02/24 09:57:23 [ GridTool::ParseParameters ] ------------------------------------- Done
+2023/02/24 09:57:24 [ GridTool::submit_grid_job ] executing :tar -tjf /pnfs/mu2e/scratch/users/murat/fcl/mdc2020/cnf.murat.cele0b2s45r0000.s5_reco_0a.mdc2020.0100.fcl.tbz | wc -l
+2023/02/24 09:57:24 [ GridTool::submit_grid_job ] nsegments: 1
+submit_grid_job: parms: ['grim/scripts/submit_grid_job', 'mdc2020', 'cele0b2s45r0000', 's5:reco_0a:0100', '2000MB:12h:xrootd', '.']
+2023/02/24 10:03:26 [ GridTool::submit_grid_job ] submission finished, process.returncode: 0
+2023/02/24 10:03:26 [ GridTool::submit_grid_job ] submission_record:
+Fri Feb 24 09:57:24 CST 2023
+mkdir /pnfs/mu2e/scratch/users/murat/workflow/mdc2020.cele0b2s45r0000.s5_reco_0a
+mkdir /pnfs/mu2e/scratch/users/murat/workflow/mdc2020.cele0b2s45r0000.s5_reco_0a/outstage
+Will use the outstage directory = /pnfs/mu2e/scratch/users/murat/workflow/mdc2020.cele0b2s45r0000.s5_reco_0a/outstage
+Will use ifdh version v2_6_10
+Will use mu2efilename version v3_8
+Will use mu2etools version v4_04_00
+Will use ifdhc_config version v2_6_17
+Command:  jobsub_submit --memory 2000MB --group mu2e --disk 30GB --resource-provides usage_model=OPPORTUNISTIC,DEDICATED --expected-lifetime 12h -l priority=0 -e XRD_STREAMTIMEOUT=300 -e EXPERIMENT=mu2e -e MU2EGRID_MU2ESETUP=/cvmfs/mu2e.opensciencegrid.org/setupmu2e-art.sh -e MU2EGRID_IFDHC_CONFIG_VERSION=v2_6_17 -e MU2EGRID_CODE=/mu2e/data/personal/murat/grid/mdc2020/mdc2020.code.murat.9a1df03f.tbz -e IFDH_VERSION=v2_6_10 -e MU2EGRID_WFOUTSTAGE=/pnfs/mu2e/scratch/users/murat/workflow/mdc2020.cele0b2s45r0000.s5_reco_0a/outstage -e MU2EGRID_FCLTAR=/pnfs/mu2e/scratch/users/murat/fcl/mdc2020/cnf.murat.cele0b2s45r0000.s5_reco_0a.mdc2020.0100.fcl.tbz -e MU2EGRID_ERRORDELAY=10 -e MU2EGRID_INPUTLIST=sDCvcrtza9 -e MU2EGRID_DEBUG=0 -e MU2EGRID_DSCONF=mdc2020 -e MU2EGRID_XROOTD=1 -e MU2EGRID_USERSETUP=Code/setup.sh -e MU2EGRID_DSOWNER=murat -e MU2EGRID_TRANSFER_ALL=1 -e MU2EGRID_MU2ETOOLS_VERSION=v4_04_00 -e MU2EGRID_MU2EFILENAME_VERSION=v3_8 -N 1 -f dropbox:///tmp/sDCvcrtza9 --tar_file_name dropbox:///mu2e/data/personal/murat/grid/mdc2020/mdc2020.code.murat.9a1df03f.tbz file:///cvmfs/mu2e.opensciencegrid.org/artexternals/mu2egrid/v8_01_02/bin/impl/mu2eprodsys.sh
+Submitting....
+sDCvcrtza9
+Using bearer token located at /tmp/bt_token_mu2e_Analysis_5339 to authenticate to RCDS
+Checking to see if uploaded file is published on RCDS.
+Could not locate uploaded file on RCDS.  Will retry in 30 seconds.
+Found uploaded file on RCDS.
+Using bearer token located at /tmp/bt_token_mu2e_Analysis_5339 to authenticate to RCDS
+Checking to see if uploaded file is published on RCDS.
+Could not locate uploaded file on RCDS.  Will retry in 30 seconds.
+Could not locate uploaded file on RCDS.  Will retry in 30 seconds.
+Found uploaded file on RCDS.
+Submitting job(s).
+1 job(s) submitted to cluster 57386183.
+Use job id 57386183.0@jobsub01.fnal.gov to retrieve output
+
+Fri Feb 24 09:57:24 CST 2023
+mkdir /pnfs/mu2e/scratch/users/murat/workflow/mdc2020.cele0b2s45r0000.s5_reco_0a
+mkdir /pnfs/mu2e/scratch/users/murat/workflow/mdc2020.cele0b2s45r0000.s5_reco_0a/outstage
+Will use the outstage directory = /pnfs/mu2e/scratch/users/murat/workflow/mdc2020.cele0b2s45r0000.s5_reco_0a/outstage
+Will use ifdh version v2_6_10
+Will use mu2efilename version v3_8
+Will use mu2etools version v4_04_00
+Will use ifdhc_config version v2_6_17
+Command:  jobsub_submit --memory 2000MB --group mu2e --disk 30GB --resource-provides usage_model=OPPORTUNISTIC,DEDICATED --expected-lifetime 12h -l priority=0 -e XRD_STREAMTIMEOUT=300 -e EXPERIMENT=mu2e -e MU2EGRID_MU2ESETUP=/cvmfs/mu2e.opensciencegrid.org/setupmu2e-art.sh -e MU2EGRID_IFDHC_CONFIG_VERSION=v2_6_17 -e MU2EGRID_CODE=/mu2e/data/personal/murat/grid/mdc2020/mdc2020.code.murat.9a1df03f.tbz -e IFDH_VERSION=v2_6_10 -e MU2EGRID_WFOUTSTAGE=/pnfs/mu2e/scratch/users/murat/workflow/mdc2020.cele0b2s45r0000.s5_reco_0a/outstage -e MU2EGRID_FCLTAR=/pnfs/mu2e/scratch/users/murat/fcl/mdc2020/cnf.murat.cele0b2s45r0000.s5_reco_0a.mdc2020.0100.fcl.tbz -e MU2EGRID_ERRORDELAY=10 -e MU2EGRID_INPUTLIST=sDCvcrtza9 -e MU2EGRID_DEBUG=0 -e MU2EGRID_DSCONF=mdc2020 -e MU2EGRID_XROOTD=1 -e MU2EGRID_USERSETUP=Code/setup.sh -e MU2EGRID_DSOWNER=murat -e MU2EGRID_TRANSFER_ALL=1 -e MU2EGRID_MU2ETOOLS_VERSION=v4_04_00 -e MU2EGRID_MU2EFILENAME_VERSION=v3_8 -N 1 -f dropbox:///tmp/sDCvcrtza9 --tar_file_name dropbox:///mu2e/data/personal/murat/grid/mdc2020/mdc2020.code.murat.9a1df03f.tbz file:///cvmfs/mu2e.opensciencegrid.org/artexternals/mu2egrid/v8_01_02/bin/impl/mu2eprodsys.sh
+Submitting....
+sDCvcrtza9
+Using bearer token located at /tmp/bt_token_mu2e_Analysis_5339 to authenticate to RCDS
+Checking to see if uploaded file is published on RCDS.
+Could not locate uploaded file on RCDS.  Will retry in 30 seconds.
+Found uploaded file on RCDS.
+Using bearer token located at /tmp/bt_token_mu2e_Analysis_5339 to authenticate to RCDS
+Checking to see if uploaded file is published on RCDS.
+Could not locate uploaded file on RCDS.  Will retry in 30 seconds.
+Could not locate uploaded file on RCDS.  Will retry in 30 seconds.
+Found uploaded file on RCDS.
+Submitting job(s).
+1 job(s) submitted to cluster 57386183.
+Use job id 57386183.0@jobsub01.fnal.gov to retrieve output
+2023/02/24 10:03:26 [ GridTool::submit_grid_job ] jobid: 57386183 , writing to json nsegments = 1
+2023/02/24 10:03:26 [ GridTool::submit_grid_job ] written status file: tmp/mdc2020/grid_job_status/57386183
+* <2023-02-24 Fri> *57386179 COMPLETED* : mdc2020.cele0b2s45r0000.s5_reco_09:0100 2000MB:12h:xrootd 
+murat@mu2egpvm05:/mu2e/app/users/murat/muse>grim/scripts/submit_job.py --project=mdc2020 --dsid=cele0b2s45r0000 --stage=s5 --job=reco_09 --fileset=0100 --doit=.
+2023/02/24 09:38:33 [ GridTool::ParseParameters ] Project      = mdc2020
+2023/02/24 09:38:33 [ GridTool::ParseParameters ] Verbose      = 1
+2023/02/24 09:38:33 [ GridTool::ParseParameters ] Doit         = .
+2023/02/24 09:38:33 [ GridTool::ParseParameters ] FamilyID     = cele0b2
+2023/02/24 09:38:33 [ GridTool::ParseParameters ] InputDsid    = xxx_xxxx
+2023/02/24 09:38:33 [ GridTool::ParseParameters ] ProjectDir   = mdc2020/datasets/cele0b2
+2023/02/24 09:38:33 [ GridTool::ParseParameters ] Recover      = None
+2023/02/24 09:38:33 [ GridTool::ParseParameters ] Fileset      = 0100
+2023/02/24 09:38:33 [ GridTool::ParseParameters ] ------------------------------------- Done
+2023/02/24 09:38:33 [ GridTool::submit_grid_job ] executing :tar -tjf /pnfs/mu2e/scratch/users/murat/fcl/mdc2020/cnf.murat.cele0b2s45r0000.s5_reco_09.mdc2020.0100.fcl.tbz | wc -l
+2023/02/24 09:38:33 [ GridTool::submit_grid_job ] nsegments: 1
+submit_grid_job: parms: ['grim/scripts/submit_grid_job', 'mdc2020', 'cele0b2s45r0000', 's5:reco_09:0100', '2000MB:12h:xrootd', '.']
+2023/02/24 09:44:09 [ GridTool::submit_grid_job ] submission finished, process.returncode: 0
+2023/02/24 09:44:09 [ GridTool::submit_grid_job ] submission_record:
+Fri Feb 24 09:38:33 CST 2023
+mkdir /pnfs/mu2e/scratch/users/murat/workflow/mdc2020.cele0b2s45r0000.s5_reco_09
+mkdir /pnfs/mu2e/scratch/users/murat/workflow/mdc2020.cele0b2s45r0000.s5_reco_09/outstage
+Will use the outstage directory = /pnfs/mu2e/scratch/users/murat/workflow/mdc2020.cele0b2s45r0000.s5_reco_09/outstage
+Will use ifdh version v2_6_10
+Will use mu2efilename version v3_8
+Will use mu2etools version v4_04_00
+Will use ifdhc_config version v2_6_17
+Command:  jobsub_submit --memory 2000MB --group mu2e --disk 30GB --resource-provides usage_model=OPPORTUNISTIC,DEDICATED --expected-lifetime 12h -l priority=0 -e XRD_STREAMTIMEOUT=300 -e EXPERIMENT=mu2e -e MU2EGRID_MU2ESETUP=/cvmfs/mu2e.opensciencegrid.org/setupmu2e-art.sh -e MU2EGRID_IFDHC_CONFIG_VERSION=v2_6_17 -e MU2EGRID_CODE=/mu2e/data/personal/murat/grid/mdc2020/mdc2020.code.murat.9a1df03f.tbz -e IFDH_VERSION=v2_6_10 -e MU2EGRID_WFOUTSTAGE=/pnfs/mu2e/scratch/users/murat/workflow/mdc2020.cele0b2s45r0000.s5_reco_09/outstage -e MU2EGRID_FCLTAR=/pnfs/mu2e/scratch/users/murat/fcl/mdc2020/cnf.murat.cele0b2s45r0000.s5_reco_09.mdc2020.0100.fcl.tbz -e MU2EGRID_ERRORDELAY=10 -e MU2EGRID_INPUTLIST=UK2ZUZike5 -e MU2EGRID_DEBUG=0 -e MU2EGRID_DSCONF=mdc2020 -e MU2EGRID_XROOTD=1 -e MU2EGRID_USERSETUP=Code/setup.sh -e MU2EGRID_DSOWNER=murat -e MU2EGRID_TRANSFER_ALL=1 -e MU2EGRID_MU2ETOOLS_VERSION=v4_04_00 -e MU2EGRID_MU2EFILENAME_VERSION=v3_8 -N 1 -f dropbox:///tmp/UK2ZUZike5 --tar_file_name dropbox:///mu2e/data/personal/murat/grid/mdc2020/mdc2020.code.murat.9a1df03f.tbz file:///cvmfs/mu2e.opensciencegrid.org/artexternals/mu2egrid/v8_01_02/bin/impl/mu2eprodsys.sh
+Submitting....
+UK2ZUZike5
+Using bearer token located at /tmp/bt_token_mu2e_Analysis_5339 to authenticate to RCDS
+Checking to see if uploaded file is published on RCDS.
+Could not locate uploaded file on RCDS.  Will retry in 30 seconds.
+Found uploaded file on RCDS.
+Using bearer token located at /tmp/bt_token_mu2e_Analysis_5339 to authenticate to RCDS
+Checking to see if uploaded file is published on RCDS.
+Could not locate uploaded file on RCDS.  Will retry in 30 seconds.
+Could not locate uploaded file on RCDS.  Will retry in 30 seconds.
+Found uploaded file on RCDS.
+Submitting job(s).
+1 job(s) submitted to cluster 57386179.
+Use job id 57386179.0@jobsub01.fnal.gov to retrieve output
+
+Fri Feb 24 09:38:33 CST 2023
+mkdir /pnfs/mu2e/scratch/users/murat/workflow/mdc2020.cele0b2s45r0000.s5_reco_09
+mkdir /pnfs/mu2e/scratch/users/murat/workflow/mdc2020.cele0b2s45r0000.s5_reco_09/outstage
+Will use the outstage directory = /pnfs/mu2e/scratch/users/murat/workflow/mdc2020.cele0b2s45r0000.s5_reco_09/outstage
+Will use ifdh version v2_6_10
+Will use mu2efilename version v3_8
+Will use mu2etools version v4_04_00
+Will use ifdhc_config version v2_6_17
+Command:  jobsub_submit --memory 2000MB --group mu2e --disk 30GB --resource-provides usage_model=OPPORTUNISTIC,DEDICATED --expected-lifetime 12h -l priority=0 -e XRD_STREAMTIMEOUT=300 -e EXPERIMENT=mu2e -e MU2EGRID_MU2ESETUP=/cvmfs/mu2e.opensciencegrid.org/setupmu2e-art.sh -e MU2EGRID_IFDHC_CONFIG_VERSION=v2_6_17 -e MU2EGRID_CODE=/mu2e/data/personal/murat/grid/mdc2020/mdc2020.code.murat.9a1df03f.tbz -e IFDH_VERSION=v2_6_10 -e MU2EGRID_WFOUTSTAGE=/pnfs/mu2e/scratch/users/murat/workflow/mdc2020.cele0b2s45r0000.s5_reco_09/outstage -e MU2EGRID_FCLTAR=/pnfs/mu2e/scratch/users/murat/fcl/mdc2020/cnf.murat.cele0b2s45r0000.s5_reco_09.mdc2020.0100.fcl.tbz -e MU2EGRID_ERRORDELAY=10 -e MU2EGRID_INPUTLIST=UK2ZUZike5 -e MU2EGRID_DEBUG=0 -e MU2EGRID_DSCONF=mdc2020 -e MU2EGRID_XROOTD=1 -e MU2EGRID_USERSETUP=Code/setup.sh -e MU2EGRID_DSOWNER=murat -e MU2EGRID_TRANSFER_ALL=1 -e MU2EGRID_MU2ETOOLS_VERSION=v4_04_00 -e MU2EGRID_MU2EFILENAME_VERSION=v3_8 -N 1 -f dropbox:///tmp/UK2ZUZike5 --tar_file_name dropbox:///mu2e/data/personal/murat/grid/mdc2020/mdc2020.code.murat.9a1df03f.tbz file:///cvmfs/mu2e.opensciencegrid.org/artexternals/mu2egrid/v8_01_02/bin/impl/mu2eprodsys.sh
+Submitting....
+UK2ZUZike5
+Using bearer token located at /tmp/bt_token_mu2e_Analysis_5339 to authenticate to RCDS
+Checking to see if uploaded file is published on RCDS.
+Could not locate uploaded file on RCDS.  Will retry in 30 seconds.
+Found uploaded file on RCDS.
+Using bearer token located at /tmp/bt_token_mu2e_Analysis_5339 to authenticate to RCDS
+Checking to see if uploaded file is published on RCDS.
+Could not locate uploaded file on RCDS.  Will retry in 30 seconds.
+Could not locate uploaded file on RCDS.  Will retry in 30 seconds.
+Found uploaded file on RCDS.
+Submitting job(s).
+1 job(s) submitted to cluster 57386179.
+Use job id 57386179.0@jobsub01.fnal.gov to retrieve output
+2023/02/24 09:44:09 [ GridTool::submit_grid_job ] jobid: 57386179 , writing to json nsegments = 1
+2023/02/24 09:44:09 [ GridTool::submit_grid_job ] written status file: tmp/mdc2020/grid_job_status/57386179
+* <2023-02-24 Fri> *57386178 COMPLETED* : mdc2020.cele0b2s45r0000.s5_reco_01:0100 2000MB:12h:xrootd 
+murat@mu2egpvm05:/mu2e/app/users/murat/muse>grim/scripts/submit_job.py --project=mdc2020 --dsid=cele0b2s45r0000 --stage=s5 --job=reco_01 --fileset=0100 --doit=.
+2023/02/24 09:26:59 [ GridTool::ParseParameters ] Project      = mdc2020
+2023/02/24 09:26:59 [ GridTool::ParseParameters ] Verbose      = 1
+2023/02/24 09:26:59 [ GridTool::ParseParameters ] Doit         = .
+2023/02/24 09:26:59 [ GridTool::ParseParameters ] FamilyID     = cele0b2
+2023/02/24 09:26:59 [ GridTool::ParseParameters ] InputDsid    = xxx_xxxx
+2023/02/24 09:26:59 [ GridTool::ParseParameters ] ProjectDir   = mdc2020/datasets/cele0b2
+2023/02/24 09:26:59 [ GridTool::ParseParameters ] Recover      = None
+2023/02/24 09:26:59 [ GridTool::ParseParameters ] Fileset      = 0100
+2023/02/24 09:26:59 [ GridTool::ParseParameters ] ------------------------------------- Done
+2023/02/24 09:27:00 [ GridTool::submit_grid_job ] executing :tar -tjf /pnfs/mu2e/scratch/users/murat/fcl/mdc2020/cnf.murat.cele0b2s45r0000.s5_reco_01.mdc2020.0100.fcl.tbz | wc -l
+2023/02/24 09:27:00 [ GridTool::submit_grid_job ] nsegments: 1
+submit_grid_job: parms: ['grim/scripts/submit_grid_job', 'mdc2020', 'cele0b2s45r0000', 's5:reco_01:0100', '2000MB:12h:xrootd', '.']
+2023/02/24 09:33:06 [ GridTool::submit_grid_job ] submission finished, process.returncode: 0
+2023/02/24 09:33:06 [ GridTool::submit_grid_job ] submission_record:
+Fri Feb 24 09:27:00 CST 2023
+Will use the outstage directory = /pnfs/mu2e/scratch/users/murat/workflow/mdc2020.cele0b2s45r0000.s5_reco_01/outstage
+Will use ifdh version v2_6_10
+Will use mu2efilename version v3_8
+Will use mu2etools version v4_04_00
+Will use ifdhc_config version v2_6_17
+Command:  jobsub_submit --memory 2000MB --group mu2e --disk 30GB --resource-provides usage_model=OPPORTUNISTIC,DEDICATED --expected-lifetime 12h -l priority=0 -e XRD_STREAMTIMEOUT=300 -e EXPERIMENT=mu2e -e MU2EGRID_MU2ESETUP=/cvmfs/mu2e.opensciencegrid.org/setupmu2e-art.sh -e MU2EGRID_IFDHC_CONFIG_VERSION=v2_6_17 -e MU2EGRID_CODE=/mu2e/data/personal/murat/grid/mdc2020/mdc2020.code.murat.9a1df03f.tbz -e IFDH_VERSION=v2_6_10 -e MU2EGRID_WFOUTSTAGE=/pnfs/mu2e/scratch/users/murat/workflow/mdc2020.cele0b2s45r0000.s5_reco_01/outstage -e MU2EGRID_FCLTAR=/pnfs/mu2e/scratch/users/murat/fcl/mdc2020/cnf.murat.cele0b2s45r0000.s5_reco_01.mdc2020.0100.fcl.tbz -e MU2EGRID_ERRORDELAY=10 -e MU2EGRID_INPUTLIST=uu6edoFD0T -e MU2EGRID_DEBUG=0 -e MU2EGRID_DSCONF=mdc2020 -e MU2EGRID_XROOTD=1 -e MU2EGRID_USERSETUP=Code/setup.sh -e MU2EGRID_DSOWNER=murat -e MU2EGRID_TRANSFER_ALL=1 -e MU2EGRID_MU2ETOOLS_VERSION=v4_04_00 -e MU2EGRID_MU2EFILENAME_VERSION=v3_8 -N 1 -f dropbox:///tmp/uu6edoFD0T --tar_file_name dropbox:///mu2e/data/personal/murat/grid/mdc2020/mdc2020.code.murat.9a1df03f.tbz file:///cvmfs/mu2e.opensciencegrid.org/artexternals/mu2egrid/v8_01_02/bin/impl/mu2eprodsys.sh
+Submitting....
+uu6edoFD0T
+Using bearer token located at /tmp/bt_token_mu2e_Analysis_5339 to authenticate to RCDS
+Checking to see if uploaded file is published on RCDS.
+Could not locate uploaded file on RCDS.  Will retry in 30 seconds.
+Could not locate uploaded file on RCDS.  Will retry in 30 seconds.
+Found uploaded file on RCDS.
+Using bearer token located at /tmp/bt_token_mu2e_Analysis_5339 to authenticate to RCDS
+Checking to see if uploaded file is published on RCDS.
+Could not locate uploaded file on RCDS.  Will retry in 30 seconds.
+Could not locate uploaded file on RCDS.  Will retry in 30 seconds.
+Found uploaded file on RCDS.
+Submitting job(s).
+1 job(s) submitted to cluster 57386178.
+Use job id 57386178.0@jobsub01.fnal.gov to retrieve output
+
+Fri Feb 24 09:27:00 CST 2023
+Will use the outstage directory = /pnfs/mu2e/scratch/users/murat/workflow/mdc2020.cele0b2s45r0000.s5_reco_01/outstage
+Will use ifdh version v2_6_10
+Will use mu2efilename version v3_8
+Will use mu2etools version v4_04_00
+Will use ifdhc_config version v2_6_17
+Command:  jobsub_submit --memory 2000MB --group mu2e --disk 30GB --resource-provides usage_model=OPPORTUNISTIC,DEDICATED --expected-lifetime 12h -l priority=0 -e XRD_STREAMTIMEOUT=300 -e EXPERIMENT=mu2e -e MU2EGRID_MU2ESETUP=/cvmfs/mu2e.opensciencegrid.org/setupmu2e-art.sh -e MU2EGRID_IFDHC_CONFIG_VERSION=v2_6_17 -e MU2EGRID_CODE=/mu2e/data/personal/murat/grid/mdc2020/mdc2020.code.murat.9a1df03f.tbz -e IFDH_VERSION=v2_6_10 -e MU2EGRID_WFOUTSTAGE=/pnfs/mu2e/scratch/users/murat/workflow/mdc2020.cele0b2s45r0000.s5_reco_01/outstage -e MU2EGRID_FCLTAR=/pnfs/mu2e/scratch/users/murat/fcl/mdc2020/cnf.murat.cele0b2s45r0000.s5_reco_01.mdc2020.0100.fcl.tbz -e MU2EGRID_ERRORDELAY=10 -e MU2EGRID_INPUTLIST=uu6edoFD0T -e MU2EGRID_DEBUG=0 -e MU2EGRID_DSCONF=mdc2020 -e MU2EGRID_XROOTD=1 -e MU2EGRID_USERSETUP=Code/setup.sh -e MU2EGRID_DSOWNER=murat -e MU2EGRID_TRANSFER_ALL=1 -e MU2EGRID_MU2ETOOLS_VERSION=v4_04_00 -e MU2EGRID_MU2EFILENAME_VERSION=v3_8 -N 1 -f dropbox:///tmp/uu6edoFD0T --tar_file_name dropbox:///mu2e/data/personal/murat/grid/mdc2020/mdc2020.code.murat.9a1df03f.tbz file:///cvmfs/mu2e.opensciencegrid.org/artexternals/mu2egrid/v8_01_02/bin/impl/mu2eprodsys.sh
+Submitting....
+uu6edoFD0T
+Using bearer token located at /tmp/bt_token_mu2e_Analysis_5339 to authenticate to RCDS
+Checking to see if uploaded file is published on RCDS.
+Could not locate uploaded file on RCDS.  Will retry in 30 seconds.
+Could not locate uploaded file on RCDS.  Will retry in 30 seconds.
+Found uploaded file on RCDS.
+Using bearer token located at /tmp/bt_token_mu2e_Analysis_5339 to authenticate to RCDS
+Checking to see if uploaded file is published on RCDS.
+Could not locate uploaded file on RCDS.  Will retry in 30 seconds.
+Could not locate uploaded file on RCDS.  Will retry in 30 seconds.
+Found uploaded file on RCDS.
+Submitting job(s).
+1 job(s) submitted to cluster 57386178.
+Use job id 57386178.0@jobsub01.fnal.gov to retrieve output
+2023/02/24 09:33:06 [ GridTool::submit_grid_job ] jobid: 57386178 , writing to json nsegments = 1
+2023/02/24 09:33:06 [ GridTool::submit_grid_job ] written status file: tmp/mdc2020/grid_job_status/57386178
+* <2023-02-24 Fri> *57386174 COMPLETED* : mdc2020.cele0b2s41r0000.s5_reco_01:0000 2000MB:12h:xrootd 
+murat@mu2egpvm05:/mu2e/app/users/murat/muse>grim/scripts/submit_job.py --project=mdc2020 --dsid=cele0b2s41r0000 --stage=s5 --job=reco_01 --fileset=0000 --doit=.
+2023/02/24 09:18:30 [ GridTool::ParseParameters ] Project      = mdc2020
+2023/02/24 09:18:30 [ GridTool::ParseParameters ] Verbose      = 1
+2023/02/24 09:18:30 [ GridTool::ParseParameters ] Doit         = .
+2023/02/24 09:18:30 [ GridTool::ParseParameters ] FamilyID     = cele0b2
+2023/02/24 09:18:30 [ GridTool::ParseParameters ] InputDsid    = xxx_xxxx
+2023/02/24 09:18:30 [ GridTool::ParseParameters ] ProjectDir   = mdc2020/datasets/cele0b2
+2023/02/24 09:18:30 [ GridTool::ParseParameters ] Recover      = None
+2023/02/24 09:18:30 [ GridTool::ParseParameters ] Fileset      = 0000
+2023/02/24 09:18:30 [ GridTool::ParseParameters ] ------------------------------------- Done
+2023/02/24 09:18:30 [ GridTool::submit_grid_job ] executing :tar -tjf /pnfs/mu2e/scratch/users/murat/fcl/mdc2020/cnf.murat.cele0b2s41r0000.s5_reco_01.mdc2020.0000.fcl.tbz | wc -l
+2023/02/24 09:18:31 [ GridTool::submit_grid_job ] nsegments: 1
+submit_grid_job: parms: ['grim/scripts/submit_grid_job', 'mdc2020', 'cele0b2s41r0000', 's5:reco_01:0000', '2000MB:12h:xrootd', '.']
+2023/02/24 09:24:10 [ GridTool::submit_grid_job ] submission finished, process.returncode: 0
+2023/02/24 09:24:10 [ GridTool::submit_grid_job ] submission_record:
+Fri Feb 24 09:18:31 CST 2023
+mkdir /pnfs/mu2e/scratch/users/murat/workflow/mdc2020.cele0b2s41r0000.s5_reco_01
+mkdir /pnfs/mu2e/scratch/users/murat/workflow/mdc2020.cele0b2s41r0000.s5_reco_01/outstage
+Will use the outstage directory = /pnfs/mu2e/scratch/users/murat/workflow/mdc2020.cele0b2s41r0000.s5_reco_01/outstage
+Will use ifdh version v2_6_10
+Will use mu2efilename version v3_8
+Will use mu2etools version v4_04_00
+Will use ifdhc_config version v2_6_17
+Command:  jobsub_submit --memory 2000MB --group mu2e --disk 30GB --resource-provides usage_model=OPPORTUNISTIC,DEDICATED --expected-lifetime 12h -l priority=0 -e XRD_STREAMTIMEOUT=300 -e EXPERIMENT=mu2e -e MU2EGRID_MU2ESETUP=/cvmfs/mu2e.opensciencegrid.org/setupmu2e-art.sh -e MU2EGRID_IFDHC_CONFIG_VERSION=v2_6_17 -e MU2EGRID_CODE=/mu2e/data/personal/murat/grid/mdc2020/mdc2020.code.murat.9a1df03f.tbz -e IFDH_VERSION=v2_6_10 -e MU2EGRID_WFOUTSTAGE=/pnfs/mu2e/scratch/users/murat/workflow/mdc2020.cele0b2s41r0000.s5_reco_01/outstage -e MU2EGRID_FCLTAR=/pnfs/mu2e/scratch/users/murat/fcl/mdc2020/cnf.murat.cele0b2s41r0000.s5_reco_01.mdc2020.0000.fcl.tbz -e MU2EGRID_ERRORDELAY=10 -e MU2EGRID_INPUTLIST=iETSuuehWe -e MU2EGRID_DEBUG=0 -e MU2EGRID_DSCONF=mdc2020 -e MU2EGRID_XROOTD=1 -e MU2EGRID_USERSETUP=Code/setup.sh -e MU2EGRID_DSOWNER=murat -e MU2EGRID_TRANSFER_ALL=1 -e MU2EGRID_MU2ETOOLS_VERSION=v4_04_00 -e MU2EGRID_MU2EFILENAME_VERSION=v3_8 -N 1 -f dropbox:///tmp/iETSuuehWe --tar_file_name dropbox:///mu2e/data/personal/murat/grid/mdc2020/mdc2020.code.murat.9a1df03f.tbz file:///cvmfs/mu2e.opensciencegrid.org/artexternals/mu2egrid/v8_01_02/bin/impl/mu2eprodsys.sh
+Submitting....
+iETSuuehWe
+Using bearer token located at /tmp/bt_token_mu2e_Analysis_5339 to authenticate to RCDS
+Checking to see if uploaded file is published on RCDS.
+Could not locate uploaded file on RCDS.  Will retry in 30 seconds.
+Found uploaded file on RCDS.
+Using bearer token located at /tmp/bt_token_mu2e_Analysis_5339 to authenticate to RCDS
+Checking to see if uploaded file is published on RCDS.
+Could not locate uploaded file on RCDS.  Will retry in 30 seconds.
+Could not locate uploaded file on RCDS.  Will retry in 30 seconds.
+Found uploaded file on RCDS.
+Submitting job(s).
+1 job(s) submitted to cluster 57386174.
+Use job id 57386174.0@jobsub01.fnal.gov to retrieve output
+
+Fri Feb 24 09:18:31 CST 2023
+mkdir /pnfs/mu2e/scratch/users/murat/workflow/mdc2020.cele0b2s41r0000.s5_reco_01
+mkdir /pnfs/mu2e/scratch/users/murat/workflow/mdc2020.cele0b2s41r0000.s5_reco_01/outstage
+Will use the outstage directory = /pnfs/mu2e/scratch/users/murat/workflow/mdc2020.cele0b2s41r0000.s5_reco_01/outstage
+Will use ifdh version v2_6_10
+Will use mu2efilename version v3_8
+Will use mu2etools version v4_04_00
+Will use ifdhc_config version v2_6_17
+Command:  jobsub_submit --memory 2000MB --group mu2e --disk 30GB --resource-provides usage_model=OPPORTUNISTIC,DEDICATED --expected-lifetime 12h -l priority=0 -e XRD_STREAMTIMEOUT=300 -e EXPERIMENT=mu2e -e MU2EGRID_MU2ESETUP=/cvmfs/mu2e.opensciencegrid.org/setupmu2e-art.sh -e MU2EGRID_IFDHC_CONFIG_VERSION=v2_6_17 -e MU2EGRID_CODE=/mu2e/data/personal/murat/grid/mdc2020/mdc2020.code.murat.9a1df03f.tbz -e IFDH_VERSION=v2_6_10 -e MU2EGRID_WFOUTSTAGE=/pnfs/mu2e/scratch/users/murat/workflow/mdc2020.cele0b2s41r0000.s5_reco_01/outstage -e MU2EGRID_FCLTAR=/pnfs/mu2e/scratch/users/murat/fcl/mdc2020/cnf.murat.cele0b2s41r0000.s5_reco_01.mdc2020.0000.fcl.tbz -e MU2EGRID_ERRORDELAY=10 -e MU2EGRID_INPUTLIST=iETSuuehWe -e MU2EGRID_DEBUG=0 -e MU2EGRID_DSCONF=mdc2020 -e MU2EGRID_XROOTD=1 -e MU2EGRID_USERSETUP=Code/setup.sh -e MU2EGRID_DSOWNER=murat -e MU2EGRID_TRANSFER_ALL=1 -e MU2EGRID_MU2ETOOLS_VERSION=v4_04_00 -e MU2EGRID_MU2EFILENAME_VERSION=v3_8 -N 1 -f dropbox:///tmp/iETSuuehWe --tar_file_name dropbox:///mu2e/data/personal/murat/grid/mdc2020/mdc2020.code.murat.9a1df03f.tbz file:///cvmfs/mu2e.opensciencegrid.org/artexternals/mu2egrid/v8_01_02/bin/impl/mu2eprodsys.sh
+Submitting....
+iETSuuehWe
+Using bearer token located at /tmp/bt_token_mu2e_Analysis_5339 to authenticate to RCDS
+Checking to see if uploaded file is published on RCDS.
+Could not locate uploaded file on RCDS.  Will retry in 30 seconds.
+Found uploaded file on RCDS.
+Using bearer token located at /tmp/bt_token_mu2e_Analysis_5339 to authenticate to RCDS
+Checking to see if uploaded file is published on RCDS.
+Could not locate uploaded file on RCDS.  Will retry in 30 seconds.
+Could not locate uploaded file on RCDS.  Will retry in 30 seconds.
+Found uploaded file on RCDS.
+Submitting job(s).
+1 job(s) submitted to cluster 57386174.
+Use job id 57386174.0@jobsub01.fnal.gov to retrieve output
+2023/02/24 09:24:10 [ GridTool::submit_grid_job ] jobid: 57386174 , writing to json nsegments = 1
+2023/02/24 09:24:10 [ GridTool::submit_grid_job ] written status file: tmp/mdc2020/grid_job_status/57386174
+* <2023-02-24 Fri> *57386172 COMPLETED* : mdc2020.cele0b2s41r0000.s5_reco_0a.0000 2000MB:12h:xrootd 
+murat@mu2egpvm05:/mu2e/app/users/murat/muse>grim/scripts/submit_job.py --project=mdc2020 --dsid=cele0b2s41r0000 --stage=s5 --job=reco_0a --fileset=0000 --doit=.
+2023/02/24 09:09:53 [ GridTool::ParseParameters ] Project      = mdc2020
+2023/02/24 09:09:53 [ GridTool::ParseParameters ] Verbose      = 1
+2023/02/24 09:09:53 [ GridTool::ParseParameters ] Doit         = .
+2023/02/24 09:09:53 [ GridTool::ParseParameters ] FamilyID     = cele0b2
+2023/02/24 09:09:53 [ GridTool::ParseParameters ] InputDsid    = xxx_xxxx
+2023/02/24 09:09:53 [ GridTool::ParseParameters ] ProjectDir   = mdc2020/datasets/cele0b2
+2023/02/24 09:09:53 [ GridTool::ParseParameters ] Recover      = None
+2023/02/24 09:09:53 [ GridTool::ParseParameters ] Fileset      = 0000
+2023/02/24 09:09:53 [ GridTool::ParseParameters ] ------------------------------------- Done
+2023/02/24 09:09:53 [ GridTool::submit_grid_job ] executing :tar -tjf /pnfs/mu2e/scratch/users/murat/fcl/mdc2020/cnf.murat.cele0b2s41r0000.s5_reco_0a.mdc2020.0000.fcl.tbz | wc -l
+2023/02/24 09:09:53 [ GridTool::submit_grid_job ] nsegments: 1
+submit_grid_job: parms: ['grim/scripts/submit_grid_job', 'mdc2020', 'cele0b2s41r0000', 's5:reco_0a:0000', '2000MB:12h:xrootd', '.']
+2023/02/24 09:15:30 [ GridTool::submit_grid_job ] submission finished, process.returncode: 0
+2023/02/24 09:15:30 [ GridTool::submit_grid_job ] submission_record:
+Fri Feb 24 09:09:54 CST 2023
+mkdir /pnfs/mu2e/scratch/users/murat/workflow/mdc2020.cele0b2s41r0000.s5_reco_0a
+mkdir /pnfs/mu2e/scratch/users/murat/workflow/mdc2020.cele0b2s41r0000.s5_reco_0a/outstage
+Will use the outstage directory = /pnfs/mu2e/scratch/users/murat/workflow/mdc2020.cele0b2s41r0000.s5_reco_0a/outstage
+Will use ifdh version v2_6_10
+Will use mu2efilename version v3_8
+Will use mu2etools version v4_04_00
+Will use ifdhc_config version v2_6_17
+Command:  jobsub_submit --memory 2000MB --group mu2e --disk 30GB --resource-provides usage_model=OPPORTUNISTIC,DEDICATED --expected-lifetime 12h -l priority=0 -e XRD_STREAMTIMEOUT=300 -e EXPERIMENT=mu2e -e MU2EGRID_MU2ESETUP=/cvmfs/mu2e.opensciencegrid.org/setupmu2e-art.sh -e MU2EGRID_IFDHC_CONFIG_VERSION=v2_6_17 -e MU2EGRID_CODE=/mu2e/data/personal/murat/grid/mdc2020/mdc2020.code.murat.9a1df03f.tbz -e IFDH_VERSION=v2_6_10 -e MU2EGRID_WFOUTSTAGE=/pnfs/mu2e/scratch/users/murat/workflow/mdc2020.cele0b2s41r0000.s5_reco_0a/outstage -e MU2EGRID_FCLTAR=/pnfs/mu2e/scratch/users/murat/fcl/mdc2020/cnf.murat.cele0b2s41r0000.s5_reco_0a.mdc2020.0000.fcl.tbz -e MU2EGRID_ERRORDELAY=10 -e MU2EGRID_INPUTLIST=pDk_St8rQ2 -e MU2EGRID_DEBUG=0 -e MU2EGRID_DSCONF=mdc2020 -e MU2EGRID_XROOTD=1 -e MU2EGRID_USERSETUP=Code/setup.sh -e MU2EGRID_DSOWNER=murat -e MU2EGRID_TRANSFER_ALL=1 -e MU2EGRID_MU2ETOOLS_VERSION=v4_04_00 -e MU2EGRID_MU2EFILENAME_VERSION=v3_8 -N 1 -f dropbox:///tmp/pDk_St8rQ2 --tar_file_name dropbox:///mu2e/data/personal/murat/grid/mdc2020/mdc2020.code.murat.9a1df03f.tbz file:///cvmfs/mu2e.opensciencegrid.org/artexternals/mu2egrid/v8_01_02/bin/impl/mu2eprodsys.sh
+Submitting....
+pDk_St8rQ2
+Using bearer token located at /tmp/bt_token_mu2e_Analysis_5339 to authenticate to RCDS
+Checking to see if uploaded file is published on RCDS.
+Could not locate uploaded file on RCDS.  Will retry in 30 seconds.
+Found uploaded file on RCDS.
+Using bearer token located at /tmp/bt_token_mu2e_Analysis_5339 to authenticate to RCDS
+Checking to see if uploaded file is published on RCDS.
+Could not locate uploaded file on RCDS.  Will retry in 30 seconds.
+Could not locate uploaded file on RCDS.  Will retry in 30 seconds.
+Found uploaded file on RCDS.
+Submitting job(s).
+1 job(s) submitted to cluster 57386172.
+Use job id 57386172.0@jobsub01.fnal.gov to retrieve output
+
+Fri Feb 24 09:09:54 CST 2023
+mkdir /pnfs/mu2e/scratch/users/murat/workflow/mdc2020.cele0b2s41r0000.s5_reco_0a
+mkdir /pnfs/mu2e/scratch/users/murat/workflow/mdc2020.cele0b2s41r0000.s5_reco_0a/outstage
+Will use the outstage directory = /pnfs/mu2e/scratch/users/murat/workflow/mdc2020.cele0b2s41r0000.s5_reco_0a/outstage
+Will use ifdh version v2_6_10
+Will use mu2efilename version v3_8
+Will use mu2etools version v4_04_00
+Will use ifdhc_config version v2_6_17
+Command:  jobsub_submit --memory 2000MB --group mu2e --disk 30GB --resource-provides usage_model=OPPORTUNISTIC,DEDICATED --expected-lifetime 12h -l priority=0 -e XRD_STREAMTIMEOUT=300 -e EXPERIMENT=mu2e -e MU2EGRID_MU2ESETUP=/cvmfs/mu2e.opensciencegrid.org/setupmu2e-art.sh -e MU2EGRID_IFDHC_CONFIG_VERSION=v2_6_17 -e MU2EGRID_CODE=/mu2e/data/personal/murat/grid/mdc2020/mdc2020.code.murat.9a1df03f.tbz -e IFDH_VERSION=v2_6_10 -e MU2EGRID_WFOUTSTAGE=/pnfs/mu2e/scratch/users/murat/workflow/mdc2020.cele0b2s41r0000.s5_reco_0a/outstage -e MU2EGRID_FCLTAR=/pnfs/mu2e/scratch/users/murat/fcl/mdc2020/cnf.murat.cele0b2s41r0000.s5_reco_0a.mdc2020.0000.fcl.tbz -e MU2EGRID_ERRORDELAY=10 -e MU2EGRID_INPUTLIST=pDk_St8rQ2 -e MU2EGRID_DEBUG=0 -e MU2EGRID_DSCONF=mdc2020 -e MU2EGRID_XROOTD=1 -e MU2EGRID_USERSETUP=Code/setup.sh -e MU2EGRID_DSOWNER=murat -e MU2EGRID_TRANSFER_ALL=1 -e MU2EGRID_MU2ETOOLS_VERSION=v4_04_00 -e MU2EGRID_MU2EFILENAME_VERSION=v3_8 -N 1 -f dropbox:///tmp/pDk_St8rQ2 --tar_file_name dropbox:///mu2e/data/personal/murat/grid/mdc2020/mdc2020.code.murat.9a1df03f.tbz file:///cvmfs/mu2e.opensciencegrid.org/artexternals/mu2egrid/v8_01_02/bin/impl/mu2eprodsys.sh
+Submitting....
+pDk_St8rQ2
+Using bearer token located at /tmp/bt_token_mu2e_Analysis_5339 to authenticate to RCDS
+Checking to see if uploaded file is published on RCDS.
+Could not locate uploaded file on RCDS.  Will retry in 30 seconds.
+Found uploaded file on RCDS.
+Using bearer token located at /tmp/bt_token_mu2e_Analysis_5339 to authenticate to RCDS
+Checking to see if uploaded file is published on RCDS.
+Could not locate uploaded file on RCDS.  Will retry in 30 seconds.
+Could not locate uploaded file on RCDS.  Will retry in 30 seconds.
+Found uploaded file on RCDS.
+Submitting job(s).
+1 job(s) submitted to cluster 57386172.
+Use job id 57386172.0@jobsub01.fnal.gov to retrieve output
+2023/02/24 09:15:30 [ GridTool::submit_grid_job ] jobid: 57386172 , writing to json nsegments = 1
+2023/02/24 09:15:30 [ GridTool::submit_grid_job ] written status file: tmp/mdc2020/grid_job_status/57386172
+* <2023-02-24 Fri> *57386164 COMPLETED* : mdc2020.cele0b2s41r0000.s5_reco_09:0000 2000MB:12h:xrootd 
+murat@mu2egpvm05:/mu2e/app/users/murat/muse>grim/scripts/submit_job.py --project=mdc2020 --dsid=cele0b2s41r0000 --stage=s5 --job=reco_09 --fileset=0000 --doit=.
+2023/02/24 08:50:48 [ GridTool::ParseParameters ] Project      = mdc2020
+2023/02/24 08:50:48 [ GridTool::ParseParameters ] Verbose      = 1
+2023/02/24 08:50:48 [ GridTool::ParseParameters ] Doit         = .
+2023/02/24 08:50:48 [ GridTool::ParseParameters ] FamilyID     = cele0b2
+2023/02/24 08:50:48 [ GridTool::ParseParameters ] InputDsid    = xxx_xxxx
+2023/02/24 08:50:48 [ GridTool::ParseParameters ] ProjectDir   = mdc2020/datasets/cele0b2
+2023/02/24 08:50:48 [ GridTool::ParseParameters ] Recover      = None
+2023/02/24 08:50:48 [ GridTool::ParseParameters ] Fileset      = 0000
+2023/02/24 08:50:48 [ GridTool::ParseParameters ] ------------------------------------- Done
+2023/02/24 08:50:49 [ GridTool::submit_grid_job ] executing :tar -tjf /pnfs/mu2e/scratch/users/murat/fcl/mdc2020/cnf.murat.cele0b2s41r0000.s5_reco_09.mdc2020.0000.fcl.tbz | wc -l
+2023/02/24 08:50:49 [ GridTool::submit_grid_job ] nsegments: 1
+submit_grid_job: parms: ['grim/scripts/submit_grid_job', 'mdc2020', 'cele0b2s41r0000', 's5:reco_09:0000', '2000MB:12h:xrootd', '.']
+2023/02/24 08:55:55 [ GridTool::submit_grid_job ] submission finished, process.returncode: 0
+2023/02/24 08:55:55 [ GridTool::submit_grid_job ] submission_record:
+Fri Feb 24 08:50:49 CST 2023
+Will use the outstage directory = /pnfs/mu2e/scratch/users/murat/workflow/mdc2020.cele0b2s41r0000.s5_reco_09/outstage
+Will use ifdh version v2_6_10
+Will use mu2efilename version v3_8
+Will use mu2etools version v4_04_00
+Will use ifdhc_config version v2_6_17
+Command:  jobsub_submit --memory 2000MB --group mu2e --disk 30GB --resource-provides usage_model=OPPORTUNISTIC,DEDICATED --expected-lifetime 12h -l priority=0 -e XRD_STREAMTIMEOUT=300 -e EXPERIMENT=mu2e -e MU2EGRID_MU2ESETUP=/cvmfs/mu2e.opensciencegrid.org/setupmu2e-art.sh -e MU2EGRID_IFDHC_CONFIG_VERSION=v2_6_17 -e MU2EGRID_CODE=/mu2e/data/personal/murat/grid/mdc2020/mdc2020.code.murat.9a1df03f.tbz -e IFDH_VERSION=v2_6_10 -e MU2EGRID_WFOUTSTAGE=/pnfs/mu2e/scratch/users/murat/workflow/mdc2020.cele0b2s41r0000.s5_reco_09/outstage -e MU2EGRID_FCLTAR=/pnfs/mu2e/scratch/users/murat/fcl/mdc2020/cnf.murat.cele0b2s41r0000.s5_reco_09.mdc2020.0000.fcl.tbz -e MU2EGRID_ERRORDELAY=10 -e MU2EGRID_INPUTLIST=DGZ6Sd55d6 -e MU2EGRID_DEBUG=0 -e MU2EGRID_DSCONF=mdc2020 -e MU2EGRID_XROOTD=1 -e MU2EGRID_USERSETUP=Code/setup.sh -e MU2EGRID_DSOWNER=murat -e MU2EGRID_TRANSFER_ALL=1 -e MU2EGRID_MU2ETOOLS_VERSION=v4_04_00 -e MU2EGRID_MU2EFILENAME_VERSION=v3_8 -N 1 -f dropbox:///tmp/DGZ6Sd55d6 --tar_file_name dropbox:///mu2e/data/personal/murat/grid/mdc2020/mdc2020.code.murat.9a1df03f.tbz file:///cvmfs/mu2e.opensciencegrid.org/artexternals/mu2egrid/v8_01_02/bin/impl/mu2eprodsys.sh
+Submitting....
+DGZ6Sd55d6
+Using bearer token located at /tmp/bt_token_mu2e_Analysis_5339 to authenticate to RCDS
+Checking to see if uploaded file is published on RCDS.
+Could not locate uploaded file on RCDS.  Will retry in 30 seconds.
+Found uploaded file on RCDS.
+Using bearer token located at /tmp/bt_token_mu2e_Analysis_5339 to authenticate to RCDS
+Checking to see if uploaded file is published on RCDS.
+Could not locate uploaded file on RCDS.  Will retry in 30 seconds.
+Found uploaded file on RCDS.
+Submitting job(s).
+1 job(s) submitted to cluster 57386164.
+Use job id 57386164.0@jobsub01.fnal.gov to retrieve output
+
+Fri Feb 24 08:50:49 CST 2023
+Will use the outstage directory = /pnfs/mu2e/scratch/users/murat/workflow/mdc2020.cele0b2s41r0000.s5_reco_09/outstage
+Will use ifdh version v2_6_10
+Will use mu2efilename version v3_8
+Will use mu2etools version v4_04_00
+Will use ifdhc_config version v2_6_17
+Command:  jobsub_submit --memory 2000MB --group mu2e --disk 30GB --resource-provides usage_model=OPPORTUNISTIC,DEDICATED --expected-lifetime 12h -l priority=0 -e XRD_STREAMTIMEOUT=300 -e EXPERIMENT=mu2e -e MU2EGRID_MU2ESETUP=/cvmfs/mu2e.opensciencegrid.org/setupmu2e-art.sh -e MU2EGRID_IFDHC_CONFIG_VERSION=v2_6_17 -e MU2EGRID_CODE=/mu2e/data/personal/murat/grid/mdc2020/mdc2020.code.murat.9a1df03f.tbz -e IFDH_VERSION=v2_6_10 -e MU2EGRID_WFOUTSTAGE=/pnfs/mu2e/scratch/users/murat/workflow/mdc2020.cele0b2s41r0000.s5_reco_09/outstage -e MU2EGRID_FCLTAR=/pnfs/mu2e/scratch/users/murat/fcl/mdc2020/cnf.murat.cele0b2s41r0000.s5_reco_09.mdc2020.0000.fcl.tbz -e MU2EGRID_ERRORDELAY=10 -e MU2EGRID_INPUTLIST=DGZ6Sd55d6 -e MU2EGRID_DEBUG=0 -e MU2EGRID_DSCONF=mdc2020 -e MU2EGRID_XROOTD=1 -e MU2EGRID_USERSETUP=Code/setup.sh -e MU2EGRID_DSOWNER=murat -e MU2EGRID_TRANSFER_ALL=1 -e MU2EGRID_MU2ETOOLS_VERSION=v4_04_00 -e MU2EGRID_MU2EFILENAME_VERSION=v3_8 -N 1 -f dropbox:///tmp/DGZ6Sd55d6 --tar_file_name dropbox:///mu2e/data/personal/murat/grid/mdc2020/mdc2020.code.murat.9a1df03f.tbz file:///cvmfs/mu2e.opensciencegrid.org/artexternals/mu2egrid/v8_01_02/bin/impl/mu2eprodsys.sh
+Submitting....
+DGZ6Sd55d6
+Using bearer token located at /tmp/bt_token_mu2e_Analysis_5339 to authenticate to RCDS
+Checking to see if uploaded file is published on RCDS.
+Could not locate uploaded file on RCDS.  Will retry in 30 seconds.
+Found uploaded file on RCDS.
+Using bearer token located at /tmp/bt_token_mu2e_Analysis_5339 to authenticate to RCDS
+Checking to see if uploaded file is published on RCDS.
+Could not locate uploaded file on RCDS.  Will retry in 30 seconds.
+Found uploaded file on RCDS.
+Submitting job(s).
+1 job(s) submitted to cluster 57386164.
+Use job id 57386164.0@jobsub01.fnal.gov to retrieve output
+2023/02/24 08:55:55 [ GridTool::submit_grid_job ] jobid: 57386164 , writing to json nsegments = 1
+2023/02/24 08:55:55 [ GridTool::submit_grid_job ] written status file: tmp/mdc2020/grid_job_status/57386164
+* <2023-02-21 Tue> *57374520 COMPLETED* : cele0b2s45r00.s5_reco_0a.0100                             
+murat@mu2ebuild01:/mu2e/app/users/murat/muse>grim/scripts/submit_job.py --project=mdc2020 --dsid=cele0b2s45r00 --stage=s5 --job=reco_0a --fileset=0100 --doit=.
+2023/02/21 23:56:01 [ GridTool::ParseParameters ] Project      = mdc2020
+2023/02/21 23:56:01 [ GridTool::ParseParameters ] Verbose      = 1
+2023/02/21 23:56:01 [ GridTool::ParseParameters ] Doit         = .
+2023/02/21 23:56:01 [ GridTool::ParseParameters ] FamilyID     = cele0b2
+2023/02/21 23:56:01 [ GridTool::ParseParameters ] InputDsid    = xxx_xxxx
+2023/02/21 23:56:01 [ GridTool::ParseParameters ] ProjectDir   = mdc2020/datasets/cele0b2
+2023/02/21 23:56:01 [ GridTool::ParseParameters ] Recover      = None
+2023/02/21 23:56:01 [ GridTool::ParseParameters ] Fileset      = 0100
+2023/02/21 23:56:01 [ GridTool::ParseParameters ] ------------------------------------- Done
+2023/02/21 23:56:02 [ GridTool::submit_grid_job ] executing :tar -tjf /pnfs/mu2e/resilient/users/murat/mdc2020/cnf.murat.cele0b2s45r00.s5_reco_0a.mdc2020.0100.fcl.tbz | wc -l
+2023/02/21 23:56:02 [ GridTool::submit_grid_job ] nsegments: 1
+submit_grid_job: parms: ['grim/scripts/submit_grid_job', 'mdc2020', 'cele0b2s45r00', 's5:reco_0a:0100', '2000MB:12h:xrootd', '.']
+2023/02/21 23:56:49 [ GridTool::submit_grid_job ] submission finished, process.returncode: 0
+2023/02/21 23:56:49 [ GridTool::submit_grid_job ] submission_record:
+Tue Feb 21 23:56:02 CST 2023
+Will use the outstage directory = /pnfs/mu2e/scratch/users/murat/workflow/mdc2020.cele0b2s45r00.s5_reco_0a/outstage
+Will use ifdh version v2_6_10
+Will use mu2efilename version v3_8
+Will use mu2etools version v4_04_00
+Will use ifdhc_config version v2_6_16
+Command:  jobsub_submit --memory 2000MB --group mu2e --disk 30GB --resource-provides usage_model=OPPORTUNISTIC,DEDICATED --expected-lifetime 12h -l priority=0 -e XRD_STREAMTIMEOUT=300 -e EXPERIMENT=mu2e -e MU2EGRID_MU2ESETUP=/cvmfs/mu2e.opensciencegrid.org/setupmu2e-art.sh -e MU2EGRID_IFDHC_CONFIG_VERSION=v2_6_16 -e MU2EGRID_CODE=/pnfs/mu2e/resilient/users/murat/mdc2020/mdc2020.code.murat.23aab4c6.tbz -e IFDH_VERSION=v2_6_10 -e MU2EGRID_WFOUTSTAGE=/pnfs/mu2e/scratch/users/murat/workflow/mdc2020.cele0b2s45r00.s5_reco_0a/outstage -e MU2EGRID_FCLTAR=/pnfs/mu2e/resilient/users/murat/mdc2020/cnf.murat.cele0b2s45r00.s5_reco_0a.mdc2020.0100.fcl.tbz -e MU2EGRID_ERRORDELAY=10 -e MU2EGRID_INPUTLIST=tMCGBttKMj -e MU2EGRID_DEBUG=0 -e MU2EGRID_DSCONF=mdc2020 -e MU2EGRID_XROOTD=1 -e MU2EGRID_USERSETUP=Code/setup.sh -e MU2EGRID_DSOWNER=murat -e MU2EGRID_TRANSFER_ALL=1 -e MU2EGRID_MU2ETOOLS_VERSION=v4_04_00 -e MU2EGRID_MU2EFILENAME_VERSION=v3_8 -N 1 -f dropbox:///tmp/tMCGBttKMj --tar_file_name dropbox:///pnfs/mu2e/resilient/users/murat/mdc2020/mdc2020.code.murat.23aab4c6.tbz file:///cvmfs/mu2e.opensciencegrid.org/artexternals/mu2egrid/v8_01_02/bin/impl/mu2eprodsys.sh
+Submitting....
+tMCGBttKMj
+Using bearer token located at /tmp/bt_token_mu2e_Analysis_5339 to authenticate to RCDS
+Checking to see if uploaded file is published on RCDS.
+Could not locate uploaded file on RCDS.  Will retry in 30 seconds.
+Found uploaded file on RCDS.
+Using bearer token located at /tmp/bt_token_mu2e_Analysis_5339 to authenticate to RCDS
+Submitting job(s).
+1 job(s) submitted to cluster 57374520.
+Use job id 57374520.0@jobsub01.fnal.gov to retrieve output
+
+Tue Feb 21 23:56:02 CST 2023
+Will use the outstage directory = /pnfs/mu2e/scratch/users/murat/workflow/mdc2020.cele0b2s45r00.s5_reco_0a/outstage
+Will use ifdh version v2_6_10
+Will use mu2efilename version v3_8
+Will use mu2etools version v4_04_00
+Will use ifdhc_config version v2_6_16
+Command:  jobsub_submit --memory 2000MB --group mu2e --disk 30GB --resource-provides usage_model=OPPORTUNISTIC,DEDICATED --expected-lifetime 12h -l priority=0 -e XRD_STREAMTIMEOUT=300 -e EXPERIMENT=mu2e -e MU2EGRID_MU2ESETUP=/cvmfs/mu2e.opensciencegrid.org/setupmu2e-art.sh -e MU2EGRID_IFDHC_CONFIG_VERSION=v2_6_16 -e MU2EGRID_CODE=/pnfs/mu2e/resilient/users/murat/mdc2020/mdc2020.code.murat.23aab4c6.tbz -e IFDH_VERSION=v2_6_10 -e MU2EGRID_WFOUTSTAGE=/pnfs/mu2e/scratch/users/murat/workflow/mdc2020.cele0b2s45r00.s5_reco_0a/outstage -e MU2EGRID_FCLTAR=/pnfs/mu2e/resilient/users/murat/mdc2020/cnf.murat.cele0b2s45r00.s5_reco_0a.mdc2020.0100.fcl.tbz -e MU2EGRID_ERRORDELAY=10 -e MU2EGRID_INPUTLIST=tMCGBttKMj -e MU2EGRID_DEBUG=0 -e MU2EGRID_DSCONF=mdc2020 -e MU2EGRID_XROOTD=1 -e MU2EGRID_USERSETUP=Code/setup.sh -e MU2EGRID_DSOWNER=murat -e MU2EGRID_TRANSFER_ALL=1 -e MU2EGRID_MU2ETOOLS_VERSION=v4_04_00 -e MU2EGRID_MU2EFILENAME_VERSION=v3_8 -N 1 -f dropbox:///tmp/tMCGBttKMj --tar_file_name dropbox:///pnfs/mu2e/resilient/users/murat/mdc2020/mdc2020.code.murat.23aab4c6.tbz file:///cvmfs/mu2e.opensciencegrid.org/artexternals/mu2egrid/v8_01_02/bin/impl/mu2eprodsys.sh
+Submitting....
+tMCGBttKMj
+Using bearer token located at /tmp/bt_token_mu2e_Analysis_5339 to authenticate to RCDS
+Checking to see if uploaded file is published on RCDS.
+Could not locate uploaded file on RCDS.  Will retry in 30 seconds.
+Found uploaded file on RCDS.
+Using bearer token located at /tmp/bt_token_mu2e_Analysis_5339 to authenticate to RCDS
+Submitting job(s).
+1 job(s) submitted to cluster 57374520.
+Use job id 57374520.0@jobsub01.fnal.gov to retrieve output
+2023/02/21 23:56:49 [ GridTool::submit_grid_job ] jobid: 57374520 , writing to json nsegments = 1
+2023/02/21 23:56:49 [ GridTool::submit_grid_job ] written status file: tmp/mdc2020/grid_job_status/57374520
+* <2023-02-21 Tue> *57374443 COMPLETED* : cele0b2s45r00.s5_reco_09.0100                             
+murat@mu2ebuild01:/mu2e/app/users/murat/muse>grim/scripts/submit_job.py --project=mdc2020 --dsid=cele0b2s45r00 --stage=s5 --job=reco_09 --fileset=0100 --doit=.
+2023/02/21 23:53:18 [ GridTool::ParseParameters ] Project      = mdc2020
+2023/02/21 23:53:18 [ GridTool::ParseParameters ] Verbose      = 1
+2023/02/21 23:53:18 [ GridTool::ParseParameters ] Doit         = .
+2023/02/21 23:53:18 [ GridTool::ParseParameters ] FamilyID     = cele0b2
+2023/02/21 23:53:18 [ GridTool::ParseParameters ] InputDsid    = xxx_xxxx
+2023/02/21 23:53:18 [ GridTool::ParseParameters ] ProjectDir   = mdc2020/datasets/cele0b2
+2023/02/21 23:53:18 [ GridTool::ParseParameters ] Recover      = None
+2023/02/21 23:53:18 [ GridTool::ParseParameters ] Fileset      = 0100
+2023/02/21 23:53:18 [ GridTool::ParseParameters ] ------------------------------------- Done
+2023/02/21 23:53:18 [ GridTool::submit_grid_job ] executing :tar -tjf /pnfs/mu2e/resilient/users/murat/mdc2020/cnf.murat.cele0b2s45r00.s5_reco_09.mdc2020.0100.fcl.tbz | wc -l
+2023/02/21 23:53:19 [ GridTool::submit_grid_job ] nsegments: 1
+submit_grid_job: parms: ['grim/scripts/submit_grid_job', 'mdc2020', 'cele0b2s45r00', 's5:reco_09:0100', '2000MB:12h:xrootd', '.']
+2023/02/21 23:54:05 [ GridTool::submit_grid_job ] submission finished, process.returncode: 0
+2023/02/21 23:54:05 [ GridTool::submit_grid_job ] submission_record:                                                                                                                                
+Tue Feb 21 23:53:19 CST 2023                                                                                                                                                                        
+Will use the outstage directory = /pnfs/mu2e/scratch/users/murat/workflow/mdc2020.cele0b2s45r00.s5_reco_09/outstage                                                                                 
+Will use ifdh version v2_6_10                                                                                                                                                                       
+Will use mu2efilename version v3_8                                                                                                                                                                  
+Will use mu2etools version v4_04_00
+Will use ifdhc_config version v2_6_16
+Command:  jobsub_submit --memory 2000MB --group mu2e --disk 30GB --resource-provides usage_model=OPPORTUNISTIC,DEDICATED --expected-lifetime 12h -l priority=0 -e XRD_STREAMTIMEOUT=300 -e EXPERIMENT=mu2e -e MU2EGRID_MU2ESETUP=/cvmfs/mu2e.opensciencegrid.org/setupmu2e-art.sh -e MU2EGRID_IFDHC_CONFIG_VERSION=v2_6_16 -e MU2EGRID_CODE=/pnfs/mu2e/resilient/users/murat/mdc2020/mdc2020.code.murat.23aab4c6.tbz -e IFDH_VERSION=v2_6_10 -e MU2EGRID_WFOUTSTAGE=/pnfs/mu2e/scratch/users/murat/workflow/mdc2020.cele0b2s45r00.s5_reco_09/outstage -e MU2EGRID_FCLTAR=/pnfs/mu2e/resilient/users/murat/mdc2020/cnf.murat.cele0b2s45r00.s5_reco_09.mdc2020.0100.fcl.tbz -e MU2EGRID_ERRORDELAY=10 -e MU2EGRID_INPUTLIST=EoCA3KOOXm -e MU2EGRID_DEBUG=0 -e MU2EGRID_DSCONF=mdc2020 -e MU2EGRID_XROOTD=1 -e MU2EGRID_USERSETUP=Code/setup.sh -e MU2EGRID_DSOWNER=murat -e MU2EGRID_TRANSFER_ALL=1 -e MU2EGRID_MU2ETOOLS_VERSION=v4_04_00 -e MU2EGRID_MU2EFILENAME_VERSION=v3_8 -N 1 -f dropbox:///tmp/EoCA3KOOXm --tar_file_name dropbox:///pnfs/mu2e/resilient/users/murat/mdc2020/mdc2020.code.murat.23aab4c6.tbz file:///cvmfs/mu2e.opensciencegrid.org/artexternals/mu2egrid/v8_01_02/bin/impl/mu2eprodsys.sh
+Submitting....
+EoCA3KOOXm
+Using bearer token located at /tmp/bt_token_mu2e_Analysis_5339 to authenticate to RCDS
+Checking to see if uploaded file is published on RCDS.
+Could not locate uploaded file on RCDS.  Will retry in 30 seconds.
+Found uploaded file on RCDS.
+Using bearer token located at /tmp/bt_token_mu2e_Analysis_5339 to authenticate to RCDS
+Submitting job(s).
+1 job(s) submitted to cluster 57374443.
+Use job id 57374443.0@jobsub01.fnal.gov to retrieve output
+
+Tue Feb 21 23:53:19 CST 2023
+Will use the outstage directory = /pnfs/mu2e/scratch/users/murat/workflow/mdc2020.cele0b2s45r00.s5_reco_09/outstage
+Will use ifdh version v2_6_10
+Will use mu2efilename version v3_8
+Will use mu2etools version v4_04_00
+Will use ifdhc_config version v2_6_16
+Command:  jobsub_submit --memory 2000MB --group mu2e --disk 30GB --resource-provides usage_model=OPPORTUNISTIC,DEDICATED --expected-lifetime 12h -l priority=0 -e XRD_STREAMTIMEOUT=300 -e EXPERIMENT=mu2e -e MU2EGRID_MU2ESETUP=/cvmfs/mu2e.opensciencegrid.org/setupmu2e-art.sh -e MU2EGRID_IFDHC_CONFIG_VERSION=v2_6_16 -e MU2EGRID_CODE=/pnfs/mu2e/resilient/users/murat/mdc2020/mdc2020.code.murat.23aab4c6.tbz -e IFDH_VERSION=v2_6_10 -e MU2EGRID_WFOUTSTAGE=/pnfs/mu2e/scratch/users/murat/workflow/mdc2020.cele0b2s45r00.s5_reco_09/outstage -e MU2EGRID_FCLTAR=/pnfs/mu2e/resilient/users/murat/mdc2020/cnf.murat.cele0b2s45r00.s5_reco_09.mdc2020.0100.fcl.tbz -e MU2EGRID_ERRORDELAY=10 -e MU2EGRID_INPUTLIST=EoCA3KOOXm -e MU2EGRID_DEBUG=0 -e MU2EGRID_DSCONF=mdc2020 -e MU2EGRID_XROOTD=1 -e MU2EGRID_USERSETUP=Code/setup.sh -e MU2EGRID_DSOWNER=murat -e MU2EGRID_TRANSFER_ALL=1 -e MU2EGRID_MU2ETOOLS_VERSION=v4_04_00 -e MU2EGRID_MU2EFILENAME_VERSION=v3_8 -N 1 -f dropbox:///tmp/EoCA3KOOXm --tar_file_name dropbox:///pnfs/mu2e/resilient/users/murat/mdc2020/mdc2020.code.murat.23aab4c6.tbz file:///cvmfs/mu2e.opensciencegrid.org/artexternals/mu2egrid/v8_01_02/bin/impl/mu2eprodsys.sh
+Submitting....
+EoCA3KOOXm
+Using bearer token located at /tmp/bt_token_mu2e_Analysis_5339 to authenticate to RCDS
+Checking to see if uploaded file is published on RCDS.
+Could not locate uploaded file on RCDS.  Will retry in 30 seconds.
+Found uploaded file on RCDS.
+Using bearer token located at /tmp/bt_token_mu2e_Analysis_5339 to authenticate to RCDS
+Submitting job(s).
+1 job(s) submitted to cluster 57374443.
+Use job id 57374443.0@jobsub01.fnal.gov to retrieve output
+2023/02/21 23:54:05 [ GridTool::submit_grid_job ] jobid: 57374443 , writing to json nsegments = 1
+2023/02/21 23:54:05 [ GridTool::submit_grid_job ] written status file: tmp/mdc2020/grid_job_status/57374443
+* <2023-02-21 Tue> *57374442 COMPLETED* : cele0b2s41r00.s5_reco_0a.0000           2000MB:12h:xrootd 
+murat@mu2ebuild01:/mu2e/app/users/murat/muse>grim/scripts/submit_job.py --project=mdc2020 --dsid=cele0b2s41r00 --stage=s5 --job=reco_0a --fileset=0000 --doit=.
+2023/02/21 23:40:55 [ GridTool::ParseParameters ] Project      = mdc2020
+2023/02/21 23:40:55 [ GridTool::ParseParameters ] Verbose      = 1
+2023/02/21 23:40:55 [ GridTool::ParseParameters ] Doit         = .
+2023/02/21 23:40:55 [ GridTool::ParseParameters ] FamilyID     = cele0b2
+2023/02/21 23:40:55 [ GridTool::ParseParameters ] InputDsid    = xxx_xxxx
+2023/02/21 23:40:55 [ GridTool::ParseParameters ] ProjectDir   = mdc2020/datasets/cele0b2
+2023/02/21 23:40:55 [ GridTool::ParseParameters ] Recover      = None
+2023/02/21 23:40:55 [ GridTool::ParseParameters ] Fileset      = 0000
+2023/02/21 23:40:55 [ GridTool::ParseParameters ] ------------------------------------- Done
+2023/02/21 23:40:56 [ GridTool::submit_grid_job ] executing :tar -tjf /pnfs/mu2e/resilient/users/murat/mdc2020/cnf.murat.cele0b2s41r00.s5_reco_0a.mdc2020.0000.fcl.tbz | wc -l
+2023/02/21 23:40:56 [ GridTool::submit_grid_job ] nsegments: 1
+submit_grid_job: parms: ['grim/scripts/submit_grid_job', 'mdc2020', 'cele0b2s41r00', 's5:reco_0a:0000', '2000MB:12h:xrootd', '.']
+2023/02/21 23:41:41 [ GridTool::submit_grid_job ] submission finished, process.returncode: 0
+2023/02/21 23:41:41 [ GridTool::submit_grid_job ] submission_record:
+Tue Feb 21 23:40:56 CST 2023
+Will use the outstage directory = /pnfs/mu2e/scratch/users/murat/workflow/mdc2020.cele0b2s41r00.s5_reco_0a/outstage
+Will use ifdh version v2_6_10
+Will use mu2efilename version v3_8
+Will use mu2etools version v4_04_00
+Will use ifdhc_config version v2_6_16
+Command:  jobsub_submit --memory 2000MB --group mu2e --disk 30GB --resource-provides usage_model=OPPORTUNISTIC,DEDICATED --expected-lifetime 12h -l priority=0 -e XRD_STREAMTIMEOUT=300 -e EXPERIMENT=mu2e -e MU2EGRID_MU2ESETUP=/cvmfs/mu2e.opensciencegrid.org/setupmu2e-art.sh -e MU2EGRID_IFDHC_CONFIG_VERSION=v2_6_16 -e MU2EGRID_CODE=/pnfs/mu2e/resilient/users/murat/mdc2020/mdc2020.code.murat.23aab4c6.tbz -e IFDH_VERSION=v2_6_10 -e MU2EGRID_WFOUTSTAGE=/pnfs/mu2e/scratch/users/murat/workflow/mdc2020.cele0b2s41r00.s5_reco_0a/outstage -e MU2EGRID_FCLTAR=/pnfs/mu2e/resilient/users/murat/mdc2020/cnf.murat.cele0b2s41r00.s5_reco_0a.mdc2020.0000.fcl.tbz -e MU2EGRID_ERRORDELAY=10 -e MU2EGRID_INPUTLIST=KfMRmICh9g -e MU2EGRID_DEBUG=0 -e MU2EGRID_DSCONF=mdc2020 -e MU2EGRID_XROOTD=1 -e MU2EGRID_USERSETUP=Code/setup.sh -e MU2EGRID_DSOWNER=murat -e MU2EGRID_TRANSFER_ALL=1 -e MU2EGRID_MU2ETOOLS_VERSION=v4_04_00 -e MU2EGRID_MU2EFILENAME_VERSION=v3_8 -N 1 -f dropbox:///tmp/KfMRmICh9g --tar_file_name dropbox:///pnfs/mu2e/resilient/users/murat/mdc2020/mdc2020.code.murat.23aab4c6.tbz file:///cvmfs/mu2e.opensciencegrid.org/artexternals/mu2egrid/v8_01_02/bin/impl/mu2eprodsys.sh
+Submitting....
+KfMRmICh9g
+Using bearer token located at /tmp/bt_token_mu2e_Analysis_5339 to authenticate to RCDS
+Checking to see if uploaded file is published on RCDS.
+Could not locate uploaded file on RCDS.  Will retry in 30 seconds.
+Found uploaded file on RCDS.
+Using bearer token located at /tmp/bt_token_mu2e_Analysis_5339 to authenticate to RCDS
+Submitting job(s).
+1 job(s) submitted to cluster 57374442.
+Use job id 57374442.0@jobsub01.fnal.gov to retrieve output
+
+Tue Feb 21 23:40:56 CST 2023
+Will use the outstage directory = /pnfs/mu2e/scratch/users/murat/workflow/mdc2020.cele0b2s41r00.s5_reco_0a/outstage
+Will use ifdh version v2_6_10
+Will use mu2efilename version v3_8
+Will use mu2etools version v4_04_00
+Will use ifdhc_config version v2_6_16
+Command:  jobsub_submit --memory 2000MB --group mu2e --disk 30GB --resource-provides usage_model=OPPORTUNISTIC,DEDICATED --expected-lifetime 12h -l priority=0 -e XRD_STREAMTIMEOUT=300 -e EXPERIMENT=mu2e -e MU2EGRID_MU2ESETUP=/cvmfs/mu2e.opensciencegrid.org/setupmu2e-art.sh -e MU2EGRID_IFDHC_CONFIG_VERSION=v2_6_16 -e MU2EGRID_CODE=/pnfs/mu2e/resilient/users/murat/mdc2020/mdc2020.code.murat.23aab4c6.tbz -e IFDH_VERSION=v2_6_10 -e MU2EGRID_WFOUTSTAGE=/pnfs/mu2e/scratch/users/murat/workflow/mdc2020.cele0b2s41r00.s5_reco_0a/outstage -e MU2EGRID_FCLTAR=/pnfs/mu2e/resilient/users/murat/mdc2020/cnf.murat.cele0b2s41r00.s5_reco_0a.mdc2020.0000.fcl.tbz -e MU2EGRID_ERRORDELAY=10 -e MU2EGRID_INPUTLIST=KfMRmICh9g -e MU2EGRID_DEBUG=0 -e MU2EGRID_DSCONF=mdc2020 -e MU2EGRID_XROOTD=1 -e MU2EGRID_USERSETUP=Code/setup.sh -e MU2EGRID_DSOWNER=murat -e MU2EGRID_TRANSFER_ALL=1 -e MU2EGRID_MU2ETOOLS_VERSION=v4_04_00 -e MU2EGRID_MU2EFILENAME_VERSION=v3_8 -N 1 -f dropbox:///tmp/KfMRmICh9g --tar_file_name dropbox:///pnfs/mu2e/resilient/users/murat/mdc2020/mdc2020.code.murat.23aab4c6.tbz file:///cvmfs/mu2e.opensciencegrid.org/artexternals/mu2egrid/v8_01_02/bin/impl/mu2eprodsys.sh
+Submitting....
+KfMRmICh9g
+Using bearer token located at /tmp/bt_token_mu2e_Analysis_5339 to authenticate to RCDS
+Checking to see if uploaded file is published on RCDS.
+Could not locate uploaded file on RCDS.  Will retry in 30 seconds.
+Found uploaded file on RCDS.
+Using bearer token located at /tmp/bt_token_mu2e_Analysis_5339 to authenticate to RCDS
+Submitting job(s).
+1 job(s) submitted to cluster 57374442.
+Use job id 57374442.0@jobsub01.fnal.gov to retrieve output
+2023/02/21 23:41:41 [ GridTool::submit_grid_job ] jobid: 57374442 , writing to json nsegments = 1
+2023/02/21 23:41:41 [ GridTool::submit_grid_job ] written status file: tmp/mdc2020/grid_job_status/57374442
+* <2023-02-21 Tue> *57374441 COMPLETED* : cele0b2s41r00.s5_reco_09.0000           2000MB:12h:xrootd 
+murat@mu2ebuild01:/mu2e/app/users/murat/muse>grim/scripts/submit_job.py --project=mdc2020 --dsid=cele0b2s41r00 --stage=s5 --job=reco_09 --fileset=0000 --doit=.
+2023/02/21 23:36:01 [ GridTool::ParseParameters ] Project      = mdc2020
+2023/02/21 23:36:01 [ GridTool::ParseParameters ] Verbose      = 1
+2023/02/21 23:36:01 [ GridTool::ParseParameters ] Doit         = .
+2023/02/21 23:36:01 [ GridTool::ParseParameters ] FamilyID     = cele0b2
+2023/02/21 23:36:01 [ GridTool::ParseParameters ] InputDsid    = xxx_xxxx
+2023/02/21 23:36:01 [ GridTool::ParseParameters ] ProjectDir   = mdc2020/datasets/cele0b2
+2023/02/21 23:36:01 [ GridTool::ParseParameters ] Recover      = None
+2023/02/21 23:36:01 [ GridTool::ParseParameters ] Fileset      = 0000
+2023/02/21 23:36:01 [ GridTool::ParseParameters ] ------------------------------------- Done
+2023/02/21 23:36:01 [ GridTool::submit_grid_job ] executing :tar -tjf /pnfs/mu2e/resilient/users/murat/mdc2020/cnf.murat.cele0b2s41r00.s5_reco_09.mdc2020.0000.fcl.tbz | wc -l
+2023/02/21 23:36:01 [ GridTool::submit_grid_job ] nsegments: 1
+submit_grid_job: parms: ['grim/scripts/submit_grid_job', 'mdc2020', 'cele0b2s41r00', 's5:reco_09:0000', '2000MB:12h:xrootd', '.']
+2023/02/21 23:38:55 [ GridTool::submit_grid_job ] submission finished, process.returncode: 0
+2023/02/21 23:38:55 [ GridTool::submit_grid_job ] submission_record:                                                                                                                               
+Tue Feb 21 23:36:02 CST 2023
+Will use the outstage directory = /pnfs/mu2e/scratch/users/murat/workflow/mdc2020.cele0b2s41r00.s5_reco_09/outstage
+Will use ifdh version v2_6_10
+Will use mu2efilename version v3_8
+Will use mu2etools version v4_04_00
+Will use ifdhc_config version v2_6_16
+Command:  jobsub_submit --memory 2000MB --group mu2e --disk 30GB --resource-provides usage_model=OPPORTUNISTIC,DEDICATED --expected-lifetime 12h -l priority=0 -e XRD_STREAMTIMEOUT=300 -e EXPERIMENT=mu2e -e MU2EGRID_MU2ESETUP=/cvmfs/mu2e.opensciencegrid.org/setupmu2e-art.sh -e MU2EGRID_IFDHC_CONFIG_VERSION=v2_6_16 -e MU2EGRID_CODE=/pnfs/mu2e/resilient/users/murat/mdc2020/mdc2020.code.murat.23aab4c6.tbz -e IFDH_VERSION=v2_6_10 -e MU2EGRID_WFOUTSTAGE=/pnfs/mu2e/scratch/users/murat/workflow/mdc2020.cele0b2s41r00.s5_reco_09/outstage -e MU2EGRID_FCLTAR=/pnfs/mu2e/resilient/users/murat/mdc2020/cnf.murat.cele0b2s41r00.s5_reco_09.mdc2020.0000.fcl.tbz -e MU2EGRID_ERRORDELAY=10 -e MU2EGRID_INPUTLIST=4elNSmyvnt -e MU2EGRID_DEBUG=0 -e MU2EGRID_DSCONF=mdc2020 -e MU2EGRID_XROOTD=1 -e MU2EGRID_USERSETUP=Code/setup.sh -e MU2EGRID_DSOWNER=murat -e MU2EGRID_TRANSFER_ALL=1 -e MU2EGRID_MU2ETOOLS_VERSION=v4_04_00 -e MU2EGRID_MU2EFILENAME_VERSION=v3_8 -N 1 -f dropbox:///tmp/4elNSmyvnt --tar_file_name dropbox:///pnfs/mu2e/resilient/users/murat/mdc2020/mdc2020.code.murat.23aab4c6.tbz file:///cvmfs/mu2e.opensciencegrid.org/artexternals/mu2egrid/v8_01_02/bin/impl/mu2eprodsys.sh
+Submitting....
+Attempting to get token from https://htvaultprod.fnal.gov:8200 ... succeeded
+Storing bearer token in /tmp/bt_token_mu2e_Analysis_5339
+4elNSmyvnt
+Using bearer token located at /tmp/bt_token_mu2e_Analysis_5339 to authenticate to RCDS
+Checking to see if uploaded file is published on RCDS.
+Could not locate uploaded file on RCDS.  Will retry in 30 seconds.
+Found uploaded file on RCDS.
+Using bearer token located at /tmp/bt_token_mu2e_Analysis_5339 to authenticate to RCDS
+Checking to see if uploaded file is published on RCDS.
+Could not locate uploaded file on RCDS.  Will retry in 30 seconds.
+Could not locate uploaded file on RCDS.  Will retry in 30 seconds.
+Could not locate uploaded file on RCDS.  Will retry in 30 seconds.
+Could not locate uploaded file on RCDS.  Will retry in 30 seconds.
+Found uploaded file on RCDS.
+Submitting job(s).
+1 job(s) submitted to cluster 57374441.
+Use job id 57374441.0@jobsub01.fnal.gov to retrieve output
+
+Tue Feb 21 23:36:02 CST 2023
+Will use the outstage directory = /pnfs/mu2e/scratch/users/murat/workflow/mdc2020.cele0b2s41r00.s5_reco_09/outstage
+Will use ifdh version v2_6_10
+Will use mu2efilename version v3_8
+Will use mu2etools version v4_04_00
+Will use ifdhc_config version v2_6_16
+Command:  jobsub_submit --memory 2000MB --group mu2e --disk 30GB --resource-provides usage_model=OPPORTUNISTIC,DEDICATED --expected-lifetime 12h -l priority=0 -e XRD_STREAMTIMEOUT=300 -e EXPERIMENT=mu2e -e MU2EGRID_MU2ESETUP=/cvmfs/mu2e.opensciencegrid.org/setupmu2e-art.sh -e MU2EGRID_IFDHC_CONFIG_VERSION=v2_6_16 -e MU2EGRID_CODE=/pnfs/mu2e/resilient/users/murat/mdc2020/mdc2020.code.murat.23aab4c6.tbz -e IFDH_VERSION=v2_6_10 -e MU2EGRID_WFOUTSTAGE=/pnfs/mu2e/scratch/users/murat/workflow/mdc2020.cele0b2s41r00.s5_reco_09/outstage -e MU2EGRID_FCLTAR=/pnfs/mu2e/resilient/users/murat/mdc2020/cnf.murat.cele0b2s41r00.s5_reco_09.mdc2020.0000.fcl.tbz -e MU2EGRID_ERRORDELAY=10 -e MU2EGRID_INPUTLIST=4elNSmyvnt -e MU2EGRID_DEBUG=0 -e MU2EGRID_DSCONF=mdc2020 -e MU2EGRID_XROOTD=1 -e MU2EGRID_USERSETUP=Code/setup.sh -e MU2EGRID_DSOWNER=murat -e MU2EGRID_TRANSFER_ALL=1 -e MU2EGRID_MU2ETOOLS_VERSION=v4_04_00 -e MU2EGRID_MU2EFILENAME_VERSION=v3_8 -N 1 -f dropbox:///tmp/4elNSmyvnt --tar_file_name dropbox:///pnfs/mu2e/resilient/users/murat/mdc2020/mdc2020.code.murat.23aab4c6.tbz file:///cvmfs/mu2e.opensciencegrid.org/artexternals/mu2egrid/v8_01_02/bin/impl/mu2eprodsys.sh
+Submitting....
+Attempting to get token from https://htvaultprod.fnal.gov:8200 ... succeeded
+Storing bearer token in /tmp/bt_token_mu2e_Analysis_5339
+4elNSmyvnt
+Using bearer token located at /tmp/bt_token_mu2e_Analysis_5339 to authenticate to RCDS
+Checking to see if uploaded file is published on RCDS.
+Could not locate uploaded file on RCDS.  Will retry in 30 seconds.
+Found uploaded file on RCDS.
+Using bearer token located at /tmp/bt_token_mu2e_Analysis_5339 to authenticate to RCDS
+Checking to see if uploaded file is published on RCDS.
+Could not locate uploaded file on RCDS.  Will retry in 30 seconds.
+Could not locate uploaded file on RCDS.  Will retry in 30 seconds.
+Could not locate uploaded file on RCDS.  Will retry in 30 seconds.
+Could not locate uploaded file on RCDS.  Will retry in 30 seconds.
+Found uploaded file on RCDS.
+Submitting job(s).
+1 job(s) submitted to cluster 57374441.
+Use job id 57374441.0@jobsub01.fnal.gov to retrieve output
+2023/02/21 23:38:55 [ GridTool::submit_grid_job ] jobid: 57374441 , writing to json nsegments = 1
+2023/02/21 23:38:55 [ GridTool::submit_grid_job ] written status file: tmp/mdc2020/grid_job_status/57374441
+* <2023-02-17 Fri> *57291023 SUBMITTED* : cele0b2s45r00.s5_reco_09        /    1  2000MB:12h:xrootd 
+murat@mu2ebuild01:/mu2e/app/users/murat/muse>grim/scripts/submit_job.py --project=mdc2020 --dsid=cele0b2s45r00 --stage=s5 --job=reco_09  --fileset=0100 --doit=.
+2023/02/17 11:55:27 [ GridTool::ParseParameters ] Project      = mdc2020
+2023/02/17 11:55:27 [ GridTool::ParseParameters ] Verbose      = 1
+2023/02/17 11:55:27 [ GridTool::ParseParameters ] Doit         = .
+2023/02/17 11:55:27 [ GridTool::ParseParameters ] FamilyID     = cele0b2
+2023/02/17 11:55:27 [ GridTool::ParseParameters ] InputDsid    = xxx_xxxx
+2023/02/17 11:55:27 [ GridTool::ParseParameters ] ProjectDir   = mdc2020/datasets/cele0b2
+2023/02/17 11:55:27 [ GridTool::ParseParameters ] Recover      = None
+2023/02/17 11:55:27 [ GridTool::ParseParameters ] Fileset      = 0100
+2023/02/17 11:55:27 [ GridTool::ParseParameters ] ------------------------------------- Done
+2023/02/17 11:55:27 [ GridTool::submit_grid_job ] executing :tar -tjf /pnfs/mu2e/resilient/users/murat/mdc2020/cnf.murat.cele0b2s45r00.s5_reco_09.mdc2020.0100.fcl.tbz | wc -l
+2023/02/17 11:55:28 [ GridTool::submit_grid_job ] nsegments: 1
+submit_grid_job: parms: ['grim/scripts/submit_grid_job', 'mdc2020', 'cele0b2s45r00', 's5:reco_09:0100', '2000MB:12h:xrootd', '.']
+2023/02/17 11:56:18 [ GridTool::submit_grid_job ] submission finished, process.returncode: 0
+2023/02/17 11:56:18 [ GridTool::submit_grid_job ] submission_record:
+Fri Feb 17 11:55:28 CST 2023
+Will use the outstage directory = /pnfs/mu2e/scratch/users/murat/workflow/mdc2020.cele0b2s45r00.s5_reco_09/outstage
+Will use ifdh version v2_6_10
+Will use mu2efilename version v3_8
+Will use mu2etools version v4_04_00
+Will use ifdhc_config version v2_6_16
+Command:  jobsub_submit --memory 2000MB --group mu2e --disk 30GB --resource-provides usage_model=OPPORTUNISTIC,DEDICATED --expected-lifetime 12h -l priority=0 -e XRD_STREAMTIMEOUT=300 -e EXPERIMENT=mu2e -e MU2EGRID_MU2ESETUP=/cvmfs/mu2e.opensciencegrid.org/setupmu2e-art.sh -e MU2EGRID_IFDHC_CONFIG_VERSION=v2_6_16 -e MU2EGRID_CODE=/pnfs/mu2e/resilient/users/murat/mdc2020/mdc2020.code.murat.f9882aa9.tbz -e IFDH_VERSION=v2_6_10 -e MU2EGRID_WFOUTSTAGE=/pnfs/mu2e/scratch/users/murat/workflow/mdc2020.cele0b2s45r00.s5_reco_09/outstage -e MU2EGRID_FCLTAR=/pnfs/mu2e/resilient/users/murat/mdc2020/cnf.murat.cele0b2s45r00.s5_reco_09.mdc2020.0100.fcl.tbz -e MU2EGRID_ERRORDELAY=10 -e MU2EGRID_INPUTLIST=oxd5c7U5wH -e MU2EGRID_DEBUG=0 -e MU2EGRID_DSCONF=mdc2020 -e MU2EGRID_XROOTD=1 -e MU2EGRID_USERSETUP=Code/setup.sh -e MU2EGRID_DSOWNER=murat -e MU2EGRID_TRANSFER_ALL=1 -e MU2EGRID_MU2ETOOLS_VERSION=v4_04_00 -e MU2EGRID_MU2EFILENAME_VERSION=v3_8 -N 1 -f dropbox:///tmp/oxd5c7U5wH --tar_file_name dropbox:///pnfs/mu2e/resilient/users/murat/mdc2020/mdc2020.code.murat.f9882aa9.tbz file:///cvmfs/mu2e.opensciencegrid.org/artexternals/mu2egrid/v8_01_01/bin/impl/mu2eprodsys.sh
+Submitting....
+Attempting to get token from https://htvaultprod.fnal.gov:8200 ... succeeded
+Storing bearer token in /tmp/bt_token_mu2e_Analysis_5339
+oxd5c7U5wH
+Using bearer token located at /tmp/bt_token_mu2e_Analysis_5339 to authenticate to RCDS
+Checking to see if uploaded file is published on RCDS.
+Could not locate uploaded file on RCDS.  Will retry in 30 seconds.
+Found uploaded file on RCDS.
+Using bearer token located at /tmp/bt_token_mu2e_Analysis_5339 to authenticate to RCDS
+Submitting job(s).
+1 job(s) submitted to cluster 57291023.
+Use job id 57291023.0@jobsub01.fnal.gov to retrieve output
+
+Fri Feb 17 11:55:28 CST 2023
+Will use the outstage directory = /pnfs/mu2e/scratch/users/murat/workflow/mdc2020.cele0b2s45r00.s5_reco_09/outstage
+Will use ifdh version v2_6_10
+Will use mu2efilename version v3_8
+Will use mu2etools version v4_04_00
+Will use ifdhc_config version v2_6_16
+Command:  jobsub_submit --memory 2000MB --group mu2e --disk 30GB --resource-provides usage_model=OPPORTUNISTIC,DEDICATED --expected-lifetime 12h -l priority=0 -e XRD_STREAMTIMEOUT=300 -e EXPERIMENT=mu2e -e MU2EGRID_MU2ESETUP=/cvmfs/mu2e.opensciencegrid.org/setupmu2e-art.sh -e MU2EGRID_IFDHC_CONFIG_VERSION=v2_6_16 -e MU2EGRID_CODE=/pnfs/mu2e/resilient/users/murat/mdc2020/mdc2020.code.murat.f9882aa9.tbz -e IFDH_VERSION=v2_6_10 -e MU2EGRID_WFOUTSTAGE=/pnfs/mu2e/scratch/users/murat/workflow/mdc2020.cele0b2s45r00.s5_reco_09/outstage -e MU2EGRID_FCLTAR=/pnfs/mu2e/resilient/users/murat/mdc2020/cnf.murat.cele0b2s45r00.s5_reco_09.mdc2020.0100.fcl.tbz -e MU2EGRID_ERRORDELAY=10 -e MU2EGRID_INPUTLIST=oxd5c7U5wH -e MU2EGRID_DEBUG=0 -e MU2EGRID_DSCONF=mdc2020 -e MU2EGRID_XROOTD=1 -e MU2EGRID_USERSETUP=Code/setup.sh -e MU2EGRID_DSOWNER=murat -e MU2EGRID_TRANSFER_ALL=1 -e MU2EGRID_MU2ETOOLS_VERSION=v4_04_00 -e MU2EGRID_MU2EFILENAME_VERSION=v3_8 -N 1 -f dropbox:///tmp/oxd5c7U5wH --tar_file_name dropbox:///pnfs/mu2e/resilient/users/murat/mdc2020/mdc2020.code.murat.f9882aa9.tbz file:///cvmfs/mu2e.opensciencegrid.org/artexternals/mu2egrid/v8_01_01/bin/impl/mu2eprodsys.sh
+Submitting....
+Attempting to get token from https://htvaultprod.fnal.gov:8200 ... succeeded
+Storing bearer token in /tmp/bt_token_mu2e_Analysis_5339
+oxd5c7U5wH
+Using bearer token located at /tmp/bt_token_mu2e_Analysis_5339 to authenticate to RCDS
+Checking to see if uploaded file is published on RCDS.
+Could not locate uploaded file on RCDS.  Will retry in 30 seconds.
+Found uploaded file on RCDS.
+Using bearer token located at /tmp/bt_token_mu2e_Analysis_5339 to authenticate to RCDS
+Submitting job(s).
+1 job(s) submitted to cluster 57291023.
+Use job id 57291023.0@jobsub01.fnal.gov to retrieve output
+2023/02/17 11:56:18 [ GridTool::submit_grid_job ] jobid: 57291023 , writing to json nsegments = 1
+2023/02/17 11:56:18 [ GridTool::submit_grid_job ] written status file: tmp/mdc2020/grid_job_status/57291023
+* <2023-02-16 Thu> *57261816 COMPLETED* : cele0b2s41r00.s5_reco_0a        /    1  2000MB:12h:xrootd 
+murat@mu2ebuild01:/mu2e/app/users/murat/muse>grim/scripts/submit_job.py --project=mdc2020 --dsid=cele0b2s41r00 --stage=s5 --job=reco_0a --verbose=1 --fileset=000 --doit=.
+2023/02/16 15:25:36 [ GridTool::ParseParameters ] Project      = mdc2020
+2023/02/16 15:25:36 [ GridTool::ParseParameters ] Verbose      = 1
+2023/02/16 15:25:36 [ GridTool::ParseParameters ] Doit         = .
+2023/02/16 15:25:36 [ GridTool::ParseParameters ] FamilyID     = cele0b2
+2023/02/16 15:25:36 [ GridTool::ParseParameters ] InputDsid    = xxx_xxxx
+2023/02/16 15:25:36 [ GridTool::ParseParameters ] ProjectDir   = mdc2020/datasets/cele0b2
+2023/02/16 15:25:36 [ GridTool::ParseParameters ] Recover      = None
+2023/02/16 15:25:36 [ GridTool::ParseParameters ] Fileset      = 000
+2023/02/16 15:25:36 [ GridTool::ParseParameters ] ------------------------------------- Done
+2023/02/16 15:25:36 [ GridTool::submit_grid_job ] executing :tar -tjf /pnfs/mu2e/resilient/users/murat/mdc2020/cnf.murat.cele0b2s41r00.s5_reco_0a.mdc2020.000.fcl.tbz | wc -l
+2023/02/16 15:25:36 [ GridTool::submit_grid_job ] nsegments: 1
+submit_grid_job: parms: ['grim/scripts/submit_grid_job', 'mdc2020', 'cele0b2s41r00', 's5:reco_0a:000', '2000MB:12h:xrootd', '.']
+2023/02/16 15:26:21 [ GridTool::submit_grid_job ] process.returncode: 0
+2023/02/16 15:26:21 [ GridTool::submit_grid_job ] submission_record: Thu Feb 16 15:25:37 CST 2023
+Will use the outstage directory = /pnfs/mu2e/scratch/users/murat/workflow/mdc2020.cele0b2s41r00.s5_reco_0a/outstage
+Will use ifdh version v2_6_10
+Will use mu2efilename version v3_8
+Will use mu2etools version v4_04_00
+Will use ifdhc_config version v2_6_16
+Command:  jobsub_submit --memory 2000MB --group mu2e --disk 30GB --resource-provides usage_model=OPPORTUNISTIC,DEDICATED --expected-lifetime 12h -l priority=0 -e XRD_STREAMTIMEOUT=300 -e EXPERIMENT=mu2e -e MU2EGRID_MU2ESETUP=/cvmfs/mu2e.opensciencegrid.org/setupmu2e-art.sh -e MU2EGRID_IFDHC_CONFIG_VERSION=v2_6_16 -e MU2EGRID_CODE=/pnfs/mu2e/resilient/users/murat/mdc2020/mdc2020.code.murat.f9882aa9.tbz -e IFDH_VERSION=v2_6_10 -e MU2EGRID_WFOUTSTAGE=/pnfs/mu2e/scratch/users/murat/workflow/mdc2020.cele0b2s41r00.s5_reco_0a/outstage -e MU2EGRID_FCLTAR=/pnfs/mu2e/resilient/users/murat/mdc2020/cnf.murat.cele0b2s41r00.s5_reco_0a.mdc2020.000.fcl.tbz -e MU2EGRID_ERRORDELAY=10 -e MU2EGRID_INPUTLIST=sF3B08Gdiv -e MU2EGRID_DEBUG=0 -e MU2EGRID_DSCONF=mdc2020 -e MU2EGRID_XROOTD=1 -e MU2EGRID_USERSETUP=Code/setup.sh -e MU2EGRID_DSOWNER=murat -e MU2EGRID_TRANSFER_ALL=1 -e MU2EGRID_MU2ETOOLS_VERSION=v4_04_00 -e MU2EGRID_MU2EFILENAME_VERSION=v3_8 -N 1 -f dropbox:///tmp/sF3B08Gdiv --tar_file_name dropbox:///pnfs/mu2e/resilient/users/murat/mdc2020/mdc2020.code.murat.f9882aa9.tbz file:///cvmfs/mu2e.opensciencegrid.org/artexternals/mu2egrid/v8_01_01/bin/impl/mu2eprodsys.sh
+Submitting....
+sF3B08Gdiv
+Using bearer token located at /tmp/bt_token_mu2e_Analysis_5339 to authenticate to RCDS
+Checking to see if uploaded file is published on RCDS.
+Could not locate uploaded file on RCDS.  Will retry in 30 seconds.
+Found uploaded file on RCDS.
+Using bearer token located at /tmp/bt_token_mu2e_Analysis_5339 to authenticate to RCDS
+Submitting job(s).
+1 job(s) submitted to cluster 57261816.
+Use job id 57261816.0@jobsub01.fnal.gov to retrieve output
+
+Thu Feb 16 15:25:37 CST 2023
+Will use the outstage directory = /pnfs/mu2e/scratch/users/murat/workflow/mdc2020.cele0b2s41r00.s5_reco_0a/outstage
+Will use ifdh version v2_6_10
+Will use mu2efilename version v3_8
+Will use mu2etools version v4_04_00
+Will use ifdhc_config version v2_6_16
+Command:  jobsub_submit --memory 2000MB --group mu2e --disk 30GB --resource-provides usage_model=OPPORTUNISTIC,DEDICATED --expected-lifetime 12h -l priority=0 -e XRD_STREAMTIMEOUT=300 -e EXPERIMENT=mu2e -e MU2EGRID_MU2ESETUP=/cvmfs/mu2e.opensciencegrid.org/setupmu2e-art.sh -e MU2EGRID_IFDHC_CONFIG_VERSION=v2_6_16 -e MU2EGRID_CODE=/pnfs/mu2e/resilient/users/murat/mdc2020/mdc2020.code.murat.f9882aa9.tbz -e IFDH_VERSION=v2_6_10 -e MU2EGRID_WFOUTSTAGE=/pnfs/mu2e/scratch/users/murat/workflow/mdc2020.cele0b2s41r00.s5_reco_0a/outstage -e MU2EGRID_FCLTAR=/pnfs/mu2e/resilient/users/murat/mdc2020/cnf.murat.cele0b2s41r00.s5_reco_0a.mdc2020.000.fcl.tbz -e MU2EGRID_ERRORDELAY=10 -e MU2EGRID_INPUTLIST=sF3B08Gdiv -e MU2EGRID_DEBUG=0 -e MU2EGRID_DSCONF=mdc2020 -e MU2EGRID_XROOTD=1 -e MU2EGRID_USERSETUP=Code/setup.sh -e MU2EGRID_DSOWNER=murat -e MU2EGRID_TRANSFER_ALL=1 -e MU2EGRID_MU2ETOOLS_VERSION=v4_04_00 -e MU2EGRID_MU2EFILENAME_VERSION=v3_8 -N 1 -f dropbox:///tmp/sF3B08Gdiv --tar_file_name dropbox:///pnfs/mu2e/resilient/users/murat/mdc2020/mdc2020.code.murat.f9882aa9.tbz file:///cvmfs/mu2e.opensciencegrid.org/artexternals/mu2egrid/v8_01_01/bin/impl/mu2eprodsys.sh
+Submitting....
+sF3B08Gdiv
+Using bearer token located at /tmp/bt_token_mu2e_Analysis_5339 to authenticate to RCDS
+Checking to see if uploaded file is published on RCDS.
+Could not locate uploaded file on RCDS.  Will retry in 30 seconds.
+Found uploaded file on RCDS.
+Using bearer token located at /tmp/bt_token_mu2e_Analysis_5339 to authenticate to RCDS
+Submitting job(s).
+1 job(s) submitted to cluster 57261816.
+Use job id 57261816.0@jobsub01.fnal.gov to retrieve output
+2023/02/16 15:26:21 [ GridTool::submit_grid_job ] jobid: 57261816 , writing to json nsegments = 1
+* <2023-02-16 Thu> *57256118    FAILED* : cele0b2s41r00.s5_reco_0a                                 
+# failed due to a bug in mu2eprodsys
+# use local tarball, rename it to tar.bz2 
+# murat@mu2ebuild01:/mu2e/app/users/murat/muse>mu2eprodsys --code=/mu2e/app/users/murat/muse/mdc2020.code.murat.f9882aa9.tar.bz2 --fcllist=/pnfs/mu2e/resilient/users/murat/mdc2020/cnf.murat.cele0b2s41r00.s5_reco_0a.mdc2020.000.fcl.tbz --dsconf=mdc2020 --wfproject=mdc2020.cele0b2s41r00.s5_reco_0a --error-delay=10 --transfer-all-files --expected-lifetime=12h --memory=2000MB --xrootd --jobsub-arg=-e --jobsub-arg=XRD_STREAMTIMEOUT=300 
+Will use the outstage directory = /pnfs/mu2e/scratch/users/murat/workflow/mdc2020.cele0b2s41r00.s5_reco_0a/outstage
+Will use ifdh version v2_6_10
+Will use mu2efilename version v3_8
+Will use mu2etools version v4_04_00
+Will use ifdhc_config version v2_6_16
+Command:  jobsub_submit --memory 2000MB --group mu2e --disk 30GB --resource-provides usage_model=OPPORTUNISTIC,DEDICATED --expected-lifetime 12h -l priority=0 -e XRD_STREAMTIMEOUT=300 -e EXPERIMENT=mu2e -e MU2EGRID_MU2ESETUP=/cvmfs/mu2e.opensciencegrid.org/setupmu2e-art.sh -e MU2EGRID_IFDHC_CONFIG_VERSION=v2_6_16 -e MU2EGRID_CODE=/mu2e/app/users/murat/muse/mdc2020.code.murat.f9882aa9.tar.bz2 -e IFDH_VERSION=v2_6_10 -e MU2EGRID_WFOUTSTAGE=/pnfs/mu2e/scratch/users/murat/workflow/mdc2020.cele0b2s41r00.s5_reco_0a/outstage -e MU2EGRID_FCLTAR=/pnfs/mu2e/resilient/users/murat/mdc2020/cnf.murat.cele0b2s41r00.s5_reco_0a.mdc2020.000.fcl.tbz -e MU2EGRID_ERRORDELAY=10 -e MU2EGRID_INPUTLIST=2_sr_kzYJw -e MU2EGRID_DEBUG=0 -e MU2EGRID_DSCONF=mdc2020 -e MU2EGRID_XROOTD=1 -e MU2EGRID_USERSETUP=Code/setup.sh -e MU2EGRID_DSOWNER=murat -e MU2EGRID_TRANSFER_ALL=1 -e MU2EGRID_MU2ETOOLS_VERSION=v4_04_00 -e MU2EGRID_MU2EFILENAME_VERSION=v3_8 -N 1 -f dropbox:///tmp/2_sr_kzYJw --use-cvmfs-dropbox --tar_file_name dropbox:///mu2e/app/users/murat/muse/mdc2020.code.murat.f9882aa9.tar.bz2 file:///cvmfs/mu2e.opensciencegrid.org/artexternals/mu2egrid/v8_00_00/bin/impl/mu2eprodsys.sh
+Submitting....
+2_sr_kzYJw
+Using bearer token located at /tmp/bt_token_mu2e_Analysis_5339 to authenticate to RCDS
+Checking to see if uploaded file is published on RCDS.
+Could not locate uploaded file on RCDS.  Will retry in 30 seconds.
+Found uploaded file on RCDS.
+Using bearer token located at /tmp/bt_token_mu2e_Analysis_5339 to authenticate to RCDS
+Submitting job(s).
+1 job(s) submitted to cluster 57256118.
+Use job id 57256118.0@jobsub01.fnal.gov to retrieve output
+
+* <2023-02-16 Thu> *57250396    FAILED* : cele0b2s41r00.s5_reco_0a        /    1  2000MB:12h:xrootd 
+# no /Code/setup.sh found - bug in mu2eprodsys
+# murat@mu2ebuild01:/mu2e/app/users/murat/muse>grim/scripts/submit_job.py
+--project=mdc2020 --dsid=cele0b2s41r00 --stage=s5 --job=reco_0a
+--verbose=1 --fileset=000 --doit=.  2023/02/16 09:57:48 [
+GridTool::ParseParameters ] Project = mdc2020 2023/02/16 09:57:48 [
+GridTool::ParseParameters ] Verbose = 1 2023/02/16 09:57:48 [
+GridTool::ParseParameters ] Doit = .  2023/02/16 09:57:48 [
+GridTool::ParseParameters ] FamilyID = cele0b2 2023/02/16 09:57:48 [
+GridTool::ParseParameters ] InputDsid = xxx_xxxx 2023/02/16 09:57:48 [
+GridTool::ParseParameters ] ProjectDir = mdc2020/datasets/cele0b2
+2023/02/16 09:57:48 [ GridTool::ParseParameters ] Recover = None
+2023/02/16 09:57:48 [ GridTool::ParseParameters ] Fileset = 000
+2023/02/16 09:57:48 [ GridTool::ParseParameters ]
+------------------------------------- Done 2023/02/16 09:57:49 [
+GridTool::submit_grid_job ] executing :tar -tjf
+/pnfs/mu2e/resilient/users/murat/mdc2020/cnf.murat.cele0b2s41r00.s5_reco_0a.mdc2020.000.fcl.tbz |
+wc -l 2023/02/16 09:57:49 [ GridTool::submit_grid_job ] nsegments: 1
+submit_grid_job: parms: ['grim/scripts/submit_grid_job', 'mdc2020',
+'cele0b2s41r00', 's5:reco_0a:000', '2000MB:12h:xrootd', '.']  ['Thu
+Feb 16 09:57:49 CST 2023', 'Will use the outstage directory =
+/pnfs/mu2e/scratch/users/murat/workflow/mdc2020.cele0b2s41r00.s5_reco_0a/outstage',
+'Will use ifdh version v2_6_10', 'Will use mu2efilename version v3_8',
+'Will use mu2etools version v4_04_00', 'Will use ifdhc_config version
+v2_6_16', 'Command: jobsub_submit --memory 2000MB --group mu2e --disk
+30GB --resource-provides usage_model=OPPORTUNISTIC,DEDICATED
+--expected-lifetime 12h -l priority=0 -e XRD_STREAMTIMEOUT=300 -e
+EXPERIMENT=mu2e -e
+MU2EGRID_MU2ESETUP=/cvmfs/mu2e.opensciencegrid.org/setupmu2e-art.sh -e
+MU2EGRID_IFDHC_CONFIG_VERSION=v2_6_16 -e
+MU2EGRID_CODE=/pnfs/mu2e/resilient/users/murat/mdc2020/mdc2020.code.murat.f9882aa9.tbz
+-e IFDH_VERSION=v2_6_10 -e
+MU2EGRID_WFOUTSTAGE=/pnfs/mu2e/scratch/users/murat/workflow/mdc2020.cele0b2s41r00.s5_reco_0a/outstage
+-e
+MU2EGRID_FCLTAR=/pnfs/mu2e/resilient/users/murat/mdc2020/cnf.murat.cele0b2s41r00.s5_reco_0a.mdc2020.000.fcl.tbz
+-e MU2EGRID_ERRORDELAY=10 -e MU2EGRID_INPUTLIST=tm6hSk_sNp -e
+MU2EGRID_DEBUG=0 -e MU2EGRID_DSCONF=mdc2020 -e MU2EGRID_XROOTD=1 -e
+MU2EGRID_USERSETUP=Code/setup.sh -e MU2EGRID_DSOWNER=murat -e
+MU2EGRID_TRANSFER_ALL=1 -e MU2EGRID_MU2ETOOLS_VERSION=v4_04_00 -e
+MU2EGRID_MU2EFILENAME_VERSION=v3_8 -N 1 -f dropbox:///tmp/tm6hSk_sNp
+--use-cvmfs-dropbox --tar_file_name
+dropbox:///pnfs/mu2e/resilient/users/murat/mdc2020/mdc2020.code.murat.f9882aa9.tbz
+file:///cvmfs/mu2e.opensciencegrid.org/artexternals/mu2egrid/v8_01_00/bin/impl/mu2eprodsys.sh',
+'Submitting....', 'Attempting to get token from
+https://htvaultprod.fnal.gov:8200 ... succeeded', 'Storing bearer
+token in /tmp/bt_token_mu2e_Analysis_5339', 'tm6hSk_sNp', 'Using
+bearer token located at /tmp/bt_token_mu2e_Analysis_5339 to
+authenticate to RCDS', 'Checking to see if uploaded file is published
+on RCDS.', 'Could not locate uploaded file on RCDS.  Will retry in 30
+seconds.', 'Could not locate uploaded file on RCDS.  Will retry in 30
+seconds.', 'Found uploaded file on RCDS.', 'Using bearer token located
+at /tmp/bt_token_mu2e_Analysis_5339 to authenticate to RCDS',
+'Submitting job(s).', '1 job(s) submitted to cluster 57250396.', 'Use
+job id 57250396.0@jobsub01.fnal.gov to retrieve output', ''] Thu Feb
+16 09:57:49 CST 2023 Will use the outstage directory =
+/pnfs/mu2e/scratch/users/murat/workflow/mdc2020.cele0b2s41r00.s5_reco_0a/outstage
+Will use ifdh version v2_6_10 Will use mu2efilename version v3_8 Will
+use mu2etools version v4_04_00 Will use ifdhc_config version v2_6_16
+Command: jobsub_submit --memory 2000MB --group mu2e --disk 30GB
+--resource-provides usage_model=OPPORTUNISTIC,DEDICATED
+--expected-lifetime 12h -l priority=0 -e XRD_STREAMTIMEOUT=300 -e
+EXPERIMENT=mu2e -e
+MU2EGRID_MU2ESETUP=/cvmfs/mu2e.opensciencegrid.org/setupmu2e-art.sh -e
+MU2EGRID_IFDHC_CONFIG_VERSION=v2_6_16 -e
+MU2EGRID_CODE=/pnfs/mu2e/resilient/users/murat/mdc2020/mdc2020.code.murat.f9882aa9.tbz
+-e IFDH_VERSION=v2_6_10 -e
+MU2EGRID_WFOUTSTAGE=/pnfs/mu2e/scratch/users/murat/workflow/mdc2020.cele0b2s41r00.s5_reco_0a/outstage
+-e
+MU2EGRID_FCLTAR=/pnfs/mu2e/resilient/users/murat/mdc2020/cnf.murat.cele0b2s41r00.s5_reco_0a.mdc2020.000.fcl.tbz
+-e MU2EGRID_ERRORDELAY=10 -e MU2EGRID_INPUTLIST=tm6hSk_sNp -e
+MU2EGRID_DEBUG=0 -e MU2EGRID_DSCONF=mdc2020 -e MU2EGRID_XROOTD=1 -e
+MU2EGRID_USERSETUP=Code/setup.sh -e MU2EGRID_DSOWNER=murat -e
+MU2EGRID_TRANSFER_ALL=1 -e MU2EGRID_MU2ETOOLS_VERSION=v4_04_00 -e
+MU2EGRID_MU2EFILENAME_VERSION=v3_8 -N 1 -f dropbox:///tmp/tm6hSk_sNp
+--use-cvmfs-dropbox --tar_file_name
+dropbox:///pnfs/mu2e/resilient/users/murat/mdc2020/mdc2020.code.murat.f9882aa9.tbz
+file:///cvmfs/mu2e.opensciencegrid.org/artexternals/mu2egrid/v8_01_00/bin/impl/mu2eprodsys.sh
+Submitting....  Attempting to get token from
+https://htvaultprod.fnal.gov:8200 ... succeeded Storing bearer token
+in /tmp/bt_token_mu2e_Analysis_5339 tm6hSk_sNp Using bearer token
+located at /tmp/bt_token_mu2e_Analysis_5339 to authenticate to RCDS
+Checking to see if uploaded file is published on RCDS.  Could not
+locate uploaded file on RCDS.  Will retry in 30 seconds.  Could not
+locate uploaded file on RCDS.  Will retry in 30 seconds.  Found
+uploaded file on RCDS.  Using bearer token located at
+/tmp/bt_token_mu2e_Analysis_5339 to authenticate to RCDS Submitting
+job(s).  1 job(s) submitted to cluster 57250396.  Use job id
+57250396.0@jobsub01.fnal.gov to retrieve output
+* <2022-11-28 Mon> *41213122 SUBMITTED* : cosme01.s1_stn                  /    9  2000MB:12h:xrootd 
 murat@mu2ebuild01:/mu2e/app/users/murat/muse>grim/scripts/submit_job.py --project=mdc2020 --dsid=cosme01 --stage=s1 --job=stn --doit=.
 2022/11/28 22:11:29 [ GridTool::ParseParameters ] Project      = mdc2020
 2022/11/28 22:11:29 [ GridTool::ParseParameters ] Verbose      = 1
@@ -40,4 +866,4 @@ Submitting job(s).........
 
 JobsubJobId of first job: 41213122.0@jobsub03.fnal.gov
 2022/11/28 22:12:05 [ GridTool::submit_grid_job ] jobid: 41213122 , writing to json nsegments = 9
-* ----------------------------------------------------------------------------------------------------
+* -----------------------------------------------------------------------------------------------------

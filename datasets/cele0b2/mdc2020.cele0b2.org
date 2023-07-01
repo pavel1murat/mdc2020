@@ -287,6 +287,145 @@ Art has completed and will exit with status 0.
 
 	  output             : 154 events out of 5000
 
+* <2023-07-01 Sat> data product sizes                                                                
+- comment: 5 MB/event is nuts
+#+begin_src
+murat@mu2ebuild01:/mu2e/app/users/murat/muse>artProductSizes results/2023-06-30-16-38.dig_mu2e_CeEndpointMix2BBSignal_MDC2020r_perfect_v1_0_art_0000_s5_reco_pbar1b0_kk.mu2ebuild01.8851/mcs.user.pbar1s51b0.pbar2m.001000_00000000.art 
+
+Size on disk for the file: results/2023-06-30-16-38.dig_mu2e_CeEndpointMix2BBSignal_MDC2020r_perfect_v1_0_art_0000_s5_reco_pbar1b0_kk.mu2ebuild01.8851/mcs.user.pbar1s51b0.pbar2m.001000_00000000.art                                     
+Size on disk (bytes):      6681208209                                                                                                                                                                                                     
+         Size   Size/Entry       Entries    Fraction  TTree/TKey Name                                                                                                                                                                     
+      (bytes)      (bytes)                                                                                                                                                                                                                
+   6679685839    4933298.3          1354       1.000  Events                                                                                                                                                                              
+       828554        611.9          1354       0.000  EventMetaData                                                                                                                                                                       
+       524360           --            --       0.000  RootFileDB                                                                                                                                                                          
+        11379          8.4          1356       0.000  FileIndex                                                                                                                                                                           
+         9066       9066.0             1       0.000  MetaData
+         3271         44.2            74       0.000  Parentage
+         2124       2124.0             1       0.000  SubRuns
+          590        590.0             1       0.000  SubRunMetaData
+          524        524.0             1       0.000  ResultsMetaData
+          510        510.0             1       0.000  ResultsTree
+          507        507.0             1       0.000  RunMetaData
+          507        507.0             1       0.000  Runs
+----------------------------------------------------
+   6681067231                                  1.000  Total
+
+Details for each TTree that occupies more than the fraction 0.05 of the size on disk.
+
+
+Details for branch: Events
+Number of entries:  1354
+        Size     Size/Entry   Fraction  Data Product Name
+     (bytes)       (bytes)
+
+  3139547171      2318720.2      0.470  mu2e::SimParticlemv_compressDigiMCs__Mix.
+   781380252       577090.3      0.117  mu2e::CaloShowerROs_compressDigiMCs__Mix.
+   520541848       384447.5      0.078  mu2e::CaloShowerSteps_compressDigiMCs__Mix.
+   400296947       295640.3      0.060  mu2e::CrvSteps_compressDigiMCs__Mix.
+   323339004       238802.8      0.048  mu2e::GenParticles_compressDigiMCs__Mix.
+   204939908       151358.9      0.031  mu2e::StrawGasSteps_compressDigiMCs__Mix.
+   178386744       131748.0      0.027  mu2e::CrvDigiMCs_compressDigiMCs__Mix.
+   147925132       109250.5      0.022  mu2e::ComboHitCollection_FlagBkgHits_StrawHits_S5Reco.
+   147447263       108897.5      0.022  mu2e::ComboHitCollection_makeSH__S5Reco.
+   113904044        84124.1      0.017  mu2e::StrawDigiMCs_compressDigiMCs__Mix.
+   103484597        76428.8      0.015  mu2e::CaloShowerSims_compressDigiMCs__Mix.
+    93994345        69419.8      0.014  mu2e::ComboHitCollection_FlagBkgHits__S5Reco.
+    93485679        69044.1      0.014  mu2e::ComboHitCollection_makePH__S5Reco.
+    89109864        65812.3      0.013  mu2e::CaloDigis_CaloDigiMaker__Mix.
+    62355611        46052.9      0.009  mu2e::KalSeeds_KKDmuMHPar__S5Reco.
+    47875617        35358.7      0.007  mu2e::StrawDigiADCWaveforms_makeSD__Mix.
+    44765048        33061.3      0.007  mu2e::StrawHits_makeSH__S5Reco.
+    42228103        31187.7      0.006  mu2e::CaloRecoDigis_CaloRecoDigiMaker__S5Reco.
+    37125992        27419.5      0.006  mu2e::StrawDigis_makeSD__Mix.
+    26416435        19509.9      0.004  mu2e::CrvDigis_CrvDigi__Mix.
+    16940386        12511.4      0.003  mu2e::CaloHits_CaloHitMaker__S5Reco.
+    13485240         9959.6      0.002  mu2e::SimParticleart::Ptrmu2e::MCTrajectorystd::map_compressDigiMCs__Mix.
+    11526016         8512.6      0.002  mu2e::CaloProtoClusters_CaloProtoClusterMaker_split_S5Reco.
+     4249609         3138.6      0.001  mu2e::HelixSeeds_MHFinderDmu__S5Reco.
+     3327328         2457.4      0.000  mu2e::HelixSeeds_MHDmuM__S5Reco.
+     2752961         2033.2      0.000  mu2e::HelixSeeds_HelixFinderDmu_Positive_S5Reco.
+     2683479         1981.9      0.000  mu2e::KalSeeds_TTKSFDeM__Mix.
+     2411046         1780.7      0.000  mu2e::StepPointMCs_compressDigiMCs_virtualdetector_Mix.
+     2392681         1767.1      0.000  mu2e::KalSeeds_TTCalSeedFitDem__Mix.
+     2334859         1724.4      0.000  mu2e::HelixSeeds_CalHelixFinderDmu_Positive_S5Reco.
+     1808939         1336.0      0.000  mu2e::HelixSeeds_TThelixFinder_Positive_Mix.
+     1759845         1299.7      0.000  mu2e::HelixSeeds_TTHelixMergerDeM__Mix.
+     1598749         1180.8      0.000  mu2e::HelixSeeds_TTCalHelixFinderDe_Positive_Mix.
+     1589477         1173.9      0.000  mu2e::HelixSeeds_TTCalHelixMergerDeM__Mix.
+     1442812         1065.6      0.000  mu2e::CaloClusters_CaloClusterMaker__S5Reco.
+     1307693          965.8      0.000  mu2e::TimeClusters_PhiClusterFinder__S5Reco.
+     1180370          871.8      0.000  mu2e::StepPointMCs_compressDigiMCs_stoppingtarget_Mix.
+     1178312          870.2      0.000  mu2e::CaloClusters_CaloClusterFast__Mix.
+      992010          732.7      0.000  mu2e::HelixSeeds_MHDmuP__S5Reco.
+      961156          709.9      0.000  mu2e::TimeClusters_TZClusterFinder__S5Reco.
+      879627          649.7      0.000  mu2e::CaloProtoClusters_CaloProtoClusterMaker_main_S5Reco.
+      688530          508.5      0.000  mu2e::StepPointMCs_compressDigiMCs_protonabsorber_Mix.
+      632687          467.3      0.000  mu2e::HelixSeeds_HelixFinderDmu_Negative_S5Reco.
+      481638          355.7      0.000  mu2e::TimeClusters_TTtimeClusterFinder__Mix.
+      367769          271.6      0.000  mu2e::HelixSeeds_CalHelixFinderDmu_Negative_S5Reco.
+      329831          243.6      0.000  mu2e::TimeClusters_MHFinderDmu__S5Reco.
+      242099          178.8      0.000  mu2e::TimeClusters_MHDmuM__S5Reco.
+      199834          147.6      0.000  mu2e::HelixSeeds_TThelixFinder_Negative_Mix.
+      193977          143.3      0.000  mu2e::HelixSeeds_TTHelixMergerDeP__Mix.
+      192598          142.2      0.000  mu2e::TimeClusters_TTCalTimePeakFinder__Mix.
+      176793          130.6      0.000  mu2e::TimeClusters_CalTimePeakFinderMu__S5Reco.
+      133027           98.2      0.000  mu2e::TimeClusters_MHDmuP__S5Reco.
+      122268           90.3      0.000  mu2e::TimeClusters_TTHelixMergerDeM__Mix.
+      106694           78.8      0.000  mu2e::TimeClusters_TTCalHelixMergerDeM__Mix.
+       30194           22.3      0.000  mu2e::TimeClusters_TTHelixMergerDeP__Mix.
+       24640           18.2      0.000  mu2e::HelixSeeds_TTCalHelixFinderDe_Negative_Mix.
+       24503           18.1      0.000  mu2e::HelixSeeds_TTCalHelixMergerDeP__Mix.
+       20051           14.8      0.000  mu2e::TriggerInfo_tprDePHighPStopTargTCFilter__Mix.
+       20046           14.8      0.000  mu2e::TriggerInfo_tprDeMHighPStopTargTCFilter__Mix.
+       20020           14.8      0.000  mu2e::TriggerInfo_tprDePLowPStopTargTCFilter__Mix.
+       20018           14.8      0.000  mu2e::TriggerInfo_tprDeMLowPStopTargTCFilter__Mix.
+       16314           12.0      0.000  mu2e::KalSeeds_TTKSFDeP__Mix.
+       16286           12.0      0.000  mu2e::StatusG4_g4run__Primary.
+       11404            8.4      0.000  mu2e::ProtonBunchIntensity_PBISim__Mix.
+       10925            8.1      0.000  mu2e::HelixSeedmu2e::KalSeedvoidart::Assns_KKDmuMHPar__S5Reco.
+       10791            8.0      0.000  mu2e::TriggerInfo_cprDePLowPStopTargTCFilter__Mix.
+       10790            8.0      0.000  mu2e::TriggerInfo_cprDeMLowPStopTargTCFilter__Mix.
+       10780            8.0      0.000  mu2e::TriggerInfo_cprDePHighPStopTargTCFilter__Mix.
+       10780            8.0      0.000  mu2e::TriggerInfo_cprDeMHighPStopTargTCFilter__Mix.
+       10185            7.5      0.000  mu2e::ProtonBunchTime_EWMProducer__Mix.
+        9143            6.8      0.000  EventAuxiliary
+        8900            6.6      0.000  mu2e::TimeClusters_TTCalHelixMergerDeP__Mix.
+        8128            6.0      0.000  mu2e::TriggerInfo_cprDeMHighPStopTargHSFilter__Mix.
+        8120            6.0      0.000  mu2e::TriggerInfo_cprDeMHighPStopTargTSFilter__Mix.
+        7993            5.9      0.000  mu2e::KalSeeds_TTCalSeedFitDep__Mix.
+        7953            5.9      0.000  mu2e::IntensityInfoTrackerHits_makeSH__S5Reco.
+        7836            5.8      0.000  mu2e::TriggerInfo_tprDeMHighPStopTargTSFilter__Mix.
+        7779            5.7      0.000  mu2e::TriggerInfo_tprDeMHighPStopTargHSFilter__Mix.
+        7227            5.3      0.000  art::TriggerResults_TriggerResults__Mix.
+        6704            5.0      0.000  mu2e::TriggerInfo_tprDeMLowPStopTargHSFilter__Mix.
+        6658            4.9      0.000  mu2e::TriggerInfo_cprDeMLowPStopTargHSFilter__Mix.
+        6569            4.9      0.000  mu2e::TriggerInfo_tprDePHighPStopTargHSFilter__Mix.
+        6551            4.8      0.000  mu2e::TriggerInfo_tprDePLowPStopTargHSFilter__Mix.
+        6484            4.8      0.000  mu2e::TriggerInfo_cprDePHighPStopTargHSFilter__Mix.
+        6471            4.8      0.000  mu2e::TriggerInfo_cprDePLowPStopTargHSFilter__Mix.
+        6452            4.8      0.000  mu2e::TriggerInfo_tprDeMLowPStopTargTSFilter__Mix.
+        6419            4.7      0.000  mu2e::TriggerInfo_cprDeMLowPStopTargTSFilter__Mix.
+        6404            4.7      0.000  mu2e::TriggerInfo_tprHelixDeMIpaPhiScaledTCFilter__Mix.
+        6370            4.7      0.000  mu2e::TriggerInfo_cprDePHighPStopTargTSFilter__Mix.
+        6344            4.7      0.000  mu2e::TriggerInfo_tprDePLowPStopTargTSFilter__Mix.
+        6343            4.7      0.000  mu2e::TriggerInfo_tprHelixDeMIpaTCFilter__Mix.
+        6333            4.7      0.000  mu2e::TriggerInfo_tprHelixDeMIpaPhiScaledHSFilter__Mix.
+        6326            4.7      0.000  mu2e::TriggerInfo_cprDePLowPStopTargTSFilter__Mix.
+        6310            4.7      0.000  mu2e::TriggerInfo_tprDePHighPStopTargTSFilter__Mix.
+        6262            4.6      0.000  mu2e::TriggerInfo_tprHelixDeMIpaHSFilter__Mix.
+        5946            4.4      0.000  mu2e::PrimaryParticle_compressDigiMCs__Mix.
+        5450            4.0      0.000  mu2e::IntensityInfoTimeCluster_TZClusterFinder__S5Reco.
+        5265            3.9      0.000  art::TriggerResults_TriggerResults__Primary.
+        5240            3.9      0.000  art::TriggerResults_TriggerResults__S5Reco.
+        5131            3.8      0.000  mu2e::ProtonBunchTimeMC_EWMProducer__Mix.
+        4798            3.5      0.000  mu2e::EventWindowMarker_EWMProducer__Mix.
+        4347            3.2      0.000  mu2e::ProtonBunchTime_PBTFSD__S5Reco.
+        4232            3.1      0.000  mu2e::IntensityInfoTimeCluster_FlagBkgHits__S5Reco.
+        3648            2.7      0.000  mu2e::TimeClusters_FlagBkgHits__S5Reco.
+--------------------------------------
+  6679707807      4933314.5      1.000  Total
+#+end_src
 * ------------------------------------------------------------------------------------------------------
 * back to summary: [[file:../../doc/dataset_summary.org][trkvst/doc/dataset_summary.org]]
 * ------------------------------------------------------------------------------------------------------
