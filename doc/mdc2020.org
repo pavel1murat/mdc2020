@@ -1,8 +1,59 @@
 # 
-
+* ------------------------------------------------------------------------------
 * MDC2020 datasets 
-
-* cele01: family of CE + ...
+* stopped muon datasets                                                      
+** stopped mu-                                                               
+*** dataset files                                                            
+- the dataset has just one file in it
+#+begin_src  
+samweb list-files "dh.dataset sim.mu2e.MuminusStopsCat.MDC2020p.art"     
+sim.mu2e.MuminusStopsCat.MDC2020p.001201_00000000.art
+#+end_src 
+*** file metadata                                                            
+#+begin_src  
+samweb get-metadata sim.mu2e.MuminusStopsCat.MDC2020p.001201_00000000.art 
+            File Name: sim.mu2e.MuminusStopsCat.MDC2020p.001201_00000000.art
+              File Id: 94134223
+          Create Date: 2022-02-17T09:11:09+00:00
+                 User: mu2epro
+            File Size: 3211046908
+             Checksum: enstore:2636679535
+                       adler32:84b48970
+                       md5:b7e2c8c4ce6baf19211399a1af64145e
+       Content Status: good
+            File Type: mc
+          File Format: art
+            Data Tier: sim
+          Application: art simjob mdc2020p
+           Process Id: 459887
+          Event Count: 1427024
+          Dataset.Tag: sim.mu2e.MuminusStopsCat.MDC2020p.art
+     dh.configuration: MDC2020p
+           dh.dataset: sim.mu2e.MuminusStopsCat.MDC2020p.art
+       dh.description: MuminusStopsCat
+       dh.first_event: 1062
+   dh.first_run_event: 1201
+  dh.first_run_subrun: 1201
+      dh.first_subrun: 0
+dh.first_subrun_event: 0
+          dh.gencount: 3982000000
+        dh.last_event: 398702
+    dh.last_run_event: 1201
+   dh.last_run_subrun: 1201
+       dh.last_subrun: 9999
+ dh.last_subrun_event: 9999
+             dh.owner: mu2e
+         dh.sequencer: 001201_00000000
+            dh.sha256: 0926a7e412c42cab935d069751da76f1b4e5008ce088e42aea2174c5420a5067
+              Parents: sim.mu2e.TargetStopsCat.MDC2020p.001201_00000001.art
+                       sim.mu2e.TargetStopsCat.MDC2020p.001201_00000006.art
+                       sim.mu2e.TargetStopsCat.MDC2020p.001201_00000005.art
+                       sim.mu2e.TargetStopsCat.MDC2020p.001201_00000000.art
+                       sim.mu2e.TargetStopsCat.MDC2020p.001201_00000003.art
+#+end_src 
+** stopped mu+ : doesn't exist for mu+ mode                                  
+- <2023-10-16 Mon> : doesn't seem to exist
+* cele01: family of CE +                                                     
 
 murat@mu2ebuild01:/mu2e/app/users/murat/muse>samweb list-definitions | grep -i mdc202 | grep -i CEendpointmix2bb
 
